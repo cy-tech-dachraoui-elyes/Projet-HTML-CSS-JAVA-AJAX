@@ -1,0 +1,33 @@
+body
+{
+    background-color: white;
+}
+
+h1
+{
+    font-weight: normal;
+    text-align: center;
+    color:darkslateblue;
+}
+
+img 
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button
+{
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
