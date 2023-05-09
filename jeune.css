@@ -1,0 +1,255 @@
+
+/* ****************** BANDE GRISE ********************* */
+
+.bande-grise{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 70px;
+    width: 100%;
+    background-image: linear-gradient(to right, #B8B8B8 0%, #f5f5f5 20%, #B8B8B8 100%);
+}
+
+/* ****************** IMAGE ********************* */
+
+.bande-grise img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top : 7px;
+    padding-left : 40px;
+    transform: scale(2.6);
+    width: 200px;
+    height: auto;
+}
+
+
+/* ****************** "POUR FAIRE DE L'ENGAGEMENT UNE VALEUR" ********************* */
+
+.texte{
+    position : absolute;
+    left : 1150px;
+    top : -75px;
+    letter-spacing : 0px;
+    color: #ff007f;
+    font-family : "Helvetica";
+    font-size : 80px;
+}
+
+.t2{
+    position : absolute;
+    font-family : "helvetica";
+    color : white;
+    font-size : 40px;
+    top : 40px;
+    left : 625px;
+    letter-spacing : 1px;
+}
+
+
+/* ****************** BANDE CENTREE ********************* */
+
+.bande-centree{
+    position : absolute;
+    width: 40%;
+    text-align: center;
+    background-image: linear-gradient(to right, #d3d3d3 0%, #f5f5f5 20%, #d3d3d3 100%);
+    text-align: center;
+    padding: 10px;
+    margin: 70px 0 0 350px;
+}
+
+.bande-centree .texte2 .jeune{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: white;
+    border : none;
+    background-color : #ff007f;
+    cursor : pointer;
+}
+
+.aj{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 span.referent{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: #228b22;
+    cursor : pointer;
+}
+
+.ar{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 span.consultant{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: #00bfff;
+    cursor : pointer;
+}
+
+.ac{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 .partenaires{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: grey;
+    border : none;
+    background-color : transparent;
+    cursor : pointer;
+}
+
+
+        /* *************************** TEXTE ROSE ************************* */
+
+.dec{
+    position : absolute;
+    font-size : 22px;
+    top : 200px;
+    left : 380px;
+    color : #ff007f;
+    font-family : "helvetica";
+    letter-spacing : 1px;
+}
+
+
+        /* ************************ TRAIT ROSE *********************** */
+
+.traitrose{
+    position : absolute;
+    width : 670px;
+    height : 230px;
+    top : 400px;
+    left : 400px;
+}
+
+
+        /* ************************ DONNÉES *********************** */
+
+/* .info{
+    position : absolute;
+    top : 40px;
+    left : -555px;
+    background-color : rgb(249, 230, 240);
+    color : #ff007f;
+} */
+
+label{
+    font-size : 20px;
+    font-family : "helvetica";
+}
+
+.cadreInfo{
+    position : absolute;
+    font-family : 20px;
+    padding-right : 75px;
+    top : 320px;
+    left : 510px;
+    width: 25%;
+    border-top : none;
+    border-left : none;
+    border-bottom : 1px solid #ff007f;
+    border-right : 1px solid #ff007f;
+    background-color : white;
+    color : #ff007f;
+}
+
+/* .qualite{
+
+} */
+input[type="text"]{
+    border: none;
+    border-bottom: 1px dotted black;
+    outline: none;
+    border-color : #ff007f;
+    font-family : 24px;
+}
+
+input[type="email"]{
+    border: none;
+    border-bottom: 1px dotted black;
+    outline: none;
+    border-color : #ff007f;
+    font-family : 24px;
+}
+
+input{
+    box-sizing: border-box;
+    width: 45%;
+}
+
+input, textarea{
+    color: navy;
+}
+
+        /* ************************** "JE SUIS"**************************** */
+
+.bandeRose{
+    position : absolute;
+    background: linear-gradient(to right, white, #FF007F);
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    padding: 10px;
+    width: 5.82cm;
+    height: 0.3cm;
+    text-align : center;
+    top : 270px;
+    left : 1100px;
+}
+
+.jss{
+    position: absolute;
+    margin-top : -5px;
+    margin-left : 130px;
+}
+
+
+.checkboxes{
+    position: absolute;
+    margin-top: 10px;
+    text-align : left;
+    margin-bottom : 10px;
+    top : 290px;
+    left : 1110px;
+    width : 230px;
+    color : #ff007f;
+    background-color: rgb(252, 237, 245);
+}
+
+.valider{
+    position : absolute;
+    background-color : #ff007f;
+    border : none;
+    color : white;
+    font-size : 25px;
+    position : absolute;
+    top : 320px;
+    left : 80px;
+    cursor : pointer;
+}
+
+.maxChoix{
+    position : absolute;
+    top : 570px;
+    left : 1150px;
+    color : #ff007f;
+}
+
+
+
