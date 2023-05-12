@@ -204,11 +204,11 @@ input, textarea{
     color: white;
     font-size: 24px;
     padding: 10px;
-    width: 5.82cm;
+    width: 5.60cm;
     height: 0.3cm;
     text-align : center;
     top : 270px;
-    left : 1150px;
+    left : 1110px;
 }
 
 .ilEst{
@@ -216,41 +216,6 @@ input, textarea{
     margin-left : 10px;
 }
 
-.container{
-    position : absolute;
-    top : 300px;
-    left : 1150px;
-    width : 240px;
-    border : none;
-    background-color : #E0EB7F;
-}
-
-.checkboxes{
-    margin-top: 10px;
-    text-align : left;
-    margin-bottom : 10px;
-}
-
-
-
-.valider{
-    position : absolute;
-    background-color : #228b22;
-    border : none;
-    color : white;
-    font-size : 25px;
-    position : absolute;
-    top : 330px;
-    left : 100px;
-    cursor : pointer;
-}
-
-.maxChoix{
-    position : absolute;
-    top : 594px;
-    left : 1200px;
-    color : #E0EB7F;
-}
 
 .commentaire{
     position : absolute;
@@ -274,9 +239,129 @@ input, textarea{
 .comm{
     position : absolute;
     top : 300px;
+    left : 70px;
     width: 5cm;
     height: 7cm;
     background-color:  #E0EB7F;
     border : none;
+} 
+
+
+
+/* ************************ TRAIT ROSE *********************** */
+
+.traitrose{
+    position : absolute;
+    width : 670px;
+    height : 230px;
+    top : 400px;
+    left : 400px;
 }
+
+
+        /* ************************ DONNÉES *********************** */
+
+
+
+label{
+    font-size : 20px;
+    font-family : "helvetica";
+}
+
+.cadreInfo{
+    position : absolute;
+    font-family : 20px;
+    padding-right : 75px;
+    top : 320px;
+    left : 510px;
+    width: 25%;
+    border-top : none;
+    border-left : none;
+    border-bottom : 1px solid #E0EB7F;
+    border-right : 1px solid #E0EB7F;
+    background-color : white;
+    color : #E0EB7F;
+}
+
+
+
+input[type="text"]{
+    border: none;
+    border-bottom: 1px dotted black;
+    outline: none;
+    border-color : #E0EB7F;
+    font-family : 24px;
+}
+
+input[type="email"]{
+    border: none;
+    border-bottom: 1px dotted black;
+    outline: none;
+    border-color : #E0EB7F;
+    font-family : 24px;
+}
+
+input{
+    box-sizing: border-box;
+    width: 45%;
+}
+
+input, textarea{
+    color: navy;
+}
+
+        /* ************************** "JE SUIS"**************************** */
+
+.bandeRose{
+    position : absolute;
+    background: linear-gradient(to right, white, #FF007F);
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    padding: 10px;
+    width: 5.82cm;
+    height: 0.3cm;
+    text-align : center;
+    top : 270px;
+    left : 1100px;
+}
+
+.jss{
+    position: absolute;
+    margin-top : -5px;
+    margin-left : 130px;
+}
+
+
+.checkboxes{
+    position: absolute;
+    margin-top: 10px;
+    text-align : left;
+    margin-bottom : 10px;
+    top : 290px;
+    left : 1110px;
+    width : 230px;
+    color : white;
+    background-color: #E0EB7F;
+}
+
+.valider{
+    position : absolute;
+    background-color : #228b22;
+    border : none;
+    color : white;
+    font-size : 25px;
+    position : absolute;
+    top : 320px;
+    left : 80px;
+    cursor : pointer;
+}
+
+.maxChoix{
+    position : absolute;
+    top : 570px;
+    left : 1150px;
+    color : #E0EB7F;
+}
+        
+
 
