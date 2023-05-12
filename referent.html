@@ -14,7 +14,7 @@
             
             <div class="bande-centree">
                 <div class="texte2">
-                    <a href="jeune.html" class="aj">
+                    <a class="aj">
                         <span> <button class="jeune"> JEUNE </button> </span>
                     </a>
                     
@@ -23,7 +23,7 @@
                     </a>
                     
                     
-                    <a href="consultant.html" class="ac">
+                    <a class="ac">
                         <span class="consultant">CONSULTANT</span>
                     </a>
                     
@@ -33,14 +33,6 @@
                 </div>
             </div>
             
-            <div>
-<!--                <label for="commentaire">Commentaire:</label>-->
-                <textarea id="commentaire" name="commentaire" required class="comm"></textarea><br>
-            </div>
-            
-            <div class="commentaire">
-                <p class="comment"> COMMENTAIRES </p>
-            </div>
             
             <div class="contenu">
                 <a href="jeune.html">
@@ -62,62 +54,67 @@
 
         <img src="traitvert.jpg" alt="traitvert" class="traitvert">
 
-        <div class="container">
-            
-            <div class="checkboxes">
-                
-                <form method="post" action="jeune.php" class="info">
-                    <fieldset class="infos">
-                        <label for="prenom"> Nom : </label>
-                        <input type="text" id="nom" name="nom" maxlenght="50">
-                            
-                        <br><label for="prenom"> Prénom : </label>
-                        <input type="text" id="prenom" name="prenom" maxlenght="50"/>
-                        
-                        <br>
-                        <label for="date"> Date de naissance: </label>
-                        <input type="date" id="date" name="date" placeholder="jj/mm/aaaa" pattern="\d{2}/\d{2}/\d{4}" required maxlenght="4">
-                        <br>
-                        <label for="email"> Email : </label>
-                        <input type="email" id="email" name="email">
-                            
-                        <br>
-                        <label for="reseau"> Réseau Social :  </label>
-                        <input type="text" id="reseau" name="reseau">
-                            
-                        <br><br>
-                        <label for="engagement"> Mon engagement: </label>
-                        <input type="text" id="engagement" name="engagement">
-                            
-                        <br>
-                        <label for="duree"> Durée : </label>
-                        <input type="text" id="duree" name="duree">
-                            
-                        
-                    </fieldset>
-                </form>
-        
-        
-        
-                <form method="post">
-                    <label><input type="checkbox" name="option1" value="option1" onclick="maxChoix()">Autonme</label>
-                    <label><input type="checkbox" name="option2" value="option2" onclick="maxChoix()">Passioné</label>
-                    <label><input type="checkbox" name="option3" value="option3" onclick="maxChoix()">Réfléchi</label>
-                    <label><input type="checkbox" name="option4" value="option4" onclick="maxChoix()">A l'écoute</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Organisé</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Passioné</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Fiable</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Patient</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Réfléchi</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Responsable</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Social</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Optimiste</label>
+        <form action="enregistrement.php" method="post">
 
-                    <button type="submit" class="valider">Valider</button>
-                </form>
-            
+            <div class="container">
+
+                <fieldset class="cadreInfo">
+                    <label for="nom"> Nom : </label>
+                    <input type="text" id="nom" name="nom" maxlenght="50" onclick="test()" required>
+                            
+                    <br><label for="prenom"> Prénom : </label>
+                    <input type="text" id="prenom" name="prenom" maxlenght="50">
+                        
+                    <br>
+                    <label for="date">Date de naissance : </label>
+                    <input type="date" id="date" name="date"  pattern="\d{2}/\d{2}/\d{4}" required maxlenght="4">
+                    <br>
+                    <label for="email"> Email : </label>
+                    <input type="email" id="email" name="email" required>
+                            
+                    <br>
+                    <label for="reseau"> Réseau Social :  </label>
+                    <input type="text" id="reseau" name="reseau">
+                        
+                    <br><br>
+                    <label for="engagement"> Mon engagement : </label>
+                    <input type="text" id="engagement" name="engagement">
+                            
+                    <br>
+                    <label for="duree"> Durée : </label>
+                    <input type="text" id="duree" name="duree">    
+                        
+                </fieldset>
             </div>
-        </div>
+
+            <div class="checkboxes">    
+                <label class="qualite"><input type="checkbox" name="o1" value="o1" onclick="maxChoix()">Autonme</label>
+                <label class="qualite"><input type="checkbox" name="o2" value="o2" onclick="maxChoix()">Passioné</label>
+                <label class="qualite"><input type="checkbox" name="o3" value="o3" onclick="maxChoix()">Réfléchi</label>
+                <label class="qualite"><input type="checkbox" name="o4" value="o4" onclick="maxChoix()">A l'écoute</label>
+                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Organisé</label>
+                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Passioné</label>
+                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Fiable</label>
+                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Patient</label>
+                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Réfléchi</label>
+                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Responsable</label>
+                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Social</label>
+                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Optimiste</label>
+
+                <button type="submit" class="valider">Valider</button>
+        
+            </div>
+            
+
+            <div>
+                <textarea id="commentaire" name="commentaire" required class="comm"></textarea><br>
+            </div>
+            
+            <div class="commentaire">
+                <p class="comment"> COMMENTAIRES </p>
+            </div>
+
+        </form>
         
         
         <div class="bandeVerte">
