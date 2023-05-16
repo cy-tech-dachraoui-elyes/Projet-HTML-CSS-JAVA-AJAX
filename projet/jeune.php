@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <title> Jeunes 6.4 </title>
         <link rel="stylesheet" type="text/css" href="jeune.css">
-        <script src="jeune.js" type="text/javascript"> </script>
+        <script src="maxChoix.js" type="text/javascript"> </script>
     </head>
     
     <body>
@@ -46,7 +46,12 @@
                 <div class="t2">
                     <p> Je donne de la valeur à mon engagement</p>
                 </div>
-                <a href="deconnexion/deconnexion.php">Deconnexion</a>
+                
+                <div class="deconnexion">
+                <a href="deconnexion/deconnexion.php" class="button">Déconnexion</a>
+                </div>
+
+
             </div>
             
         </div>
