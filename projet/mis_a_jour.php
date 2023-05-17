@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $reseau = $_POST['reseau'] ?? '';
     $engagement = $_POST['engagement'] ?? '';
     $duree = $_POST['duree'] ?? '';
-    $qualites = implode(', ', $_POST['qualites']);
+    $qualites = $_POST['qualites'];
 
     // Charger le contenu du fichier utilisateurs.json dans une variable
     $json = file_get_contents('utilisateurs.json');
