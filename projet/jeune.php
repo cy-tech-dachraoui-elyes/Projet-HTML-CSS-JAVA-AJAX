@@ -1,6 +1,9 @@
 <?php
 	include("session.php");
 ?>
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -46,12 +49,9 @@
                 <div class="t2">
                     <p> Je donne de la valeur à mon engagement</p>
                 </div>
-                
                 <div class="deconnexion">
                 <a href="deconnexion/deconnexion.php" class="button">Déconnexion</a>
                 </div>
-
-
             </div>
             
         </div>
@@ -60,7 +60,7 @@
         
         <img src="/image/traitRose.jpg" alt="traitrose" class="traitrose">
             
-        <form action="enregistrement.php" method="post">
+        <form  action="mis_a_jour.php" method="post">
 
             <div class="container">
 
@@ -84,28 +84,29 @@
                         
                     <br><br>
                     <label for="engagement"> Mon engagement : </label>
-                    <input type="text" id="engagement" name="engagement">
+                    <input type="text" id="engagement" name="engagement" value="<?php echo $engagement; ?>">
                             
                     <br>
                     <label for="duree"> Durée : </label>
-                    <input type="text" id="duree" name="duree">    
+                    <input type="text" id="duree" name="duree" value="<?php echo $duree; ?>">    
                         
                 </fieldset>
             </div>
 
+
             <div class="checkboxes">    
-                <label class="qualite"><input type="checkbox" name="o1" value="o1" onclick="maxChoix()">Autonme</label>
-                <label class="qualite"><input type="checkbox" name="o2" value="o2" onclick="maxChoix()">Passioné</label>
-                <label class="qualite"><input type="checkbox" name="o3" value="o3" onclick="maxChoix()">Réfléchi</label>
-                <label class="qualite"><input type="checkbox" name="o4" value="o4" onclick="maxChoix()">A l'écoute</label>
-                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Organisé</label>
-                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Passioné</label>
-                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Fiable</label>
-                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Patient</label>
-                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Réfléchi</label>
-                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Responsable</label>
-                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Social</label>
-                <label class="qualite"><input type="checkbox" name="o5" value="o5" onclick="maxChoix()">Optimiste</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Autonome" onclick="maxChoix()">Autonme</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Passionné" onclick="maxChoix()">Passioné</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Réfléchi" onclick="maxChoix()">Réfléchi</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="A l'écoute" onclick="maxChoix()">A l'écoute</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Organisé" onclick="maxChoix()">Organisé</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Passioné" onclick="maxChoix()">Passioné</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Fiable" onclick="maxChoix()">Fiable</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Patient" onclick="maxChoix()">Patient</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Réfléchi" onclick="maxChoix()">Réfléchi</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Responsable" onclick="maxChoix()">Responsable</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Social" onclick="maxChoix()">Social</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Optimiste" onclick="maxChoix()">Optimiste</label> 
 
                 <button type="submit" class="valider">Valider</button>
         
