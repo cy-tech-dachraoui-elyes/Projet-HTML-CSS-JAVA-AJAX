@@ -9,7 +9,7 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
     $users = json_decode(file_get_contents("../utilisateurs.json"), true);
 
     // Vérifier si les informations de connexion sont correctes
-    foreach($users as $user){
+    foreach($users['jeune'] as $user){
         if($user['email'] === $email && $user['mdp'] === $mdp ){
             $_SESSION['user'] = $user['prenom'];
             header("Location: ../jeune.php");
