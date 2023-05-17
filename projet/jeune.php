@@ -134,6 +134,7 @@
                 }
                 if (engagement.value !== '' && duree.value !== '' && cocher && qualites !== null) {
                     // Les champs requis sont remplis, permettre à l'utilisateur de cliquer sur le bouton
+		    // Les qualites sont enregistrées dans le JSON
                     
                     document.getElementById('monFormulaire').submit();
                 } else {
