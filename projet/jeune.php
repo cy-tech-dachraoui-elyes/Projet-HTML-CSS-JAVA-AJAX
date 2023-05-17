@@ -15,7 +15,7 @@
     
     <body>
 
-        <div class="bande-grise">
+        <div class="bande-grise">aucun
             
             <div class="bande-centree">
                 <div class="texte2">
@@ -60,7 +60,7 @@
         
         <img src="/image/traitRose.jpg" alt="traitrose" class="traitrose">
             
-        <form  action="mis_a_jour.php" method="post">
+        <form  id="monFormulaire" action="mis_a_jour.php" method="post">
 
             <div class="container">
 
@@ -115,38 +115,34 @@
             </div>
             
 
-        </form>  
+        </form> 
         <script>
-	function verifierFormulaire() {
-        var engagement = document.getElementById('engagement');
-        var duree = document.getElementById('duree');
-        var checkboxes = document.getElementsByName('qualites');
-        var vide = true;
+            var qualites = <?php echo json_encode($qualites); ?>;
 
-        for (var i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i].checked) {
-        vide = false;
-        break;
-         }
-        }
-      
-        if (engagement.value !== '' && duree.value !== '') {
-            if(!vide){
-                // Les champs requis sont remplis, permettre à l'utilisateur de cliquer sur le bouton
-                document.getElementById('monFormulaire').submit();
+
+            function verifierFormulaire() {
+                var engagement = document.getElementById('engagement');
+                var duree = document.getElementById('duree');
+                var checkboxes = document.getElementsByName('qualites[]');
+                var cocher = false;
+
+                for (var i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].checked) {
+                        cocher = true;
+                        break;
+                    }
+                }
+                if (engagement.value !== '' && duree.value !== '' && cocher && qualites !== null) {
+                    // Les champs requis sont remplis, permettre à l'utilisateur de cliquer sur le bouton
+                    
+                    document.getElementById('monFormulaire').submit();
+                } else {
+                    // Afficher un message d'erreur ou effectuer une autre action appropriée
+                    alert('Veuillez remplir tous les champs requis.');
+                    event.preventDefault(); // Annuler l'action par défaut du lien
+                }
             }
-         
-        } else {
-          // Afficher un message d'erreur ou effectuer une autre action appropriée
-          alert('Veuillez remplir tous les champs requis.');
-          event.preventDefault(); // Annuler l'action par défaut du lien
-        }
-      }
-      
-</script>
-
-          
-        
+        </script>   
         <div class="bandeRose">
             <p class="jss"> Je suis* </p>
         </div>
