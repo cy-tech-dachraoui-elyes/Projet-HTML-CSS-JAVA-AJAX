@@ -1,0 +1,19 @@
+$qualites = $_POST['qualites']; // Supposons que vous avez reçu les valeurs depuis un formulaire en utilisant la méthode POST
+
+// Utilisez explode() pour diviser la chaîne en un tableau de valeurs individuelles
+$qualitesIndividuelles = explode(', ', $qualites);
+
+// Parcourez le tableau de qualités individuelles
+foreach ($qualitesIndividuelles as $qualite) {
+  // Utilisez chaque valeur individuelle comme nécessaire
+  echo $qualite . "<br>";
+}
+
+<div class="checkboxes">    
+    <label class="qualite"><input type="checkbox" name="qualites[]" value="Autonome" <?php if (in_array('Autonome', $qualitesIndividuelles)) echo 'checked'; ?> onclick="maxChoix()">Autonome</label> 
+    <label class="qualite"><input type="checkbox" name="qualites[]" value="Passionné" <?php if (in_array('Passionné', $qualitesIndividuelles)) echo 'checked'; ?> onclick="maxChoix()">Passioné</label> 
+    <label class="qualite"><input type="checkbox" name="qualites[]" value="Réfléchi" <?php if (in_array('Réfléchi', $qualitesIndividuelles)) echo 'checked'; ?> onclick="maxChoix()">Réfléchi</label>
+    <!-- Les autres cases à cocher -->
+
+    <button type="submit" class="valider">Valider</button>
+</div>
