@@ -95,18 +95,16 @@
 
 
             <div class="checkboxes">    
-                <label class="qualite"><input type="checkbox" name="qualites[]" value="Autonome" onclick="maxChoix()">Autonme</label> 
-                <label class="qualite"><input type="checkbox" name="qualites[]" value="Passionné" onclick="maxChoix()">Passioné</label> 
-                <label class="qualite"><input type="checkbox" name="qualites[]" value="Réfléchi" onclick="maxChoix()">Réfléchi</label>
-                <label class="qualite"><input type="checkbox" name="qualites[]" value="A l'écoute" onclick="maxChoix()">A l'écoute</label>
-                <label class="qualite"><input type="checkbox" name="qualites[]" value="Organisé" onclick="maxChoix()">Organisé</label>
-                <label class="qualite"><input type="checkbox" name="qualites[]" value="Passioné" onclick="maxChoix()">Passioné</label>
-                <label class="qualite"><input type="checkbox" name="qualites[]" value="Fiable" onclick="maxChoix()">Fiable</label> 
-                <label class="qualite"><input type="checkbox" name="qualites[]" value="Patient" onclick="maxChoix()">Patient</label>
-                <label class="qualite"><input type="checkbox" name="qualites[]" value="Réfléchi" onclick="maxChoix()">Réfléchi</label>
-                <label class="qualite"><input type="checkbox" name="qualites[]" value="Responsable" onclick="maxChoix()">Responsable</label> 
-                <label class="qualite"><input type="checkbox" name="qualites[]" value="Social" onclick="maxChoix()">Social</label>
-                <label class="qualite"><input type="checkbox" name="qualites[]" value="Optimiste" onclick="maxChoix()">Optimiste</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Autonome" onclick="maxChoix()" <?php if (in_array('Autonome', $qualites)) echo 'checked'; ?>>Autonme</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Passionné" onclick="maxChoix()" <?php if (in_array('Passionné', $qualites)) echo 'checked'; ?>>Passioné</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Réfléchi" onclick="maxChoix()" <?php if (in_array('Réfléchi', $qualites)) echo 'checked'; ?>>Réfléchi</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="A l'écoute" onclick="maxChoix()" <?php if (in_array("A l'écoute", $qualites)) echo 'checked'; ?>>A l'écoute</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Organisé" onclick="maxChoix()" <?php if (in_array('Organisé', $qualites)) echo 'checked'; ?>>Organisé</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Fiable" onclick="maxChoix()" <?php if (in_array('Fiable', $qualites)) echo 'checked'; ?>>Fiable</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Patient" onclick="maxChoix()" <?php if (in_array('Patient', $qualites)) echo 'checked'; ?>>Patient</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Responsable" onclick="maxChoix()" <?php if (in_array('Responsable', $qualites)) echo 'checked'; ?>>Responsable</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Social" onclick="maxChoix()" <?php if (in_array('Social', $qualites)) echo 'checked'; ?>>Social</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Optimiste" onclick="maxChoix()" <?php if (in_array('Optimiste', $qualites)) echo 'checked'; ?>>Optimiste</label> 
 
                 <button type="submit" class="valider">Valider</button>
         
