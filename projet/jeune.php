@@ -69,7 +69,7 @@
                     <input type="text" id="nom" name="nom" maxlenght="50" onclick="test()" required value="<?php echo $nom; ?>">
                             
                     <br><label for="prenom"> Prénom : </label>
-                    <input type="text" id="prenom" name="prenom" maxlenght="50" value="<?php echo $prenom; ?>">
+                    <input type="text" id="prenom" name="prenom" maxlenght="50" required value="<?php echo $prenom; ?>">
                         
                     <br>
                     <label for="date">Date de naissance : </label>
@@ -80,7 +80,7 @@
                             
                     <br>
                     <label for="reseau"> Réseau Social :  </label>
-                    <input type="text" id="reseau" name="reseau" value="<?php echo $reseau; ?>">
+                    <input type="text" id="reseau" name="reseau" required value="<?php echo $reseau; ?>">
                         
                     <br><br>
                     <label for="engagement"> Mon engagement : </label>
@@ -106,12 +106,45 @@
                 <label class="qualite"><input type="checkbox" name="qualites[]" value="Social" onclick="maxChoix()" <?php if (in_array('Social', $qualites)) echo 'checked'; ?>>Social</label>
                 <label class="qualite"><input type="checkbox" name="qualites[]" value="Optimiste" onclick="maxChoix()" <?php if (in_array('Optimiste', $qualites)) echo 'checked'; ?>>Optimiste</label> 
 
+
+                <div class="demande">
+                <a href="creation_refrence.html" class="button" onclick="verifierFormulaire()">Demande</a>
+                </div>
                 <button type="submit" class="valider">Valider</button>
         
             </div>
             
 
-        </form>    
+        </form>  
+        <script>
+	function verifierFormulaire() {
+        var engagement = document.getElementById('engagement');
+        var duree = document.getElementById('duree');
+        var checkboxes = document.getElementsByName('qualites');
+        var vide = true;
+
+        for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+        vide = false;
+        break;
+         }
+        }
+      
+        if (engagement.value !== '' && duree.value !== '') {
+            if(!vide){
+                // Les champs requis sont remplis, permettre à l'utilisateur de cliquer sur le bouton
+                document.getElementById('monFormulaire').submit();
+            }
+         
+        } else {
+          // Afficher un message d'erreur ou effectuer une autre action appropriée
+          alert('Veuillez remplir tous les champs requis.');
+          event.preventDefault(); // Annuler l'action par défaut du lien
+        }
+      }
+      
+</script>
+
           
         
         <div class="bandeRose">
