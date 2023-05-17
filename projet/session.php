@@ -7,7 +7,7 @@ if(isset($_SESSION['user'])){
     $users = json_decode(file_get_contents("utilisateurs.json"), true);
 
     // Trouver l'utilisateur connecté dans le tableau des utilisateurs
-    foreach($users as $user){
+    foreach($users['jeune'] as $user){
         if($user['prenom'] === $_SESSION['user']){
             // Afficher les informations de l'utilisateur
             $prenom = $user['prenom'];
@@ -15,6 +15,9 @@ if(isset($_SESSION['user'])){
             $email = $user['email'];
             $date = $user['date'];
             $reseau = $user['reseau'];
+            $engagement = $user['engagement'];
+            $qualites = $user['qualites'];
+            $duree = $user['duree'];
         }
     }
 } else {
