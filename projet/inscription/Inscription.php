@@ -6,20 +6,22 @@
     $email = $_POST['email'];
     $date = $_POST['date'];
     $reseau = $_POST['reseau'];
-    $engagement = "";
-    $duree = "";
-    $qualites = "";
+    $tel = "";
     $mdp = $_POST['mdp'];
     
+    $utilisateurs = json_decode(file_get_contents('../utilisateurs.json'), true) ?: [];
+
+    // Compter le nombre d'utilisateurs déjà enregistrés
+    $nombreComptes = count($utilisateurs['jeune']);
+
     $utilisateur = [
+        'id' => $nombreComptes + 1, // L'id est défini en fonction du nombre de comptes existants
         'nom' => $nom,
         'prenom' => $prenom,
         'email' => $email,
         'date' => $date,
         'reseau' => $reseau,
-        'engagement' => $engagement,
-        'duree' => $duree,
-        'qualites' => $qualites,
+        'tel' => $tel,
         'mdp' => $mdp
     ];
     $utilisateurs = json_decode(file_get_contents('../utilisateurs.json'), true) ?: [];
