@@ -1,0 +1,310 @@
+
+/* ****************** BANDE GRISE ********************* */
+
+.bande-grise{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 70px;
+    width: 100%;
+    background-image: linear-gradient(to right, #B8B8B8 0%, #f5f5f5 20%, #B8B8B8 100%);
+}
+
+/* ****************** IMAGE ********************* */
+
+.bande-grise img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top : 7px;
+    padding-left : 40px;
+    transform: scale(2.6);
+    width: 200px;
+    height: auto;
+}
+
+
+/* ****************** "POUR FAIRE DE L'ENGAGEMENT UNE VALEUR" ********************* */
+
+.texte{
+    position: fixed;
+    color: #ff007f;
+    font-family : "Helvetica";
+    letter-spacing : 0px;
+    right: 0; /* Texte à droite de l'écran */
+    top: -75px;
+    font-size : 80px;
+    padding-right : 20px; 
+}
+
+.t2{
+    position: fixed;
+    font-family : "Helvetica";
+    right: 0; /* Texte à droite de l'écran */
+    top: -55px;
+    padding-right : 20px;
+    color : white;
+    font-size : 40px;
+    top : 40px;
+    letter-spacing : 1px;
+}
+
+
+/* ****************** BANDE CENTREE ********************* */
+
+.bande-centree{
+    position: fixed;
+    top: 140px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40%;
+    text-align: center;
+    background-image: linear-gradient(to right, #d3d3d3 0%, #f5f5f5 20%, #d3d3d3 100%);
+    padding: 10px;
+}
+
+.bande-centree .texte2 .jeune{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: white;
+    border : none;
+    background-color : #ff007f;
+    cursor : pointer;
+}
+
+.aj{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 span.referent{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: #228b22;
+    cursor : pointer;
+}
+
+.ar{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 span.consultant{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: #00bfff;
+    cursor : pointer;
+}
+
+.ac{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 .partenaires{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: grey;
+    border : none;
+    background-color : transparent;
+    cursor : pointer;
+}
+        /* ************* Positionnement de la déconnexion ************* */
+
+.deconnexion {
+    position: fixed;
+    right: 20px; /* Texte à droite de l'écran */
+    top: 160px;
+}
+/* ************* Positionnement de profil ************* */
+
+.profil{
+    position: fixed;
+    right: 160px; /* Texte à droite de l'écran */
+    top: 160px;
+}
+
+/* ************* Positionnement de liste reference ************* */
+
+.liste{
+    position: fixed;
+    right: 250px; /* Texte à droite de l'écran */
+    top: 160px;
+}
+          
+  
+
+        /* ************* Style du bouton de déconnexion et profil************* */
+
+.commande .button{
+    font-family : "Helvetica";
+    letter-spacing : 0px;
+    font-size : 14px;
+    background-color: #cccccc;
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    text-decoration : none; 
+}
+  
+.commande .button:hover {
+    background-color: #ff007f;
+}
+    
+.commande .button:active {
+    background-color: #ff0080; 
+}
+
+
+
+        /* *************************** TEXTE ROSE ************************* */
+.dec{
+    position: fixed;
+    font-size: 22px;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);/*le texte sera centré horizontalement au milieu de l'écran*/
+    color: #ff007f;
+    font-family: "Helvetica", sans-serif;
+    letter-spacing: 1px;
+}
+        /* ************************ TRAIT ROSE *********************** */
+
+.traitrose{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 660px;
+    left: 50%;
+    width : 670px;
+    height : 230px;
+
+}
+        /* ************************ DONNÉES *********************** */
+
+
+
+label{
+    font-size : 20px;
+    font-family : "helvetica";
+}
+.cadreInfo{
+    position: fixed;
+    font-size: 22px;
+    top: 540px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family : 20px;
+    padding-right : 75px;
+    width: 25%;
+    border: 1px solid #ff007f;
+    background-color : white;
+    color : #ff007f;
+}
+.cadreInfo1{
+    position: fixed;
+    font-size: 22px;
+    top: 320px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family : 20px;
+    padding-right : 75px;
+    width: 25%;
+    border: 1px solid #ff007f;
+    background-color : white;
+    color : #ff007f;
+}
+
+
+input[type="text"]{
+    border: none;
+    border-bottom: 1px dotted black;
+    outline: none;
+    border-color : #ff007f;
+    font-family : 24px;
+}
+
+input[type="email"]{
+    border: none;
+    border-bottom: 1px dotted black;
+    outline: none;
+    border-color : #ff007f;
+    font-family : 24px;
+}
+
+input{
+    box-sizing: border-box;
+    width: 45%;
+}
+
+input, textarea{
+    color: navy;
+    font-size: 14px;
+}
+
+        /* ************************** "JE SUIS"**************************** */
+
+.bandeRose{
+    position : fixed;
+    top: 309px;
+    left: 79.9%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, white, #FF007F);
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    padding: 10px;
+    width: 5.65cm;
+    height: 0.3cm;
+    text-align : center;
+}
+
+.jss{
+    position: absolute;
+    margin-top : -5px;
+    margin-left : 130px;
+}
+
+
+.checkboxes{
+    position: fixed;
+    margin-top: 10px;
+    text-align : left;
+    margin-bottom : 10px;
+    top: 430px;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width : 230px;
+    color : #ff007f;
+    background-color: rgb(252, 237, 245);
+}
+
+
+.valider{
+    position : absolute;
+    background-color : #ff007f;
+    border : none;
+    color : white;
+    font-size : 25px;
+    position : absolute;
+    top : 320px;
+    left : 80px;
+    cursor : pointer;
+}
+
+.maxChoix{
+    position : fixed;
+    top: 580px;
+    left: 79.9%;
+    transform: translate(-50%, -50%);
+    color : #ff007f;
+}
+
