@@ -1,0 +1,271 @@
+
+/* ****************** BANDE GRISE ********************* */
+
+.bande-grise{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 70px;
+    width: 100%;
+    background-image: linear-gradient(to right, #B8B8B8 0%, #f5f5f5 20%, #B8B8B8 100%);
+}
+
+/* ****************** IMAGE ********************* */
+
+.bande-grise img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top : 7px;
+    padding-left : 40px;
+    transform: scale(2.6);
+    width: 200px;
+    height: auto;
+}
+
+
+/* ****************** "Jeune" ********************* */
+
+.texte{
+    position: fixed;
+    color: #ff007f;
+    font-family : "Helvetica";
+    letter-spacing : 0px;
+    right: 0; /* Texte à droite de l'écran */
+    top: -55px;
+    font-size : 80px;
+    padding-right : 20px; 
+}
+  
+  
+/* ****************** BANDE CENTREE ********************* */
+
+.bande-centree{
+    position: fixed;
+    top: 140px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40%;
+    text-align: center;
+    background-image: linear-gradient(to right, #d3d3d3 0%, #f5f5f5 20%, #d3d3d3 100%);
+    padding: 10px;
+}
+
+.bande-centree .texte2 span.accueil{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: grey;
+    border : none;
+    cursor : pointer;
+}
+
+.aj{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 span.profil{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: #ff007f;
+    cursor : pointer;
+}
+
+.ar{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 span.demande{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: #228b22;
+    cursor : pointer;
+}
+
+.ac{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 .liste{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 19px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: #00bfff;
+    border : none;
+    background-color : transparent;
+    cursor : pointer;
+}
+
+        /* ************* Positionnement de la déconnexion ************* */
+
+.deconnexion {
+    position: fixed;
+    right: 20px; /* Texte à droite de l'écran */
+    top: 160px;
+}
+  
+
+        /* ************* Style du bouton de déconnexion ************* */
+
+.deconnexion .button{
+    font-family : "Helvetica";
+    letter-spacing : 0px;
+    font-size : 14px;
+    background-color: #cccccc;
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    text-decoration : none; 
+}
+  
+.deconnexion .button:hover {
+    background-color: #ff007f;
+}
+    
+.deconnexion .button:active {
+    background-color: #ff0080; 
+}
+
+        /* *************************** TEXTE ROSE ************************* */
+
+.dec{
+    position: fixed;
+    font-size: 22px;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);/*le texte sera centré horizontalement au milieu de l'écran*/
+    color: #ff007f;
+    font-family: "Helvetica", sans-serif;
+    letter-spacing: 1px;
+}
+
+        /* ************************* LOGO JEUNE *********************** */
+
+img.dec {
+    top: 320px;
+}
+
+        /* ************************ TRAIT ROSE *********************** */
+
+.traitrose{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 680px;
+    left: 50%;
+    width : 670px;
+    height : 230px;
+
+}
+
+
+        /* ************************ DONNÉES *********************** */
+
+
+label{
+    font-size : 20px;
+    font-family : "helvetica";
+}
+
+.cadreInfo{
+    position: fixed;
+    font-size: 22px;
+    top: 540px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family : 20px;
+    padding-right : 75px;
+    width: 25%;
+    border: 1px solid #ff007f;
+    background-color : white;
+    color : #ff007f;
+}
+
+input[type="text"]{
+    border: none;
+    border-bottom: 1px dotted black;
+    outline: none;
+    border-color : #ff007f;
+    font-family : 24px;
+}
+
+input[type="email"]{
+    border: none;
+    border-bottom: 1px dotted black;
+    outline: none;
+    border-color : #ff007f;
+    font-family : 24px;
+}
+
+input{
+    box-sizing: border-box;
+    width: 45%;
+}
+
+input, textarea{
+    font-size: 14px;
+    color: navy;
+}
+
+        /* ************************** "JE SUIS"**************************** */
+
+.bandeRose{
+    position : absolute;
+    background: linear-gradient(to right, white, #FF007F);
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    padding: 10px;
+    width: 5.82cm;
+    height: 0.3cm;
+    text-align : center;
+    top : 270px;
+    left : 1100px;
+}
+
+.jss{
+    position: absolute;
+    margin-top : -5px;
+    margin-left : 130px;
+}
+
+
+.checkboxes{
+    position: absolute;
+    margin-top: 10px;
+    text-align : left;
+    margin-bottom : 10px;
+    top : 290px;
+    left : 1110px;
+    width : 230px;
+    color : #ff007f;
+    background-color: rgb(252, 237, 245);
+}
+
+.valider{
+    right: 8px; /* Texte à droite de l'écran */
+    bottom: 4px;
+    background-color : #ff007f;
+    border : none;
+    color : white;
+    font-size : 20px;
+    position : absolute;
+    cursor : pointer;
+}
+
+.maxChoix{
+    position : absolute;
+    top : 570px;
+    left : 1150px;
+    color : #ff007f;
+}
+
