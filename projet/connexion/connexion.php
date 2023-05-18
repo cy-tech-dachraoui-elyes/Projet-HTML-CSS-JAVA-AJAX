@@ -11,8 +11,8 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
     // Vérifier si les informations de connexion sont correctes
     foreach($users['jeune'] as $user){
         if($user['email'] === $email && $user['mdp'] === $mdp ){
-            $_SESSION['user'] = $user['prenom'];
-            header("Location: ../jeune.php");
+            $_SESSION['user'] = $user['id'];
+            header("Location: /profil/profil.php");
             exit;
         }
          //else {
