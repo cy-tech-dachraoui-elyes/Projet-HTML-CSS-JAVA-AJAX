@@ -87,6 +87,7 @@
                     <input type="tel" id="tel" name="telephone" value="<?php echo $tel; ?>" placeholder="Format : 07 04 23 17 01">
                     <br>
                     <label for="Mdp"> Mot de passe :  </label>
+                    <img class="imgs" width="16px" height="16px" src="/boutton/eye-closed.svg" alt="password" onclick="affichage()" id="eye">
                     <input type="password" id="mdp" name="mdp" required value="<?php echo $mdp; ?>">
                     <br><br>
                     <button type="submit" class="valider">Valider</button>
@@ -99,3 +100,21 @@
     </body>
 </html>
 
+<script>
+
+// Cette fonction affiche le mot de passe et l'oeil ouvert/fermé
+
+        function affichage(){
+            var afficher = document.getElementById("mdp");
+            var eye = document.getElementById("eye");
+            if(afficher.type === "password"){
+                afficher.type = "texte";
+                eye.src = "/boutton/eye.svg";
+            }
+            else{
+                afficher.type = "password";
+                eye.src = "/boutton/eye-closed.svg";
+            }
+        }
+
+</script>
