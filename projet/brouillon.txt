@@ -1,0 +1,868 @@
+Jeune.php:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Jeunes 6.4 </title>
+        <link rel="stylesheet" type="text/css" href="Jeune.css">
+        <script src="../maxChoix.js" type="text/javascript"> </script>
+    </head>
+    
+    <body>
+
+        <div class="bande-grise">
+            
+            <div class="bande-centree">
+                <div class="texte2">
+                    <a href="a.php" class="aj">
+                        <span> <button class="jeune"> JEUNE </button> </span>
+                    </a>
+                    
+                    <a href="../referent.html" class="ar">
+                        <span class="referent">RÉFÉRENT</span>
+                    </a>
+                    <a href="../consultant.html" class="ac">
+                        <span class="consultant">CONSULTANT</span>
+                    </a>
+                    
+                    <a href="../partenaire.html">
+                        <span> <button class="partenaires"> PARTENAIRES </button> </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contenu">
+                <a href="../accueil.html">
+                    <img src="/image/jeunes.PNG" alt="Image">
+                </a>
+                    
+                <div class="texte">
+                    <p> JEUNE </p>
+                </div>
+                <div class="t2">
+                    <p> Je donne de la valeur à mon engagement</p>
+                </div>
+                
+            </div>
+            <div class="commande">
+                <div class="profil">
+                    <a href="/profil/profil.php" class="button">Profil</a>
+                </div>
+                <div class="liste">
+                    <a href="/profil/profil.php" class="button">Voir referent</a>
+                </div>
+                <div class="deconnexion">
+                    <a href="/deconnexion/deconnexion.php" class="button">Déconnexion</a>
+                </div>
+            </div>
+
+        </div>
+        
+        <p class="dec"> Décrivez votre expérience et mettez en avant ce que vous en avez retiré.</p>
+        
+        <img src="/image/traitRose.jpg" alt="traitrose" class="traitrose">
+            
+        <form action="reference.php" method="post">
+
+            <div class="container">
+            <fieldset class="cadreInfo1">
+            <legend>Jeune</legend>
+                    <label for="email"> Email : </label>
+                    <input type="email" id="email" name="mail" required value="<?php echo $email; ?>">        
+                </fieldset>
+                <fieldset class="cadreInfo">
+                <legend>Referent</legend>
+                    <label for="nom"> Nom : </label>
+                    <input type="text" id="nom" name="nomR" maxlenght="50" required>
+                            
+                    <br><label for="prenom"> Prénom : </label>
+                    <input type="text" id="prenom" name="prenomR" maxlenght="50" required >
+                        
+                    <br>
+                    <label for="email"> Email : </label>
+                    <input type="email" id="email" name="mailR" required >
+                            
+                    <br><br>
+                    <label for="engagement"> Mon engagement : </label>
+                    <input type="text" id="engagement" name="engagement" required>
+                            
+                    <br>
+                    <label for="duree"> Durée : </label>
+                    <input type="text" id="duree" name="duree" required>
+                    <br>
+                    <label for="milieu"> Milieu : </label>
+                    <input type="text" id="milieu" name="milieu" required >       
+
+                </fieldset>
+            </div>
+
+
+            <div class="checkboxes" id="checkboxes">
+            <input type="text" id="newQualites" placeholder="Nouvelle qualité" value="" maxlength="11">
+            <button onclick="ajouter()"id="ajouterBtn">Ajouter</button>  
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Autonome" onclick="maxChoix()">Autonme</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Passionné" onclick="maxChoix()" >Passioné</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Réfléchi" onclick="maxChoix()">Réfléchi</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="A l'écoute" onclick="maxChoix()">A l'écoute</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Organisé" onclick="maxChoix()">Organisé</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Fiable" onclick="maxChoix()" >Fiable</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Patient" onclick="maxChoix()" >Patient</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Responsable" onclick="maxChoix()">Responsable</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Social" onclick="maxChoix()">Social</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Optimiste" onclick="maxChoix()">Optimiste</label> 
+
+                <button type="submit" class="valider">Valider</button>
+        
+            </div>
+            
+
+        </form> 
+        <div class="bandeRose">
+            <p class="jss"> Je suis* </p>
+        </div>
+    
+        <p class="maxChoix"> * Faire 4 choix maximum </p>
+        
+    </body>
+</html>
+<script>
+ function ajouter() {
+        var newQualitesInput = document.getElementById("newQualites");
+        var checkboxes = document.getElementById("checkboxes");
+        var newQualitesValue = newQualitesInput.value;
+
+        if (newQualitesValue !== "") {
+            var checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.name = "qualites[]";
+            checkbox.value = newQualitesValue;
+
+            var label = document.createElement("label");
+            label.appendChild(checkbox);
+            label.appendChild(document.createTextNode(newQualitesValue));
+
+            var br = document.createElement("br");
+
+            checkboxes.appendChild(label);
+            checkboxes.appendChild(br);
+
+            newQualitesInput.value = "";
+
+            // Désactive le bouton "Ajouter" après trois ajouts
+            if (checkboxes.getElementsByTagName("input").length > 13) {
+                document.getElementById("ajouterBtn").disabled = true;
+            }
+        }
+    }
+</script>
+Jeune.css:
+
+/* ****************** BANDE GRISE ********************* */
+
+.bande-grise{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 70px;
+    width: 100%;
+    background-image: linear-gradient(to right, #B8B8B8 0%, #f5f5f5 20%, #B8B8B8 100%);
+}
+
+/* ****************** IMAGE ********************* */
+
+.bande-grise img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top : 7px;
+    padding-left : 40px;
+    transform: scale(2.6);
+    width: 200px;
+    height: auto;
+}
+
+
+/* ****************** "POUR FAIRE DE L'ENGAGEMENT UNE VALEUR" ********************* */
+
+.texte{
+    position: fixed;
+    color: #ff007f;
+    font-family : "Helvetica";
+    letter-spacing : 0px;
+    right: 0; /* Texte à droite de l'écran */
+    top: -75px;
+    font-size : 80px;
+    padding-right : 20px; 
+}
+
+.t2{
+    position: fixed;
+    font-family : "Helvetica";
+    right: 0; /* Texte à droite de l'écran */
+    top: -55px;
+    padding-right : 20px;
+    color : white;
+    font-size : 40px;
+    top : 40px;
+    letter-spacing : 1px;
+}
+
+
+/* ****************** BANDE CENTREE ********************* */
+
+.bande-centree{
+    position: fixed;
+    top: 140px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40%;
+    text-align: center;
+    background-image: linear-gradient(to right, #d3d3d3 0%, #f5f5f5 20%, #d3d3d3 100%);
+    padding: 10px;
+}
+
+.bande-centree .texte2 .jeune{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: white;
+    border : none;
+    background-color : #ff007f;
+    cursor : pointer;
+}
+
+.aj{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 span.referent{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: #228b22;
+    cursor : pointer;
+}
+
+.ar{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 span.consultant{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: #00bfff;
+    cursor : pointer;
+}
+
+.ac{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 .partenaires{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: grey;
+    border : none;
+    background-color : transparent;
+    cursor : pointer;
+}
+        /* ************* Positionnement de la déconnexion ************* */
+
+.deconnexion {
+    position: fixed;
+    right: 20px; /* Texte à droite de l'écran */
+    top: 160px;
+}
+/* ************* Positionnement de profil ************* */
+
+.profil{
+    position: fixed;
+    right: 160px; /* Texte à droite de l'écran */
+    top: 160px;
+}
+
+/* ************* Positionnement de liste reference ************* */
+
+.liste{
+    position: fixed;
+    right: 250px; /* Texte à droite de l'écran */
+    top: 160px;
+}
+          
+  
+
+        /* ************* Style du bouton de déconnexion et profil************* */
+
+.commande .button{
+    font-family : "Helvetica";
+    letter-spacing : 0px;
+    font-size : 14px;
+    background-color: #cccccc;
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    text-decoration : none; 
+}
+  
+.commande .button:hover {
+    background-color: #ff007f;
+}
+    
+.commande .button:active {
+    background-color: #ff0080; 
+}
+
+
+
+        /* *************************** TEXTE ROSE ************************* */
+.dec{
+    position: fixed;
+    font-size: 22px;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);/*le texte sera centré horizontalement au milieu de l'écran*/
+    color: #ff007f;
+    font-family: "Helvetica", sans-serif;
+    letter-spacing: 1px;
+}
+        /* ************************ TRAIT ROSE *********************** */
+
+.traitrose{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 660px;
+    left: 50%;
+    width : 670px;
+    height : 230px;
+
+}
+        /* ************************ DONNÉES *********************** */
+
+
+
+label{
+    font-size : 20px;
+    font-family : "helvetica";
+}
+.cadreInfo{
+    position: fixed;
+    font-size: 22px;
+    top: 540px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family : 20px;
+    padding-right : 75px;
+    width: 25%;
+    border: 1px solid #ff007f;
+    background-color : white;
+    color : #ff007f;
+}
+.cadreInfo1{
+    position: fixed;
+    font-size: 22px;
+    top: 320px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family : 20px;
+    padding-right : 75px;
+    width: 25%;
+    border: 1px solid #ff007f;
+    background-color : white;
+    color : #ff007f;
+}
+
+
+input[type="text"]{
+    border: none;
+    border-bottom: 1px dotted black;
+    outline: none;
+    border-color : #ff007f;
+    font-family : 24px;
+}
+
+input[type="email"]{
+    border: none;
+    border-bottom: 1px dotted black;
+    outline: none;
+    border-color : #ff007f;
+    font-family : 24px;
+}
+
+input{
+    box-sizing: border-box;
+    width: 45%;
+}
+
+input, textarea{
+    color: navy;
+    font-size: 14px;
+}
+
+        /* ************************** "JE SUIS"**************************** */
+
+.bandeRose{
+    position : fixed;
+    top: 359px;
+    left: 79.9%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, white, #FF007F);
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    padding: 10px;
+    width: 5.65cm;
+    height: 0.3cm;
+    text-align : center;
+}
+
+.jss{
+    position: absolute;
+    margin-top : -5px;
+    margin-left : 130px;
+}
+
+
+.checkboxes{
+    position: fixed;
+    margin-top: 10px;
+    text-align : left;
+    margin-bottom : 10px;
+    top: 430px;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width : 230px;
+    color : #ff007f;
+    background-color: rgb(252, 237, 245);
+}
+
+
+.valider{
+    position : absolute;
+    background-color : #ff007f;
+    border : none;
+    color : white;
+    font-size : 25px;
+    position : absolute;
+    top : 320px;
+    left : 80px;
+    cursor : pointer;
+}
+
+.maxChoix{
+    position : fixed;
+    top: 610px;
+    left: 79.9%;
+    transform: translate(-50%, -50%);
+    color : #ff007f;
+}
+
+profil.php:
+<?php
+	include("session.php");
+?>
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Jeunes 6.4 </title>
+        <link rel="stylesheet" type="text/css" href="profil.css">
+    </head>
+    
+    <body>
+
+        <div class="bande-grise">
+            
+            <div class="bande-centree">
+                <div class="texte2">
+                    <a href="../accueil.html" class="aj" >
+                        <span class="accueil">Accueil</span>
+                    </a>
+                    
+                    <a href="profil.php" class="ar">
+                        <span class="profil">Profil</span>
+                    </a>
+                    
+                    
+                    <a href="/Jeune/Jeune.php" class="ac">
+                        <span class="demande" valeur="3">Demandes de Référent</span>
+                    </a>
+                    
+                    <a href="partenaire.html">
+                        <span> <button class="liste">Liste des Référents</button> </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contenu">
+                <a href="../accueil.html">
+                    <img src="/image/jeunes.PNG" alt="Image" class="jeune">
+                </a>
+                    
+                <div class="texte">
+                    <p>JEUNE </p>
+                </div>
+                
+            </div>
+            <div class="deconnexion">
+                <a href="/deconnexion/deconnexion.php" class="button">Déconnexion</a>
+            </div>
+        </div>
+        
+        <p class="dec">Personnalisez votre profil : exprimez votre identité, partagez vos informations.</p>
+
+        <img src="/image/logo_jeune.png" alt="Image" class="dec">
+        
+        <img src="/image/traitRose.jpg" alt="traitrose" class="traitrose">
+            
+        <form  id="monFormulaire" action="mis_a_jour.php" method="post">
+
+            <div class="container">
+
+                <fieldset class="cadreInfo">
+                 <!-- valeur "id" sera envoyée par POST mais ne passe pas par le bloc formulaire -->
+                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+
+                    <label for="nom"> Nom : </label>
+                    <input type="text" id="nom" name="nom" maxlenght="50" required value="<?php echo $nom; ?>">
+                            
+                    <br><label for="prenom"> Prénom : </label>
+                    <input type="text" id="prenom" name="prenom" maxlenght="50" required value="<?php echo $prenom; ?>">
+                        
+                    
+                    <br>
+                    <label for="email"> Email : </label>
+                    <input type="email" id="email" name="email" required value="<?php echo $email; ?>">     
+                    <br>
+                    <label for="reseau"> Réseau Social :  </label>
+                    <input type="text" id="reseau" name="reseau" required value="<?php echo $reseau; ?>">
+                    <br><br>
+                    <label for="date">Date de naissance : </label>
+                    <input type="date" id="date" name="date"  pattern="\d{2}/\d{2}/\d{4}" required maxlenght="4" value="<?php echo $date; ?>">
+                    <br>
+                    <label for="tel"> Tel :  </label>
+                    <input type="tel" id="tel" name="telephone" value="<?php echo $tel; ?>" placeholder="Format : 07 04 23 17 01">
+                    <br>
+                    <label for="Mdp"> Mot de passe :  </label>
+                    <img class="imgs" width="16px" height="16px" src="/boutton/eye-closed.svg" alt="password" onclick="affichage()" id="eye">
+                    <input type="password" id="mdp" name="mdp" required value="<?php echo $mdp; ?>">
+                    <br><br>
+                    <button type="submit" class="valider">Valider</button>
+                </fieldset>
+            </div>
+                
+        </form>
+        <script>
+    </script> 
+    </body>
+</html>
+
+<script>
+
+// Cette fonction affiche le mot de passe 
+
+        function affichage(){
+            var afficher = document.getElementById("mdp");
+            var eye = document.getElementById("eye");
+            if(afficher.type === "password"){
+                afficher.type = "texte";
+                eye.src = "/boutton/eye.svg";
+            }
+            else{
+                afficher.type = "password";
+                eye.src = "/boutton/eye-closed.svg";
+            }
+        }
+
+</script>
+
+profil.css:
+
+/* ****************** BANDE GRISE ********************* */
+
+.bande-grise{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 70px;
+    width: 100%;
+    background-image: linear-gradient(to right, #B8B8B8 0%, #f5f5f5 20%, #B8B8B8 100%);
+}
+
+/* ****************** IMAGE ********************* */
+
+.bande-grise img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top : 7px;
+    padding-left : 40px;
+    transform: scale(2.6);
+    width: 200px;
+    height: auto;
+}
+
+
+/* ****************** "Jeune" ********************* */
+
+.texte{
+    position: fixed;
+    color: #ff007f;
+    font-family : "Helvetica";
+    letter-spacing : 0px;
+    right: 0; /* Texte à droite de l'écran */
+    top: -55px;
+    font-size : 80px;
+    padding-right : 20px; 
+}
+  
+  
+/* ****************** BANDE CENTREE ********************* */
+
+.bande-centree{
+    position: fixed;
+    top: 140px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40%;
+    text-align: center;
+    background-image: linear-gradient(to right, #d3d3d3 0%, #f5f5f5 20%, #d3d3d3 100%);
+    padding: 10px;
+}
+
+.bande-centree .texte2 span.accueil{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: grey;
+    border : none;
+    cursor : pointer;
+}
+
+.aj{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 span.profil{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: #ff007f;
+    cursor : pointer;
+}
+
+.ar{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 span.demande{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: #228b22;
+    cursor : pointer;
+}
+
+.ac{
+    text-decoration : none;
+}
+
+.bande-centree .texte2 .liste{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 19px;
+    font-family : "helvetica";
+    letter-spacing : -1px;
+    color: #00bfff;
+    border : none;
+    background-color : transparent;
+    cursor : pointer;
+}
+
+        /* ************* Positionnement de la déconnexion ************* */
+
+.deconnexion {
+    position: fixed;
+    right: 20px; /* Texte à droite de l'écran */
+    top: 160px;
+}
+  
+
+        /* ************* Style du bouton de déconnexion ************* */
+
+.deconnexion .button{
+    font-family : "Helvetica";
+    letter-spacing : 0px;
+    font-size : 14px;
+    background-color: #cccccc;
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    text-decoration : none; 
+}
+  
+.deconnexion .button:hover {
+    background-color: #ff007f;
+}
+    
+.deconnexion .button:active {
+    background-color: #ff0080; 
+}
+
+        /* *************************** TEXTE ROSE ************************* */
+
+.dec{
+    position: fixed;
+    font-size: 22px;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);/*le texte sera centré horizontalement au milieu de l'écran*/
+    color: #ff007f;
+    font-family: "Helvetica", sans-serif;
+    letter-spacing: 1px;
+}
+
+        /* ************************* LOGO JEUNE *********************** */
+
+img.dec {
+    top: 320px;
+}
+
+        /* ************************ TRAIT ROSE *********************** */
+
+.traitrose{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 680px;
+    left: 50%;
+    width : 670px;
+    height : 230px;
+
+}
+
+
+        /* ************************ DONNÉES *********************** */
+
+
+label{
+    font-size : 20px;
+    font-family : "helvetica";
+}
+
+.cadreInfo{
+    position: fixed;
+    font-size: 22px;
+    top: 540px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family : 20px;
+    padding-right : 75px;
+    width: 25%;
+    border: 1px solid #ff007f;
+    background-color : white;
+    color : #ff007f;
+}
+
+input[type="text"]{
+    border: none;
+    border-bottom: 1px dotted black;
+    outline: none;
+    border-color : #ff007f;
+    font-family : 24px;
+}
+
+input[type="email"]{
+    border: none;
+    border-bottom: 1px dotted black;
+    outline: none;
+    border-color : #ff007f;
+    font-family : 24px;
+}
+
+input{
+    box-sizing: border-box;
+    width: 45%;
+}
+
+input, textarea{
+    font-size: 14px;
+    color: navy;
+}
+
+        /* ************************** "JE SUIS"**************************** */
+
+.bandeRose{
+    position : absolute;
+    background: linear-gradient(to right, white, #FF007F);
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    padding: 10px;
+    width: 5.82cm;
+    height: 0.3cm;
+    text-align : center;
+    top : 270px;
+    left : 1100px;
+}
+
+.jss{
+    position: absolute;
+    margin-top : -5px;
+    margin-left : 130px;
+}
+
+
+.checkboxes{
+    position: absolute;
+    margin-top: 10px;
+    text-align : left;
+    margin-bottom : 10px;
+    top : 290px;
+    left : 1110px;
+    width : 230px;
+    color : #ff007f;
+    background-color: rgb(252, 237, 245);
+}
+
+.valider{
+    right: 8px; /* Texte à droite de l'écran */
+    bottom: 4px;
+    background-color : #ff007f;
+    border : none;
+    color : white;
+    font-size : 20px;
+    position : absolute;
+    cursor : pointer;
+}
+
+.maxChoix{
+    position : fixed;
+    top : 570px;
+    left : 1150px;
+    color : #ff007f;
+}
+
+
+.imgs{
+    position: absolute;
+    left:68%;
+    bottom:45px;
+}
