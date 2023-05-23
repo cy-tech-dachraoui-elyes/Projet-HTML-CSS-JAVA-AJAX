@@ -1,3 +1,8 @@
+<?php
+	include("session.php");
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +18,7 @@
             
             <div class="bande-centree">
                 <div class="texte2">
-                    <a href="a.php" class="aj">
+                    <a href="Jeune.php" class="aj">
                         <span> <button class="jeune"> JEUNE </button> </span>
                     </a>
                     
