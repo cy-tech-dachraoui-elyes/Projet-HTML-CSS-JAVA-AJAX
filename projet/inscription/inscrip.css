@@ -49,6 +49,7 @@ body{
     padding-bottom: 20px;
     background-size: cover;
     background-position: center center;
+    
 }
 
 .sign-up{
@@ -77,18 +78,33 @@ h2 {
     align-items: center;
     justify-content: center; 
     margin-bottom: 20px;
+
 }
+
 .label-date {
+    position:absolute;
+    top: 400px;
     font-size: 1rem;
     color: #333;
-    margin-right: -17px;
-    width: 200px;
-  }
-  .input-box input[type="date"] {
-    outline: none;
     width: 70%;
-     /* Diminue la distance entre la date de naissance et son input */
-  }
+
+    margin-left: 45px; /* Augmenter la valeur de margin-left pour pousser l'input plus à droite */
+    margin-right: 70px;
+
+}
+
+.input-box input[type="date"] {
+    outline: none;
+
+
+    width: 100%;
+    margin-left: 54%;
+    margin-right: -51%;
+    /* Diminue la distance entre la date de naissance et son input */
+}
+
+
+
 .imgs{
     position: absolute;
     right: 10px;
