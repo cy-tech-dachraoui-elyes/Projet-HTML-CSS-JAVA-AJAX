@@ -30,18 +30,21 @@ body{
 }
 
 .texte{
-    position : absolute;
-    left : 1270px;
-    top : -50px;
+    position: fixed;
+    right: 0; 
+    top: -55px;
     letter-spacing : 0px;
     color: #000000;
     font-family : "Helvetica";
     font-size : 80px;
+    padding-right : 20px;
 }
 
 .sign-up-wrapper{
     position: fixed;
-    left: 40%;
+    left: 50%;
+    top: 500px;
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +52,6 @@ body{
     padding-bottom: 20px;
     background-size: cover;
     background-position: center center;
-    
 }
 
 .sign-up{
@@ -82,28 +84,29 @@ h2 {
 }
 
 .label-date {
-    position:absolute;
-    top: 400px;
+    position:relative;
+    top: 0px;
     font-size: 1rem;
     color: #333;
-    width: 70%;
+    width: 300%;
+    padding-right:0%; 
+    margin-left: -15%; /* Augmenter la valeur de margin-left pour pousser l'input plus à droite */
+    margin-right: 0%;
+    padding-left: 0%;
+    
 
-    margin-left: 45px; /* Augmenter la valeur de margin-left pour pousser l'input plus à droite */
-    margin-right: 70px;
 
 }
 
 .input-box input[type="date"] {
-    outline: none;
 
-
-    width: 100%;
-    margin-left: 54%;
-    margin-right: -51%;
+    width: 250%;
+    margin-left: 10%;
+    margin-right: 0%;
+    padding-left: 2%;
+    padding-right: 0%;
     /* Diminue la distance entre la date de naissance et son input */
 }
-
-
 
 .imgs{
     position: absolute;
