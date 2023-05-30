@@ -31,7 +31,7 @@
                         <span class="demande" valeur="3">Demandes de Référent</span>
                     </a>
                     
-                    <a href="partenaire.html">
+                    <a href="/Jeune/liste_reference.php">
                         <span> <button class="liste">Liste des Référents</button> </span>
                     </a>
                 </div>
