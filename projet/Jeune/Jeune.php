@@ -53,7 +53,7 @@
                     <a href="/profil/profil.php" class="button">Profil</a>
                 </div>
                 <div class="liste">
-                    <a href="/profil/profil.php" class="button">Voir referent</a>
+                    <a href="/Jeune/liste_reference.php" class="button">Voir références</a>
                 </div>
                 <div class="deconnexion">
                     <a href="/deconnexion/deconnexion.php" class="button">Déconnexion</a>
