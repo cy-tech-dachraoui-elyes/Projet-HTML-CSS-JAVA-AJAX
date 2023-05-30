@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Afficher un message de confirmation
             echo "La demande de référence a été ajoutée!";
+            header('Location: Jeune.php');
             break;
         }
     }
