@@ -9,7 +9,7 @@
         <meta charset="UTF-8">
         <title> Jeunes 6.4 </title>
         <link rel="stylesheet" type="text/css" href="Jeune.css">
-        <script src="maxChoix.js" type="text/javascript"> </script>
+        <script src="../maxChoix.js" type="text/javascript"> </script>
     </head>
     
     <body>
