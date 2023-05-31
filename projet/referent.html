@@ -1,3 +1,29 @@
+<?php
+$emailR = urldecode($_GET['emailR']);
+$id = $_GET['id'];
+// Charger le contenu du fichier utilisateurs.json dans une variable
+$json = file_get_contents('utilisateurs.json');
+
+// Convertir le contenu JSON en tableau associatif PHP
+$utilisateurs = json_decode($json, true);
+
+foreach ($utilisateurs['jeune'] as $utilisateur) {
+    if ($utilisateur['id'] == $id) {// Vérifier le compte utilisateur jeune
+        $email = $utilisateur['email'];
+        foreach ($utilisateur['references'] as $referent) {
+            if ($referent['email_ref'] == $emailR) {
+                $nomR = $referent['nom_ref'];
+                $prenomR = $referent['prenom_ref'];
+                $engagement = $referent['engagement'];
+                $duree = $referent['duree'];
+                $milieu = $referent['milieu'];
+                $qualites = $referent['qualites'];
+            }
+        }
+    }
+}
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -69,29 +95,29 @@
                 <form method="post" action="jeune.php" class="info">
                     <fieldset class="infos">
                         <label for="prenom"> Nom : </label>
-                        <input type="text" id="nom" name="nom" maxlenght="50">
+                        <input type="text" id="nom" name="nom" maxlenght="50" value="<?php echo $nomR; ?>">
                             
                         <br><label for="prenom"> Prénom : </label>
-                        <input type="text" id="prenom" name="prenom" maxlenght="50"/>
+                        <input type="text" id="prenom" name="prenom" maxlenght="50" value="<?php echo $prenomR; ?>">
                         
                         <br>
-                        <label for="date"> Date de naissance: </label>
-                        <input type="date" id="date" name="date" placeholder="jj/mm/aaaa" pattern="\d{2}/\d{2}/\d{4}" required maxlenght="4">
+                        <label for="date"> Milieu: </label>
+                        <input type="text" id="prenom" name="prenom" maxlenght="50" value="<?php echo $milieu; ?>">
                         <br>
                         <label for="email"> Email : </label>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email" value="<?php echo $emailR; ?>">
                             
                         <br>
                         <label for="reseau"> Réseau Social :  </label>
-                        <input type="text" id="reseau" name="reseau">
+                        <input type="text" id="reseau" name="reseau" value="<?php echo $email; ?>">
                             
                         <br><br>
                         <label for="engagement"> Mon engagement: </label>
-                        <input type="text" id="engagement" name="engagement">
+                        <input type="text" id="engagement" name="engagement" value="<?php echo $engagement; ?>">
                             
                         <br>
                         <label for="duree"> Durée : </label>
-                        <input type="text" id="duree" name="duree">
+                        <input type="text" id="duree" name="duree" value="<?php echo $duree; ?>">
                             
                         
                     </fieldset>
