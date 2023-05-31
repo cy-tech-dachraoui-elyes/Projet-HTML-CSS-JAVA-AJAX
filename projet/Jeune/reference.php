@@ -3,6 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Récupération des données du formulaire
     $email = $_POST['mail'] ?? '';
+    $id = $_POST['id'] ?? '';
     $nomR = $_POST['nomR'] ?? '';
     $prenomR = $_POST['prenomR'] ?? '';
     $emailR = $_POST['mailR'] ?? '';
@@ -44,7 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             file_put_contents('../utilisateurs.json', $json);
 
             // Afficher un message de confirmation
-            echo "La demande de référence a été ajoutée!";
+
+	        include("mail/mail.php");
+
             header('Location: Jeune.php');
             break;
         }
