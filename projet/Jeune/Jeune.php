@@ -1,5 +1,5 @@
 <?php
-	include("session.php");
+	include("session.php"); //Inclusion d'un fichier qui utilise les paramètres de la session en cours.
 ?>
 
 
@@ -22,7 +22,7 @@
                         <span> <button class="jeune"> JEUNE </button> </span>
                     </a>
                     
-                    <a href="../referent.html" class="ar">
+                    <a href="../referent.php" class="ar">
                         <span class="referent">RÉFÉRENT</span>
                     </a>
                     <a href="../consultant.html" class="ac">
@@ -72,7 +72,8 @@
             <fieldset class="cadreInfo1">
             <legend>Jeune</legend>
                     <label for="email"> Email : </label>
-                    <input type="email" id="email" name="mail" required value="<?php echo $email; ?>">        
+                    <input type="email" id="email" name="mail" required value="<?php echo $email; ?>">
+                    <input type="hidden" name="id" value="<?php echo $id; ?>">        
                 </fieldset>
                 <fieldset class="cadreInfo">
                 <legend>Referent</legend>
@@ -113,12 +114,37 @@
                 <label class="qualite"><input type="checkbox" name="qualites[]" value="Social" onclick="maxChoix()">Social</label>
                 <label class="qualite"><input type="checkbox" name="qualites[]" value="Optimiste" onclick="maxChoix()">Optimiste</label> 
 
-                <button type="submit" class="valider">Valider</button>
+                <button type="submit" class="valider" onclick="verifierFormulaire(event)" id="ajouterBtn">Valider</button>
         
             </div>
             
 
-        </form> 
+        </form>
+        <script>
+
+            function verifierFormulaire(event) { //  Vérifie si au moins une case "qualité" est cochée.
+                var checkboxes = document.getElementsByName('qualites[]');
+                var cocher = false;
+
+                for (var i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].checked) {
+                        cocher = true;
+                        break;
+                    }
+                }
+                if (!cocher) { 
+                    alert("Veuillez cocher au moins une option.");
+                    document.getElementById("ajouterBtn").disabled = true;
+                    event.preventDefault(); // Empêcher la soumission du formulaire
+
+                    // Réactiver le bouton après 2 secondes
+                    setTimeout(function() {
+                    document.getElementById("ajouterBtn").disabled = false;
+                    }, 2000);
+                }
+            }
+        </script>   
+
         <div class="bandeRose">
             <p class="jss"> Je suis* </p>
         </div>
