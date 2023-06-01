@@ -142,12 +142,16 @@
 .dec{
     position: fixed;
     font-size: 22px;
-    top: 200px;
+    top: 220px;
     left: 50%;
     transform: translate(-50%, -50%);/*le texte sera centré horizontalement au milieu de l'écran*/
     color: #ff007f;
+
     font-family: "Helvetica", sans-serif;
     letter-spacing: 1px;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
         /* ************************* LOGO JEUNE *********************** */
