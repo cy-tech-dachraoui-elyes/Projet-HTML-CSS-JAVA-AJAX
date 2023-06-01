@@ -9,7 +9,7 @@ $mail = new PHPMailer(true);
 
 $emailR_encoded = urlencode($emailR);
 $id_encoded = urlencode($id);
-$lien = "http://localhost:8080/referent.html?emailR=$emailR_encoded&id=$id_encoded";
+$lien = "http://localhost:8080/referent.php?emailR=$emailR_encoded&id=$id_encoded";
 
 
 try {
