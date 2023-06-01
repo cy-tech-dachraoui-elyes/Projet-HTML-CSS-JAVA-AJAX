@@ -52,8 +52,8 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
         <div class="gradient"></div>
         <div class="sign-up-wrapper">
             <div class="sign-up">
-                <?php if(isset($msg)): ?>
-                <p class="erreur"><?php echo $msg; ?></p>
+                <?php if(isset($msg)): ?> <!-- Affichage d'un message d'erreur en cas d'identifiant ou de mot de passe incorrect.-->
+                <p class="erreur"><?php echo $msg; ?></p> 
                 <?php endif; ?>
                 <h2>Se connecter</h2>
                 <div class="input-box">
@@ -67,10 +67,16 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
                     <input type="password" class="input" placeholder="Entre ton mot de passe..." id="mdp" name="mdp" required>
                 </div>
                 <input type="submit" value="Se connecter">
-            </div>
-            
-        </div>
+
+                <div class="container">
+                    <span class="text">Pas de compte? </span><span class="text"><a href="/inscription/Inscription.html">Créez-en un !</a></span>
+                </div>
+        <img src="/image/logo_jeune.png" alt="Image" class="dec">
     </form>
+    <div class="trait-long">
+    
+</div>
+
     
     <style>
         
