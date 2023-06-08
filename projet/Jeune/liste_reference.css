@@ -128,6 +128,7 @@
     box-sizing: border-box;
 }
 
+
 .reference {
 
     cursor: pointer;
@@ -147,9 +148,11 @@
     
 }
 
+
 .reference:hover {
     background: linear-gradient(to bottom, #ff007f, #e77fb1);
     color: white;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.75);
 }
 
 /* Détails de référence */
@@ -182,4 +185,66 @@
     
  }
 
- 
+ .reference-validee {
+    color: #1aac1a;
+    border: 1px solid #1aac1a;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.75);
+}
+
+.reference-validee:hover {
+    background: linear-gradient(to bottom, #228b22, #C2E12E);
+    color: white;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.75);
+}
+
+.reference-validee-details{
+    display: none;
+    padding: 10px;
+    color: #1aac1a;
+    background: linear-gradient(to bottom, #ffffff, #dddbdb);
+    
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    right:560px;
+    transform: scale(1.5); /* Ajustez la valeur de l'échelle selon vos besoins */
+    margin-right: 5px; /* Ajoute un peu d'espace entre la case à cocher et le texte */
+    
+  }
+
+  .envoyer{
+    position : absolute;
+    border : none;
+    bottom : 100px;
+    right : 110px;
+    padding: 10px 10px; 
+    text-align: center; 
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+input[type="email"]{
+    border: none;
+    border-bottom: 3px dotted black;
+    outline: none;
+    border-color : #1c9fcb;
+}
+
+.bouton{
+    position : absolute;
+    background-color : #1c9fcb;
+    border : none;
+    color : white;
+    font-size : 20px;
+    cursor : pointer;
+    padding: 10px 10px;
+    text-align: center; 
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    bottom: -50px;
+}
+
+.bouton:hover {
+    background-color: #00bfff; /* Couleur de fond au survol */
+  }

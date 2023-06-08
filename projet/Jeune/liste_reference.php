@@ -46,6 +46,7 @@ if(isset($_SESSION['user'])){
                 details.style.display = 'block';
             }
         }
+        
     </script>
 </head>
 
@@ -75,19 +76,48 @@ if(isset($_SESSION['user'])){
 
     <img src="/image/traitRose.jpg" alt="traitrose" class="traitrose">
 
+    <form action="" method="POST">
     <div class="references-container">
+   
         <?php foreach($references as $reference): ?>
-            <div class="reference" onclick="MontrerDetails(this)">
+            <?php if ($reference['valide']): ?>
+                <label class="reference-label">
+                    <span class="reference-checkbox">
+                        <input type="checkbox" name="reference[]" value="<?php echo $index; ?>">
+                    </span>
+                </label>
+            <?php endif; ?>
+            <div class="reference <?php if ($reference['valide']) echo 'reference-validee'; ?>" onclick="MontrerDetails(this)">
                 <p><b>Référent:</b> <?php echo $reference['nom_ref']; echo " "; echo $reference['prenom_ref']; ?></p>
                 <p><b>Engagement :</b> <?php echo $reference['engagement']; ?></p>
-                <div class="reference-details" style="display: none;">
+              
+                <div class="reference-details <?php if ($reference['valide']) echo 'reference-validee-details'; ?>" style="display: none;">
                     <p><b>Email du référent:</b> <?php echo $reference['email_ref']; ?></p>
                     <p><b>Durée :</b> <?php echo $reference['duree']; ?></p>
                     <p><b>Milieu :</b> <?php echo $reference['milieu']; ?></p>
                     <p><b>Qualités :</b> <?php echo implode(", ", $reference['qualites']); ?></p>
+                    <p><b>Statut :</b> <?php if ($reference['valide']==true){
+                        echo "Validée par le référent.";
+                    }
+                    else{
+                        echo "Non validée par le référent"; 
+                    }?></p>
+
+                    <?php if ($reference['valide']==true){
+                        echo "<p><b>Commentaire du référent : </b>"; echo $reference['Commentaire'];
+                        echo "<p><b>Qualités confirmées par le référent : </b>"; echo implode(", ", $reference['qualites_ref']);;
+                    }
+                   ?>
+
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
+    <div class="envoyer">
+        <label for="email"> Veuillez entrer l'email du Consultant: </label><br>
+        <input type="email" id="email" name="email" value="" required><br>
+        <button type="submit" class="bouton">Envoyer</button>
+    </div>
+    </form>
 </body>
 </html>
