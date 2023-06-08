@@ -59,10 +59,7 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
                 </div>
             </div>
             
-            <div>
-<!--                <label for="commentaire">Commentaire:</label>-->
-                <textarea id="commentaire" name="commentaire" required class="comm"></textarea><br>
-            </div>
+        
             
             <div class="commentaire">
                 <p class="comment"> COMMENTAIRES </p>
@@ -92,8 +89,11 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
             
             <div class="checkboxes">
                 
-                <form method="post" action="jeune.php" class="info">
+                <form method="POST" action="validation_reference.php">
+                    <div class="info">
                     <fieldset class="infos">
+                        <!-- valeur "id" sera envoyée par POST mais ne passe pas par le bloc formulaire -->
+                    <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <label for="prenom"> Nom : </label>
                         <input type="text" id="nom" name="nom" maxlenght="50" value="<?php echo $nomR; ?>">
                             
@@ -121,29 +121,29 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
                             
                         
                     </fieldset>
-                </form>
-        
-        
-        
-                <form method="post">
-                    <label><input type="checkbox" name="option1" value="option1" onclick="maxChoix()">Autonme</label>
-                    <label><input type="checkbox" name="option2" value="option2" onclick="maxChoix()">Passioné</label>
-                    <label><input type="checkbox" name="option3" value="option3" onclick="maxChoix()">Réfléchi</label>
-                    <label><input type="checkbox" name="option4" value="option4" onclick="maxChoix()">A l'écoute</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Organisé</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Passioné</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Fiable</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Patient</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Réfléchi</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Responsable</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Social</label>
-                    <label><input type="checkbox" name="option5" value="option5" onclick="maxChoix()">Optimiste</label>
+                    </div>
+                    </div>
+                    <div>
+<!--                <label for="commentaire">Commentaire:</label>-->
+                <textarea id="commentaire" name="commentaire" required class="comm"></textarea><br>
+            </div>
+                    <label><input type="checkbox" name="qualites[]" value="Autonome" onclick="maxChoix()">Autonome</label>
+                    <label><input type="checkbox" name="qualites[]" value="Passioné" onclick="maxChoix()">Passioné</label>
+                    <label><input type="checkbox" name="qualites[]" value="Réfléchi" onclick="maxChoix()">Réfléchi</label>
+                    <label><input type="checkbox" name="qualites[]" value="A l'écoute" onclick="maxChoix()">A l'écoute</label>
+                    <label><input type="checkbox" name="qualites[]" value="Organisé" onclick="maxChoix()">Organisé</label>
+                    <label><input type="checkbox" name="qualites[]" value="Fiable" onclick="maxChoix()">Fiable</label>
+                    <label><input type="checkbox" name="qualites[]" value="Patient" onclick="maxChoix()">Patient</label>
+                    <label><input type="checkbox" name="qualites[]" value="Responsable" onclick="maxChoix()">Responsable</label>
+                    <label><input type="checkbox" name="qualites[]" value="Social" onclick="maxChoix()">Social</label>
+                    <label><input type="checkbox" name="qualites[]" value="Optimiste" onclick="maxChoix()">Optimiste</label>
 
                     <button type="submit" class="valider">Valider</button>
                 </form>
+    
             
             </div>
-        </div>
+        
         
         
         <div class="bandeVerte">
@@ -154,5 +154,4 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
         
     </body>
 </html>
-
 
