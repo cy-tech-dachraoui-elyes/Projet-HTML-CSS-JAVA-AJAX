@@ -274,7 +274,8 @@ input, textarea{
 }
 .comm{
     position : absolute;
-    top : 300px;
+    top : 0px;
+    left: -1080px;
     width: 5cm;
     height: 7cm;
     background-color:  #E0EB7F;
