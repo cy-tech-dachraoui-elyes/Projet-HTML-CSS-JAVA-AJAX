@@ -5,56 +5,80 @@ body{
     padding: 0;
     font-family : "Helvetica";
     
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align : center;
+    transition: transform 0.3s ease; /* Ajoute une transition fluide lors du zoom */
 }
 
         /* ************************* TITRE ********************** */
 
+.conteneur titre{
+    position: fixed;
+    top: 5%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;   
+}
+
 .titre{
-    color : navy;
-    font-size : 36px;
-    text-align : center;
+    color: navy;
+    font-size: 2vw;
 }
 
         /* ************************* IMAGE ********************** */
 
-
-.image{
-    display: flex;
+.image img{
+    width: 300px; 
+    height: auto;
+    transform: scale(2.4);
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+
 }
 
-.image img{
-    position  : absolute;
-    top : 200px;
-    height : 50px;
-    transform : scale(7.9);
+
+
+.conteneur image{
+    position: fixed;
+    top: 35%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
 }
+
+
 
         /* ************************* "... l’expression d’un potentiel, la promesse d’une richesse !"  ********************** */
 
 
-.desc{
-    position : absolute;
-    top : 390px;
-    left : 590px;
+.texte{
     color : navy;
-    font-size : 22px;
+    font-size : 1vw;
+    align-items: center;
     text-align : center;
+
 }
+
+.conteneur texte {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+}
+
+
+
 
         /* ************************* BOUTON ********************** */
 
 .bouton-container{
-    display: flex;
+    position: fixed;
     justify-content: center;
     margin-top: 50px;
+    transition: transform 0.3s ease; /* Ajoute une transition fluide lors du zoom */
 }
 
 .bouton-container a{
@@ -62,9 +86,6 @@ body{
 }
 
 .bouton{
-    position : absolute;
-    top : 250px;
-    left : 330px;
     background-color: transparent;
     color: red;
     font-size: 24px;
@@ -73,22 +94,31 @@ body{
     cursor : pointer;
 }
 
+.conteneur bouton{
+    position : fixed;
+    top : 80%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    transition: transform 0.3s ease;
+}
+
+
 
 
 /* ********************* PIEDS DE PAGE ******************** */
 
-.bande-blanche{
-background-color: white;
-height: 85px;
-width: 100%;
-position : fixed;
-bottom : 0;
-}
-
-.bas{
-color : grey;
-font-size : 12px;
-text-align : center;
-}
 
 
+.bande-blanche {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+  }
+  
+  .bas {
+    color: grey;
+    font-size: 12px;
+    text-align: center;
+  }
+  
