@@ -36,7 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'engagement' => $engagement,
                 'duree' => $duree,
                 'milieu' => $milieu,
-                'qualites' => $qualites
+                'qualites' => $qualites,
+                'valide' => false, // par défaut la demande de référence est non validée.
+                'Commentaire' => "" ,
+                'qualites_ref' => ""
             );
             $utilisateurs['jeune'][$key]['references'][] = $reference;
 
