@@ -76,9 +76,11 @@ if(isset($_SESSION['user'])){
 
     <img src="/image/traitRose.jpg" alt="traitrose" class="traitrose">
 
-    <form action="" method="POST">
+    <form action="mail/mail_consul.php" method="POST">
     <div class="references-container">
-   
+
+    <input type="hidden" name="id" value="<?php echo $id; ?>">
+
         <?php foreach($references as $reference): ?>
             <?php if ($reference['valide']): ?>
                 <label class="reference-label">
@@ -115,9 +117,17 @@ if(isset($_SESSION['user'])){
     </div>
     <div class="envoyer">
         <label for="email"> Veuillez entrer l'email du Consultant: </label><br>
-        <input type="email" id="email" name="email" value="" required><br>
-        <button type="submit" class="bouton">Envoyer</button>
+        <input type="email" id="emailC" name="emailC" value="" required><br>
+        <button type="submit" class="bouton" onclick="envoyer()">Envoyer</button>
     </div>
     </form>
 </body>
 </html>
+<script>
+
+// Cette fonction affiche le mot de passe et l'oeil ouvert/fermé
+
+        function envoyer(){
+            alert("Votre mail a été envoyé au consultant.");
+        }
+</script>
