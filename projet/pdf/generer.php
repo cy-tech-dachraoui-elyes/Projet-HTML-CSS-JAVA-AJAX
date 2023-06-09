@@ -1,5 +1,5 @@
 <?php
-require('fpdf185/fpdf.php');
+require('FPDF/fpdf.php');
 
 class PDF_Document extends FPDF {
     function __construct() {
