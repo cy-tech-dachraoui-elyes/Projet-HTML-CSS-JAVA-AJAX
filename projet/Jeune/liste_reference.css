@@ -48,7 +48,13 @@
     top : 40px;
     letter-spacing : 1px;
 }
+    /* ************* Positionnement de la déconnexion ************* */
 
+.pdf {
+position: fixed;
+right: 260px; /* Texte à droite de l'écran */
+top: 160px;
+}
 
         /* ************* Positionnement de la déconnexion ************* */
 
