@@ -2,7 +2,7 @@
 $emailC = urldecode($_GET['emailC']);
 $id = $_GET['id'];
 // Charger le contenu du fichier utilisateurs.json dans une variable
-$json = file_get_contents('utilisateurs.json');
+$json = file_get_contents('../utilisateurs.json');
 
 // Convertir le contenu JSON en tableau associatif PHP
 $utilisateurs = json_decode($json, true);
@@ -49,10 +49,10 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
                         <span> <button class="jeune"> JEUNE </button> </span>
                     </a>
                     
-                    <a href="../referent.php" class="ar">
+                    <a href="/referent/referent.php" class="ar">
                         <span class="referent">RÉFÉRENT</span>
                     </a>
-                    <a href="../consultant.html" class="ac">
+                    <a href="/consultant/consultant.php" class="ac">
                         <span class="consultant">CONSULTANT</span>
                     </a>
                     
