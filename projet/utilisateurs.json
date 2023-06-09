@@ -3,109 +3,75 @@
         {
             "id": 1,
             "nom": "sw",
-            "prenom": "ad",
-            "email": "a@gmail.com",
-            "date": "2023-06-08",
-            "reseau": "a",
-            "tel": "",
-            "mdp": "a",
+            "prenom": "Adam",
+            "email": "compteref1@gmail.com",
+            "date": "2023-06-05",
+            "reseau": "Snapchat",
+            "tel": "04 54 88 96 54 ",
+            "mdp": "ok",
             "references": [
                 {
-                    "nom_ref": "adam",
-                    "prenom_ref": "aafg",
-                    "email_ref": "moi.adamswk@gmail.com",
-                    "engagement": "aklpm",
-                    "duree": "akkjl",
-                    "milieu": "aakj",
+                    "nom_ref": "dach",
+                    "prenom_ref": "elyes",
+                    "email_ref": "compteref2@gmail.com",
+                    "engagement": "Coach",
+                    "duree": "2 semaines",
+                    "milieu": "Club de football",
                     "qualites": [
-                        "Patient"
-                    ],
-                    "valide": true,
-                    "Commentaire": "c 'est goood",
-                    "qualites_ref":[
-                        "Patient"
-                    ]
-                },
-                {
-                    "nom_ref": "adam",
-                    "prenom_ref": "aafg",
-                    "email_ref": "moi.adamswk@gmail.com",
-                    "engagement": "aklpm",
-                    "duree": "akkjl",
-                    "milieu": "aakj",
-                    "qualites": [
+                        "Passionné",
+                        "Organisé",
                         "Responsable"
                     ],
                     "valide": true,
-                    "Commentaire": "",
+                    "Commentaire": "Exemplaire. Il met en avant sa passion pour le foot",
                     "qualites_ref": [
-                        "Patient"
+                        "Organisé",
+                        "Fiable"
                     ]
                 },
                 {
-                    "nom_ref": "adam",
-                    "prenom_ref": "aafg",
-                    "email_ref": "moi.adamswk@gmail.com",
-                    "engagement": "aklpm",
-                    "duree": "akkjl",
-                    "milieu": "aakj",
+                    "nom_ref": "nom",
+                    "prenom_ref": "Thomas",
+                    "email_ref": "compteref3@gmail.com",
+                    "engagement": "Bénévolat",
+                    "duree": "2 ans",
+                    "milieu": "Resto du coeur",
                     "qualites": [
-                        "Autonome",
                         "Passionné",
-                        "A l'écoute",
-                        "Patient"
+                        "Social"
                     ],
                     "valide": true,
-                    "Commentaire": "",
+                    "Commentaire": "Ton cœur bienveillant et tes actions désintéressées sont une source d'inspiration pour nous tous. Tu es toujours là pour tendre la main, offrir un soutien et partager un sourire réconfortant. Ta capacité à écouter attentivement et à comprendre les autres est remarquable, et cela crée un environnement où chacun se sent écouté et valorisé.\r\n\r\nChaque jour, tu montres une générosité sans limites, que ce soit en offrant ton aide, en prodiguant des mots d'encouragement ou simplement en répandant de la joie autour de toi. Tu es une véritable source de positivité et de bienveillance, et ta présence dans nos vies est un cadeau précieux.",
                     "qualites_ref": [
-                        "Patient"
+                        "Social",
+                        "Optimiste"
                     ]
                 },
                 {
-                    "nom_ref": "adam",
-                    "prenom_ref": "aafg",
-                    "email_ref": "moi.adamswk@gmail.com",
-                    "engagement": "aklpm",
-                    "duree": "akkjl",
-                    "milieu": "aakj",
+                    "nom_ref": "a",
+                    "prenom_ref": "s",
+                    "email_ref": "compteref1@gmail.com",
+                    "engagement": "a",
+                    "duree": "a",
+                    "milieu": "a",
                     "qualites": [
-                        "Autonome",
-                        "Passionné",
                         "Patient"
                     ],
-                    "valide": true,
+                    "valide": false,
                     "Commentaire": "",
-                    "qualites_ref": [
-                        "Patient"
-                    ]
-                },
-                {
-                    "nom_ref": "adam",
-                    "prenom_ref": "aafg",
-                    "email_ref": "moi.adamswk@gmail.com",
-                    "engagement": "aklpm",
-                    "duree": "akkjl",
-                    "milieu": "aakj",
-                    "qualites": [
-                        "Patient"
-                    ],
-                    "valide": true,
-                    "Commentaire": "aa",
-                    "qualites_ref": [
-                        "Patient"
-                    ]
+                    "qualites_ref": ""
                 }
             ]
         },
         {
             "id": 2,
-            "nom": "a",
-            "prenom": "a",
-            "email": "ad@gmail.com",
-            "date": "2023-06-08",
-            "reseau": "a",
+            "nom": "use",
+            "prenom": "Martin",
+            "email": "compteref2@gmail.com",
+            "date": "2023-06-06",
+            "reseau": "Facebook",
             "tel": "",
-            "mdp": "a"
+            "mdp": "ok"
         }
     ]
 }
