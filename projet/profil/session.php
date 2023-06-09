@@ -18,6 +18,9 @@ if(isset($_SESSION['user'])){
             $reseau = $user['reseau'];
             $tel = $user['tel'];
             $mdp = $user['mdp'];
+            if(!isset($user['references'])){
+                $nbref = 'null';
+            }
         }
     }
 } else {
