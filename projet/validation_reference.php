@@ -1,7 +1,13 @@
 <?php
+
+
 $emailR = $_POST['email'];
 $id = $_POST['id'];
 $nomR = $_POST['nom'];
+$prenomR = $_POST['prenom'];
+$engagement = $_POST['engagement'];
+$duree = $_POST['duree'];
+$milieu = $_POST['milieu'];
 $qualites = $_POST['qualites'];
 $commentaire = $_POST['commentaire'];
 
@@ -14,10 +20,15 @@ $utilisateurs = json_decode($json, true);
 foreach ($utilisateurs['jeune'] as &$utilisateur) {
     if ($utilisateur['id'] == $id) {
         foreach ($utilisateur['references'] as &$referent) {
-            if ($referent['email_ref'] == $emailR && $referent['nom_ref'] == $nomR) {
+            if ($referent['email_ref'] == $emailR ) {
                 $referent['valide'] = true;
                 $referent['Commentaire'] = $commentaire;
                 $referent['qualites_ref'] = $qualites;
+                $referent['nom_ref'] = $nomR;
+                $referent['prenom_ref'] = $prenomR;
+                $referent['engagement'] = $engagement;
+                $referent['duree'] = $duree;
+                $referent['milieu'] = $milieu;
                 
             }
         }
