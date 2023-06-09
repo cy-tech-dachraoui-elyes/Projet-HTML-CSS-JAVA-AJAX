@@ -64,6 +64,11 @@ if(isset($_SESSION['user'])){
             </div>
         </div>
         <div class="commande">
+ 
+            <div class="pdf"> 
+                <a href="/pdf/generer.php" class="button">Générer PDF</a>
+            </div>
+           
             <div class="profil">
                 <a href="/profil/profil.php" class="button">Profil</a>
             </div>
@@ -121,6 +126,7 @@ if(isset($_SESSION['user'])){
         <button type="submit" class="bouton" onclick="envoyer()">Envoyer</button>
     </div>
     </form>
+
 </body>
 </html>
 <script>
