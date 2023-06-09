@@ -40,16 +40,16 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
             
             <div class="bande-centree">
                 <div class="texte2">
-                    <a href="jeune.php" class="aj">
+                    <a href="/Jeune/Jeune.php" class="aj">
                         <span> <button class="jeune"> JEUNE </button> </span>
                     </a>
                     
-                    <a href="referent.html" class="ar">
+                    <a href="referent.php" class="ar">
                         <span class="referent">RÉFÉRENT</span>
                     </a>
                     
                     
-                    <a href="consultant.html" class="ac">
+                    <a href="consultant.php" class="ac">
                         <span class="consultant">CONSULTANT</span>
                     </a>
                     
@@ -95,17 +95,17 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
                         <!-- valeur "id" sera envoyée par POST mais ne passe pas par le bloc formulaire -->
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <label for="prenom"> Nom : </label>
-                        <input type="text" id="nom" name="nom" maxlenght="50" value="<?php echo $nomR; ?>">
+                        <input type="text" id="nom" name="nom" maxlenght="50" value="<?php echo $nomR; ?>"required>
                             
                         <br><label for="prenom"> Prénom : </label>
-                        <input type="text" id="prenom" name="prenom" maxlenght="50" value="<?php echo $prenomR; ?>">
+                        <input type="text" id="prenom" name="prenom" maxlenght="50" value="<?php echo $prenomR; ?>"required>
                         
                         <br>
                         <label for="date"> Milieu: </label>
-                        <input type="text" id="prenom" name="prenom" maxlenght="50" value="<?php echo $milieu; ?>">
+                        <input type="text" id="milieu" name="milieu" maxlenght="50" value="<?php echo $milieu; ?>"required>
                         <br>
                         <label for="email"> Email : </label>
-                        <input type="email" id="email" name="email" value="<?php echo $emailR; ?>">
+                        <input type="email" id="email" name="email" value="<?php echo $emailR; ?>"readonly>
                             
                         <br>
                         <label for="reseau"> Réseau Social :  </label>
@@ -137,10 +137,14 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
                     <label><input type="checkbox" name="qualites[]" value="Responsable" onclick="maxChoix()">Responsable</label>
                     <label><input type="checkbox" name="qualites[]" value="Social" onclick="maxChoix()">Social</label>
                     <label><input type="checkbox" name="qualites[]" value="Optimiste" onclick="maxChoix()">Optimiste</label>
+                   
+
 
                     <button type="submit" class="valider">Valider</button>
                 </form>
-    
+                        <a href="mail_refus.php">
+                    <button class="refuser" formnovalidate>Refuser</button>
+                    </a>
             
             </div>
         
@@ -155,3 +159,6 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
     </body>
 </html>
 
+<script>
+
+</script>
