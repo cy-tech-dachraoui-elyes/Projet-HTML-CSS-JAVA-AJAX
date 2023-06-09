@@ -23,57 +23,71 @@
       }
       
       
-              /* ****************** "REMERCIEMENTS&CONFIRMATION" ********************* */
+              /* ****************** "CONFIRMATION" ********************* */
               .texte {
                 position: fixed;
                 color: #ff007f;
-                font-family: "Helvetica";
+                font-family : "Helvetica";
                 letter-spacing : 0px;
                 right: 0; /* Texte à droite de l'écran */
-                top: -75px;
+                top: -55px;
                 font-size : 80px;
-                padding-right : 20px; ;
+                padding-right : 20px; 
               }
 
               /******************** "Felicitations"**************************************/
               .h1{
-                position : absolute;
+                position : fixed;
                 color: #ad3333;
                 width : 33%;
-                text-align : center;
-                margin-left: 30vw;
                 font-family : "helvetica";
-                left : 40px;
-                top : 232px;
+                left : 8%;
+                top : 160px;
                 letter-spacing : 0px;
-                font-size : 60px;
+                font-size : 90px;
         
             }
 
 
             /******************"im" *********************************/
             .im {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh; /* assurance d'avoir une hauteur suffisante pour centrer verticalement */
-              }
-              
-              .im img {
-                max-width: 100%; /* assurance que l'image ne dépasse pas la largeur du conteneur */
-                max-height: 100%; /* assurance que l'image ne dépasse pas la hauteur du conteneur */
+              position: fixed;
+              height: auto;
+              left: 65%;
+              top: 460px;
+              transform: scale(1.8);
               }
 
+
               .t2 {
-                position : absolute;
+                position: fixed;
                 color: #00bfff;
-                width : 33%;
-                text-align : center;
-                margin-left: 30vw;
-                font-family : "helvetica";
-                left : 40px;
-                top : 232px;
+                font-family: "Helvetica";
                 letter-spacing : 0px;
-                font-size : 40px;
-                margin-top: 25vw;
+                left:8%;
+                right:45%; 
+                top: 340px;
+                font-size : 30px;
+                padding-right : 20px; ;
             }
+            .t3 {
+              position: fixed;
+              font-family: "Helvetica";
+              letter-spacing : 0px;
+              left:8%;
+              color: gray;
+              top: 540px;
+              font-size : 15px;
+              padding-right : 20px; ;
+          }
+          .t4 {
+            position: fixed;
+            font-family: "Helvetica";
+            letter-spacing : 0px;
+            left:8%;
+            right:45%; 
+            color: gray;
+            top: 460px;
+            font-size : 15px;
+            padding-right : 20px; ;
+        }
