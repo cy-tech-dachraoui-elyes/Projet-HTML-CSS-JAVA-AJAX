@@ -1,5 +1,10 @@
 <?php
-	include("session.php"); //Inclusion d'un fichier qui utilise les paramètres de la session en cours.
+    include("session.php"); //Inclusion d'un fichier qui utilise les paramètres de la session en cours.
+   
+    // ... votre code PHP ...
+    echo '<script>var userReferences = ' . json_encode($user['references']) . ';</script>';
+
+
 ?>
 
 
@@ -25,7 +30,7 @@
                     <a href="../referent.php" class="ar">
                         <span class="referent">RÉFÉRENT</span>
                     </a>
-                    <a href="../consultant.html" class="ac">
+                    <a href="../consultant.php" class="ac">
                         <span class="consultant">CONSULTANT</span>
                     </a>
                     
@@ -53,7 +58,7 @@
                     <a href="/profil/profil.php" class="button">Profil</a>
                 </div>
                 <div class="liste">
-                    <a href="/Jeune/liste_reference.php" class="button">Voir références</a>
+                    <a href="/Jeune/liste_reference.php" class="button" onclick="verifierRef(event)">Voir références</a>
                 </div>
                 <div class="deconnexion">
                     <a href="/deconnexion/deconnexion.php" class="button">Déconnexion</a>
@@ -121,7 +126,7 @@
 
         </form>
         <script>
-
+             var userReferences = <?php echo $nbref; ?>;
             function verifierFormulaire(event) { //  Vérifie si au moins une case "qualité" est cochée.
                 var checkboxes = document.getElementsByName('qualites[]');
                 var cocher = false;
@@ -142,7 +147,16 @@
                     document.getElementById("ajouterBtn").disabled = false;
                     }, 2000);
                 }
+
             }
+
+            function verifierRef(event) {
+                if (userReferences == null) {
+                    alert("Vous n'avez pas de référent.");
+                    event.preventDefault();
+                }
+            }
+
         </script>   
 
         <div class="bandeRose">
