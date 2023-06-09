@@ -214,8 +214,7 @@ top: 160px;
 input[type="checkbox"] {
     position: absolute;
     right:560px;
-    transform: scale(1.5); /* Ajustez la valeur de l'échelle selon vos besoins */
-    margin-right: 5px; /* Ajoute un peu d'espace entre la case à cocher et le texte */
+    transform: scale(3); /* On grossit la case */
     
   }
 
