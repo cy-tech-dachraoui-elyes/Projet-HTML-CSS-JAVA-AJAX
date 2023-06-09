@@ -78,6 +78,7 @@
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
+    padding: 5px 15px 5px 15px;
     font-family : "helvetica";
     letter-spacing : -1px;
     color: white;
@@ -232,6 +233,17 @@ input, textarea{
     margin-bottom : 10px;
 }
 
+.refuser{
+    position : absolute;
+    background-color : #228b22;
+    border : none;
+    color : white;
+    font-size : 25px;
+    position : absolute;
+    top : 330px;
+    left : -10px;
+    cursor : pointer;
+}
 
 
 .valider{
