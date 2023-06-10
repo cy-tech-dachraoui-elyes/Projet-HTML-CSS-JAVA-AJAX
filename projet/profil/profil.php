@@ -10,6 +10,7 @@
         <meta charset="UTF-8">
         <title> Jeunes 6.4 </title>
         <link rel="stylesheet" type="text/css" href="profil.css">
+	<script src="../fonction.js" type="text/javascript"> </script>
     </head>
     
     <body>
@@ -101,21 +102,6 @@
 </html>
 <script>
     var userReferences = <?php echo $nbref; ?>;
-
-    // This function shows the password and changes the eye icon to open/closed
-
-    function affichage() {
-        var afficher = document.getElementById("mdp");
-        var eye = document.getElementById("eye");
-
-        if (afficher.type === "password") {
-            afficher.type = "text";
-            eye.src = "/boutton/eye.svg";
-        } else {
-            afficher.type = "password";
-            eye.src = "/boutton/eye-closed.svg";
-        }
-    }
 
     function verifierRef(event) {
         if (userReferences == null) {
