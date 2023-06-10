@@ -10,6 +10,8 @@ $utilisateurs = json_decode($json, true);
 foreach ($utilisateurs['jeune'] as $utilisateur) {
     if ($utilisateur['id'] == $id) {// Vérifier le compte utilisateur jeune
         $email = $utilisateur['email'];
+        $nom = $utilisateur['nom'];
+        $prenom = $utilisateur['prenom'];
         foreach ($utilisateur['references'] as $referent) {
             if ($referent['email_ref'] == $emailR) {
                 $nomR = $referent['nom_ref'];
@@ -89,11 +91,12 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
             
             <div class="checkboxes">
                 
-                <form method="POST" action="validation_reference.php">
+                <form method="POST" action="/mail/mailR_valide.php">
                     <div class="info">
                     <fieldset class="infos">
                         <!-- valeur "id" sera envoyée par POST mais ne passe pas par le bloc formulaire -->
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
+                    
                         <label for="prenom"> Nom : </label>
                         <input type="text" id="nom" name="nom" maxlenght="50" value="<?php echo $nomR; ?>"required>
                             
@@ -142,9 +145,18 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
 
                     <button type="submit" class="valider">Valider</button>
                 </form>
-                        <a href="mail_refus.php">
-                    <button class="refuser" formnovalidate>Refuser</button>
-                    </a>
+                <form method="POST" action="/mail/mailR_refus.php">
+
+                <input type="hidden" name="email" value="<?php echo $email; ?>">
+                <input type="hidden" name="nom" value="<?php echo $nom; ?>">
+                <input type="hidden" name="prenom" value="<?php echo $prenom; ?>">
+                <input type="hidden" name="message" id="message">
+
+                    <button type ="submit" class="refuser" onclick="return promptValidation();">Refuser</button>
+                </form>
+
+                    
+
             
             </div>
         
@@ -160,5 +172,15 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
 </html>
 
 <script>
+function promptValidation() {
+  var commentaire = prompt("Veuillez expliquer le refus de référence");
+  if (commentaire) { // Le commentaire a été saisi dans la boîte de dialogue prompt
+    
+    document.getElementById("message").value = commentaire;// Envoyer le commentaire en tant que champ POST
 
+    return true; // Soumet le formulaire
+  } else {
+    return false; // Annule la soumission du formulaire
+  }
+}
 </script>
