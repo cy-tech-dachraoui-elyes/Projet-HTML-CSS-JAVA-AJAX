@@ -1,10 +1,5 @@
 <?php
-    include("session.php"); //Inclusion d'un fichier qui utilise les paramètres de la session en cours.
-   
-    // ... votre code PHP ...
-    echo '<script>var userReferences = ' . json_encode($user['references']) . ';</script>';
-
-
+	include("session.php");
 ?>
 
 
@@ -30,7 +25,7 @@
                     <a href="../referent.php" class="ar">
                         <span class="referent">RÉFÉRENT</span>
                     </a>
-                    <a href="../consultant.php" class="ac">
+                    <a href="../consultant.html" class="ac">
                         <span class="consultant">CONSULTANT</span>
                     </a>
                     
@@ -126,8 +121,8 @@
 
         </form>
         <script>
-             var userReferences = <?php echo $nbref; ?>;
-            function verifierFormulaire(event) { //  Vérifie si au moins une case "qualité" est cochée.
+
+            function verifierFormulaire(event) {
                 var checkboxes = document.getElementsByName('qualites[]');
                 var cocher = false;
 
@@ -137,7 +132,7 @@
                         break;
                     }
                 }
-                if (!cocher) { 
+                if (!cocher) {
                     alert("Veuillez cocher au moins une option.");
                     document.getElementById("ajouterBtn").disabled = true;
                     event.preventDefault(); // Empêcher la soumission du formulaire
@@ -147,16 +142,14 @@
                     document.getElementById("ajouterBtn").disabled = false;
                     }, 2000);
                 }
-
             }
-
-            function verifierRef(event) {
-                if (userReferences == null) {
-                    alert("Vous n'avez pas de référent.");
-                    event.preventDefault();
-                }
-            }
-
+            function verifierRef(event) {
+                var userReferences = <?php echo $nbref ?>;
+                    if (userReferences == null) {
+                    alert("Vous n'avez pas de référent.");
+                    event.preventDefault();
+                }
+            }
         </script>   
 
         <div class="bandeRose">
@@ -167,4 +160,5 @@
         
     </body>
 </html>
+
 
