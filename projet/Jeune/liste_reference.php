@@ -37,46 +37,7 @@ if(isset($_SESSION['user'])){
     <meta charset="UTF-8">
     <title>Jeunes 6.4</title>
     <link rel="stylesheet" type="text/css" href="liste_reference.css">
-
-    <script>
-        function MontrerDetails(element) {
-            const details = element.querySelector('.reference-details');
-            if (details.style.display === 'block') {
-                details.style.display = 'none';
-            } else {
-                details.style.display = 'block';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var boutonsSuppression = document.querySelectorAll('.supprimer-reference');
-            boutonsSuppression.forEach(function(bouton) {
-                bouton.addEventListener('click', function() {
-                var referenceId = this.getAttribute('data-reference-id');
-                if (confirm('Êtes-vous sûr de vouloir supprimer cette référence ?')) {
-                    supprimerReference(referenceId);
-                }
-                });
-            });
-
-            function supprimerReference(referenceId) {
-                var xhr = new XMLHttpRequest();
-                xhr.open('POST', 'supprimer_reference.php', true);
-                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    // Recharger la page après la suppression
-                    location.reload();
-                }
-                };
-                xhr.send('referenceId=' + encodeURIComponent(referenceId));
-            }
-        });
-
-        
-    </script>
-
-
+    <script src="../fonction.js" type="text/javascript"> </script>
 </head>
 
 <body>
@@ -160,10 +121,3 @@ if(isset($_SESSION['user'])){
 
 </body>
 </html>
-<script>
-
-
-        function envoyer(){
-            alert("Votre mail a été envoyé au consultant.");
-        }
-</script>
