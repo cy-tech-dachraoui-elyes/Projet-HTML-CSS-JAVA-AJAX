@@ -10,7 +10,7 @@
 
 /* ****************** Boutton ********************* */
 .boutton {
-  display: flex;
+  display: flex; /* Utilise le flexbox pour aligner les boutons horizontalement */
   position: absolute;
   top: 20px;
   right: 150px;
@@ -36,7 +36,7 @@
   left: 0;
   padding-top: 7px;
   padding-left: 40px;
-  transform: scale(2.6);
+  transform: scale(2.6); /* Applique une mise à l'échelle de l'image */
   width: 200px;
   height: auto;
 }
@@ -130,7 +130,7 @@ p {
   font-family: "helvetica";
   left: 20%;
   top: 240px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* Déplace de -50% de la largeur et -50% de la hauteur par rapport au centre */
   letter-spacing: 0px;
   font-size: 22px;
 }
