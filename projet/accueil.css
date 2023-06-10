@@ -1,270 +1,246 @@
-
-       /* ****************** BANDE GRISE ********************* */
-       .bande-grise {
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding: 70px;
-        width: 100%;
-        background-image: linear-gradient(to right, #B8B8B8 0%, #f5f5f5 20%, #B8B8B8 100%);
-  
-  }
-          /* ****************** Boutton ********************* */
-  
-  .boutton {
-    display: flex;
-    position: absolute;
-    top: 20px;
-    right: 150px;
-    gap: 10px;
-  }
-  
-  .boutton button {
-    color: #fff;
-    background-color: none;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-  }
-  
-  .boutton button:hover {
-      cursor: pointer;
-  }
-  
-          /* ****************** IMAGE ********************* */
-  
-  .bande-grise img{
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding-top : 7px;
-        padding-left : 40px;
-        transform: scale(2.6);
-        width: 200px;
-        height: auto;
-  }
-  
-  
-          /* ****************** "POUR FAIRE DE L'ENGAGEMENT UNE VALEUR" ********************* */
-  
-
-  
-  p{
-    position: fixed;
-    font-family : "Helvetica";
-    right: 0; /* Texte à droite de l'écran */
-    top: 50px;
-    padding-right : 20px;
-    color : white;
-    font-size : 40px;
-    top : 40px;
-    letter-spacing : 1px;
-  }
-
-  
-  
-  
-          /* ****************** BANDE CENTREE ********************* */
-  
-  .bande-centree {
-    position: fixed;
-    top: 140px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 40%;
-    text-align: center;
-    background-image: linear-gradient(to right, #d3d3d3 0%, #f5f5f5 20%, #d3d3d3 100%);
-    padding: 10px;
-  }
-        
- 
-.bande-centree .texte2 span.jeune{
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-family : "helvetica";
-    letter-spacing : -1px;
-    color: #ff007f;
-    cursor : pointer;
-    
-   
+/* ****************** BANDE GRISE ********************* */
+.bande-grise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 70px;
+  width: 100%;
+  background-image: linear-gradient(to right, #B8B8B8 0%, #f5f5f5 20%, #B8B8B8 100%);
 }
 
-.aj{
-    text-decoration : none;
+/* ****************** Boutton ********************* */
+.boutton {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 150px;
+  gap: 10px;
 }
 
-.bande-centree .texte2 span.referent{
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-family : "helvetica";
-    letter-spacing : -1px;
-    color: #228b22;
-    cursor : pointer;
+.boutton button {
+  color: #fff;
+  background-color: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
-.ar{
-    text-decoration : none;
+.boutton button:hover {
+  cursor: pointer;
 }
 
-.bande-centree .texte2 span.consultant{
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-family : "helvetica";
-    letter-spacing : -1px;
-    color: #00bfff;
-    cursor : pointer;
+/* ****************** IMAGE ********************* */
+.bande-grise img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 7px;
+  padding-left: 40px;
+  transform: scale(2.6);
+  width: 200px;
+  height: auto;
 }
 
-.ac{
-    text-decoration : none;
+/* ****************** "POUR FAIRE DE L'ENGAGEMENT UNE VALEUR" ********************* */
+p {
+  position: fixed;
+  font-family: "Helvetica";
+  right: 0; /* Texte à droite de l'écran */
+  top: 50px;
+  padding-right: 20px;
+  color: white;
+  font-size: 40px;
+  top: 40px;
+  letter-spacing: 1px;
 }
 
-.bande-centree .texte2 .partenaires{
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-family : "helvetica";
-    letter-spacing : -1px;
-    color: grey;
-    border : none;
-    background-color : transparent;
-    cursor : pointer;
+/* ****************** BANDE CENTREE ********************* */
+.bande-centree {
+  position: fixed;
+  top: 140px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 40%;
+  text-align: center;
+  background-image: linear-gradient(to right, #d3d3d3 0%, #f5f5f5 20%, #d3d3d3 100%);
+  padding: 10px;
 }
-                /* ****************** PPARAGRAPHE 1 ********************* */
-        
-        
-        .h1{
-            position : fixed;
-            color: #7f7f7f;
-            width : 33%;
-            text-align : left;
-            font-family : "helvetica";
-            left : 20%;
-            top : 240px;
-            transform: translate(-50%,-50%);
-            letter-spacing : 0px;
-            font-size : 22px;
-        }
-        
-        .left{
-            position : fixed;
-            color: grey;
-            width : 33%;
-            text-align : left;
-            font-family : "helvetica";
-            left : 20%;
-            top : 310px;
-            transform: translate(-50%,-50%);
-            letter-spacing : 0px;
-            font-size : 15px;
-        }
-        
-                /* ****************** PPARAGRAPHE 2 ********************* */
-        
-        .h2{
-            position : fixed;
-            color: #7f7f7f;
-            width : 33%;
-            text-align : left;
-            font-family : "helvetica";
-            left : 52%;
-            top : 240px;
-            transform: translate(-50%,-50%);
-            letter-spacing : 0px;
-            font-size : 22px;
-        }
-        
-        .p1{
-            position : fixed;
-            color: grey;
-            width : 33%;
-            text-align : left;
-            font-family : "helvetica";
-            left : 52%;
-            top : 310px;
-            transform: translate(-50%,-50%);
-            letter-spacing : 0px;
-            font-size : 15px;
-        }
-        
-        .p2{
-            position : fixed;
-            color: grey;
-            width : 33%;
-            text-align : left;
-            font-family : "helvetica";
-            left : 52%;
-            top : 410px;
-            transform: translate(-50%,-50%);
-            letter-spacing : 0px;
-            font-size : 15px;
-        }
-        
-        
-        
-                /* ****************** PARAGRAPHE 3 ********************* */
-        
-        
-        .r1{
-            position : fixed;
-            color: grey;
-            width : 30%;
-            text-align : left;
-            font-family : "helvetica";
-            left : 86%;
-            top : 300px;
-            transform: translate(-50%,-50%);
-            letter-spacing : 0px;
-            font-size : 15px;
-            margin-right: 20px;
-        }
-        
-        .r2{
-            position : fixed;
-            color: grey;
-            width : 30%;
-            text-align : left;
-            font-family : "helvetica";
-            left : 86%;
-            top : 370px;
-            transform: translate(-50%,-50%);
-            letter-spacing : 0px;
-            font-size : 15px;
-            margin-right: 20px;
-        }
-        
-        
-        
-                /* ****************** IMAGES RBV ********************* */
-        
-        .rose{
-            position: fixed;
-            width: 10%;
-            height: auto;
-            transform: scale(1.5);
-            top: 70%;
-            left: 20%;
-        }
-        
-        .vert{
-            position: fixed;
-            width: 10%;
-            height: auto;
-            transform: scale(1.5);
-            top: 70%;
-            left: 40%;
-        }
-        
-        .bleu{
-            position: fixed;
-            width: 10%;
-            height: auto;
-            transform: scale(1.5);
-            top: 70%;
-            left: 60%;
-        }
-        
+
+.bande-centree .texte2 span.jeune {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "helvetica";
+  letter-spacing: -1px;
+  color: #ff007f;
+  cursor: pointer;
+}
+
+.aj {
+  text-decoration: none;
+}
+
+.bande-centree .texte2 span.referent {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "helvetica";
+  letter-spacing: -1px;
+  color: #228b22;
+  cursor: pointer;
+}
+
+.ar {
+  text-decoration: none;
+}
+
+.bande-centree .texte2 span.consultant {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "helvetica";
+  letter-spacing: -1px;
+  color: #00bfff;
+  cursor: pointer;
+}
+
+.ac {
+  text-decoration: none;
+}
+
+.bande-centree .texte2 .partenaires {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "helvetica";
+  letter-spacing: -1px;
+  color: grey;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* ****************** PPARAGRAPHE 1 ********************* */
+.h1 {
+  position: fixed;
+  color: #7f7f7f;
+  width: 33%;
+  text-align: left;
+  font-family: "helvetica";
+  left: 20%;
+  top: 240px;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0px;
+  font-size: 22px;
+}
+
+.left {
+  position: fixed;
+  color: grey;
+  width: 33%;
+  text-align: left;
+  font-family: "helvetica";
+  left: 20%;
+  top: 310px;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0px;
+  font-size: 15px;
+}
+
+/* ****************** PPARAGRAPHE 2 ********************* */
+.h2 {
+  position: fixed;
+  color: #7f7f7f;
+  width: 33%;
+  text-align: left;
+  font-family: "helvetica";
+  left: 52%;
+  top: 240px;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0px;
+  font-size: 22px;
+}
+
+.p1 {
+  position: fixed;
+  color: grey;
+  width: 33%;
+  text-align: left;
+  font-family: "helvetica";
+  left: 52%;
+  top: 310px;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0px;
+  font-size: 15px;
+}
+
+.p2 {
+  position: fixed;
+  color: grey;
+  width: 33%;
+  text-align: left;
+  font-family: "helvetica";
+  left: 52%;
+  top: 410px;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0px;
+  font-size: 15px;
+}
+
+/* ****************** PARAGRAPHE 3 ********************* */
+.r1 {
+  position: fixed;
+  color: grey;
+  width: 30%;
+  text-align: left;
+  font-family: "helvetica";
+  left: 86%;
+  top: 300px;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0px;
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+.r2 {
+  position: fixed;
+  color: grey;
+  width: 30%;
+  text-align: left;
+  font-family: "helvetica";
+  left: 86%;
+  top: 370px;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0px;
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+/* ****************** IMAGES RBV ********************* */
+.rose {
+  position: fixed;
+  width: 10%;
+  height: auto;
+  transform: scale(1.5);
+  top: 70%;
+  left: 28%;
+}
+
+.vert {
+  position: fixed;
+  width: 11%;
+  height: auto;
+  transform: scale(1.3);
+  top: 69%;
+  left: 45%;
+}
+
+.bleu {
+  position: fixed;
+  width: 10.9%;
+  height: auto;
+  transform: scale(1.3);
+  top: 69.5%;
+  left: 62%;
+}
