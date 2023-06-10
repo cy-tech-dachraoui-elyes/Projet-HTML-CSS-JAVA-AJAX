@@ -17,6 +17,9 @@ class PDF_Document extends FPDF {
     }
     
     function Content($reference) {
+        $nombreReferent = count($reference);//Compter le nombre de réferent déjà enregistrés
+        $Comptage = 0;
+        if ($reference['valide'] == true){
         $this->SetFont('Arial', 'B', 12);
         $this->Cell(0, 10, utf8_decode('Référent: ' . $reference['nom_ref'] . ' ' . $reference['prenom_ref']), 0, 1); // Affiche le nom et prénom du référent
         
@@ -34,6 +37,15 @@ class PDF_Document extends FPDF {
         $this->MultiCell(0, 10, utf8_decode('Qualités: ' . $qualites), 0, 'L');
         
         $this->Ln(10); // Espacement après chaque fieldset
+        }
+        else{
+            ++$Comptage; //Compter le nombre de réferent non validés
+        }
+        if($Comptage == $nombreReferent){ //Si aucun compte réferent n'a été validé
+            $this->SetFont('Arial', 'B', 12);
+            $this->Cell(0, 10, utf8_decode('Aucun réferencement validée '), 0, 1); 
+        }
+
     }
 }
 
@@ -44,11 +56,12 @@ function getReferences() {
     if(isset($_SESSION['user'])){
         foreach($users['jeune'] as $user){
             if($user['id'] === $_SESSION['user']){
+
                 return $user['references'];
             }
         }
     } else {
-        header("Location: ../connexion.php");
+        header("Location: ../accueil.html");
         exit;
     }
 }
@@ -63,3 +76,6 @@ foreach($references as $reference) {
 }
 
 $pdf->Output('F', '../livret_experience.pdf'); // Enregistrez le PDF sur le serveur
+header("Location: /Jeune/liste_reference.php");
+exit;
+?>
