@@ -32,7 +32,7 @@
                     </a>
                     
                     <a href="/Jeune/liste_reference.php">
-                        <span> <button class="liste">Liste des Référents</button> </span>
+                        <span> <button class="liste" onclick="verifierRef(event)">Liste des Référents</button> </span>
                     </a>
                 </div>
             </div>
@@ -99,22 +99,29 @@
     </script> 
     </body>
 </html>
-
 <script>
+    var userReferences = <?php echo $nbref; ?>;
 
-// Cette fonction affiche le mot de passe et l'oeil ouvert/fermé
+    // This function shows the password and changes the eye icon to open/closed
 
-        function affichage(){
-            var afficher = document.getElementById("mdp");
-            var eye = document.getElementById("eye");
-            if(afficher.type === "password"){
-                afficher.type = "texte";
-                eye.src = "/boutton/eye.svg";
-            }
-            else{
-                afficher.type = "password";
-                eye.src = "/boutton/eye-closed.svg";
-            }
+    function affichage() {
+        var afficher = document.getElementById("mdp");
+        var eye = document.getElementById("eye");
+
+        if (afficher.type === "password") {
+            afficher.type = "text";
+            eye.src = "/boutton/eye.svg";
+        } else {
+            afficher.type = "password";
+            eye.src = "/boutton/eye-closed.svg";
         }
+    }
 
+    function verifierRef(event) {
+        if (userReferences == null) {
+            alert("Vous n'avez pas de référent.");
+            event.preventDefault();
+        }
+    }
 </script>
+
