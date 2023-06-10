@@ -31,3 +31,4 @@ if (isset($_POST['referenceId'])) {
   // Enregistrer les modifications dans le fichier JSON
   file_put_contents("../utilisateurs.json", json_encode($users,JSON_UNESCAPED_UNICODE| JSON_PRETTY_PRINT));
 }
+?>
