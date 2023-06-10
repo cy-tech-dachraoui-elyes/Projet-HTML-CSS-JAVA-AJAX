@@ -183,22 +183,3 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
 
     </body>
 </html>
-
-<script>
-
-// Cette fonction affiche le mot de passe et l'oeil ouvert/fermé
-
-        function affichage(){
-            var afficher = document.getElementById("mdp");
-            var eye = document.getElementById("eye");
-            if(afficher.type === "password"){
-                afficher.type = "texte";
-                eye.src = "/boutton/eye.svg";
-            }
-            else{
-                afficher.type = "password";
-                eye.src = "/boutton/eye-closed.svg";
-            }
-        }
-
-</script>
