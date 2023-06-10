@@ -118,17 +118,21 @@
   background-color : transparent;
   cursor : pointer;
 }
-/* ************* Positionnement de la déconnexion ************* */
+/* ************* Positionnement de refus et valider ************* */
 
-.deconnexion {
+.validation {
   position: fixed;
   right: 20px; /* Texte à droite de l'écran */
-  top: 160px;
+  top: 150px;
+}
+.refus {
+  position: fixed;
+  right: 100px; /* Texte à droite de l'écran */
+  top: 150px;
 }
 
-/* ************* Style du bouton de déconnexion ************* */
-
-.deconnexion .button {
+/* ************* Style du bouton des commandes ************* */
+.validation .bouton{
   font-family: "Helvetica";
   letter-spacing: 0px;
   font-size: 14px;
@@ -142,14 +146,28 @@
   display: inline-block;
   cursor: pointer;
 }
+.refus .bouton{
+  font-family: "Helvetica";
+  letter-spacing: 0px;
+  font-size: 14px;
+  background-color: #cccccc;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 20px; 
+}
+.validation .bouton:hover {
+  background-color: #ff0080;
+}
+.refus .bouton:hover {
+  background-color: #ff0080;
+}
 
-.deconnexion .button:hover {
-  background-color: #b8b8b8;
-}
- 
-.deconnexion .button:active {
-    background-color: #ff0080; 
-}
 
         /* *************************** TEXTE BLEU ************************* */
 
