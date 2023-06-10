@@ -35,7 +35,7 @@ body{
 
 /* ****************** "Connexion" ********************* */
 
-.texte{
+.texte p{
     position: fixed;
     right: 0; 
     top: -55px;
@@ -49,16 +49,16 @@ body{
 
 /* ********** Formulaire de connexion utilisateur ********** */
 
-.sign-up-wrapper{
+.zone-inscription{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 800px;
+    height: 850px;
     background-size: cover;
     background-position: center center;
 }
 
-.sign-up{
+.inscription{
     background-color: rgba(255, 255, 255, 0.8);
     width: 400px;
     height: 410px;
@@ -70,6 +70,8 @@ body{
     align-items: center;
 }
 
+/* ********** Se connecter ********** */
+
 h2 {
     margin-bottom: 20px;
     text-align: center;
@@ -77,7 +79,7 @@ h2 {
     color: #333;
 }
 
-.input-box{
+.champ-saisie{
     position: relative;
     display: flex;
     padding: 10px;
@@ -85,12 +87,6 @@ h2 {
     justify-content: center;
     flex-direction: column;
     margin-bottom: 20px;
-}
-
-.imgs{
-    position: absolute;
-    right: 10px;
-    bottom: 20px;
 }
 
 input{
@@ -104,10 +100,21 @@ input{
     padding-left: 0px;
 }
 
+/* ********** Bouton lock et email ********** */
+
+.imgs{
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+/* ********** Bouton se connecter ********** */
+
 input[type=submit] {
     width: 300px;
     height: 50px;
     padding: 0;
+    margin-bottom: 5px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -124,21 +131,37 @@ input[type=submit]:hover{
 /* ************** "Créer un compte" ************** */
 .compte {
     display: inline;
-    font-size: 15px;
+    font-size: 16px;
     font-family: "Helvetica", sans-serif;
+    padding-top:10px;
     letter-spacing: 1px;
+}
 
-  }
-
-  .compte a {
+.compte a {
     text-decoration: none;
-  }
+}
 
-  img.dec {
+.Accueil {
     position: fixed;
-    height: 50px;
-    width: auto;
-    top: 295px;
-    margin-right:-350px;
-    transform: translate(-50%, -50%);
+    right: 20px; /* Texte à droite de l'écran */
+    top: 150px;
+}
+
+.Accueil a{
+    font-family: "Helvetica";
+    letter-spacing: 0px;
+    font-size: 14px;
+    background-color: #cccccc;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 4px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.Accueil a:hover {
+    background-color: #ff0080;
 }
