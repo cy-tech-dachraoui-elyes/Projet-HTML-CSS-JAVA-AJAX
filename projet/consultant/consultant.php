@@ -60,7 +60,7 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
                         <span> <button class="partenaires"> PARTENAIRES </button> </span>
                     </a>
                 </div>
-            </div>
+        </div>
 
             <div class="contenu">
                 <a href="../accueil.html">
@@ -75,8 +75,28 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
                 </div>
                 
             </div>
-            <div class="deconnexion">
-                <a href="/deconnexion/deconnexion.php" class="button">Valider</a>
+            <div class="commande">
+                <div class="refus">
+                <form method="POST" action="/mail/mailC_refus.php">
+
+                    <input type="hidden" name="email" value="<?php echo $email; ?>">
+                    <input type="hidden" name="nom" value="<?php echo $nom; ?>">
+                    <input type="hidden" name="prenom" value="<?php echo $prenom; ?>">
+
+                    <button type ="submit" class="bouton" >Refuser</button>
+                </form>
+                </div>
+
+                <div class="validation">
+                <form method="POST" action="/mail/mailC_valide.php">
+
+                    <input type="hidden" name="email" value="<?php echo $email; ?>">
+                    <input type="hidden" name="nom" value="<?php echo $nom; ?>">
+                    <input type="hidden" name="prenom" value="<?php echo $prenom; ?>">
+
+                    <button type ="submit" class="bouton" >Valider</button>
+                </form>
+                </div>
             </div>
         </div>
         
@@ -115,7 +135,7 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
                 </fieldset></div>
         <div class="references-contain">  
         <?php foreach($references as $reference): ?>
-        <?php if ($reference['valide'] == true): ?>
+        <?php if ($reference['cochee'] == true): ?>
         <div class="references-container">
         <fieldset class="cadreInfo2">
             <!-- valeur "id" sera envoyée par POST mais ne passe pas par le bloc formulaire -->
@@ -133,7 +153,7 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
             <label for="email"> Email : </label>
             <input type="email" id="email" name="email" readonly value="<?php echo $reference['email_ref']; ?>">     
             <br><br>
-            <label for="engagement"> Mon engagement : </label>
+            <label for="engagement"> Engagement : </label>
             <input type="text" id="engagement" name="engagement" readonly value="<?php echo $reference['engagement']; ?>">
             <br>
             <label for="duree"> Durée : </label>
@@ -161,9 +181,6 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
         </div><?php endif; ?> <?php endforeach; ?>
 </div>
 
-                
-        <script>
-    </script> 
     </body>
 </html>
 
