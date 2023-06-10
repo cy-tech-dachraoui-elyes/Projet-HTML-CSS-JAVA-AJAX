@@ -144,7 +144,7 @@ if(isset($_SESSION['user'])){
                         echo "<p><b>Qualités confirmées par le référent : </b>"; echo implode(", ", $reference['qualites_ref']);;
                     }
                    ?>
-                    </br><button class="supprimer-reference" data-reference-id="<?php echo $reference['email_ref']; ?>"><b>Supprimer</b></button>
+                    <button class="supprimer-reference" data-reference-id="<?php echo $reference['email_ref']; ?>"><b>Supprimer</b></button>
 
 
                 </div>
