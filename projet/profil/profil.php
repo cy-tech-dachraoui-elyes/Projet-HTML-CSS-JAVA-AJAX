@@ -87,7 +87,7 @@
                     <input type="tel" id="tel" name="telephone" value="<?php echo $tel; ?>" placeholder="Format : 07 04 23 17 01">
                     <br>
                     <label for="Mdp"> Mot de passe :  </label>
-                    <img class="imgs" width="16px" height="16px" src="/boutton/eye-closed.svg" alt="password" onclick="affichage()" id="eye">
+                    <img class="imgs" width="16px" height="16px" src="/boutton/eye-closed.svg" alt="password" onclick="affichage_eye()" id="eye">
                     <input type="password" id="mdp" name="mdp" required value="<?php echo $mdp; ?>">
                     <br><br>
                     <button type="submit" class="valider">Valider</button>
