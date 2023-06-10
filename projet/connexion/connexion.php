@@ -33,6 +33,7 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
 <head>
     <title>Connexion</title>
     <link href="connexion.css" type="text/css" rel="stylesheet">
+    <script src="../fonction.js" type="text/javascript"> </script>
 </head>
 <body>
     <div class="bande-grise">
@@ -94,20 +95,3 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
     </style>
 </body>
 </html>
-
-
-<script>
-
-// Cette fonction affiche le mot de passe 
-
-        function affichage(){
-            var afficher = document.getElementById("mdp");
-            if(afficher.type === "password"){
-                afficher.type = "texte";
-            }
-            else{
-                afficher.type = "password";
-            }
-        }
-
-</script>
