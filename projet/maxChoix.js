@@ -14,3 +14,28 @@ function maxChoix(){
       }
     }
 }
+
+function verifierFormulaire(event) {
+  var checkboxes = document.getElementsByName('qualites[]');
+  var cocher = false;
+
+  for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+          cocher = true;
+          break;
+      }
+  }
+  if (!cocher) {
+      alert("Veuillez cocher au moins une option.");
+      document.getElementById("ajouterBtn").disabled = true;
+      event.preventDefault(); // Empêcher la soumission du formulaire
+
+      // Réactiver le bouton après 2 secondes
+      setTimeout(function() {
+      document.getElementById("ajouterBtn").disabled = false;
+      }, 2000);
+  }else{
+    alert("Votre demande de référence a été envoyé.");
+  }
+}
+
