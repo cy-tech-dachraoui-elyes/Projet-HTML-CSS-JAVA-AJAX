@@ -25,7 +25,7 @@ if(isset($_SESSION['user'])){
     }
 } else {
     // Si l'utilisateur n'est pas connecté, le rediriger vers la page de connexion
-    header("Location: ../connexion.php");
+    header("Location: /connexion/connexion.php");
     exit;
 }
 ?>
@@ -37,6 +37,7 @@ if(isset($_SESSION['user'])){
     <meta charset="UTF-8">
     <title>Jeunes 6.4</title>
     <link rel="stylesheet" type="text/css" href="liste_reference.css">
+
     <script>
         function MontrerDetails(element) {
             const details = element.querySelector('.reference-details');
@@ -46,8 +47,36 @@ if(isset($_SESSION['user'])){
                 details.style.display = 'block';
             }
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var boutonsSuppression = document.querySelectorAll('.supprimer-reference');
+            boutonsSuppression.forEach(function(bouton) {
+                bouton.addEventListener('click', function() {
+                var referenceId = this.getAttribute('data-reference-id');
+                if (confirm('Êtes-vous sûr de vouloir supprimer cette référence ?')) {
+                    supprimerReference(referenceId);
+                }
+                });
+            });
+
+            function supprimerReference(referenceId) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'supprimer_reference.php', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Recharger la page après la suppression
+                    location.reload();
+                }
+                };
+                xhr.send('referenceId=' + encodeURIComponent(referenceId));
+            }
+        });
+
         
     </script>
+
+
 </head>
 
 <body>
@@ -90,7 +119,7 @@ if(isset($_SESSION['user'])){
             <?php if ($reference['valide']): ?>
                 <label class="reference-label">
                     <span class="reference-checkbox">
-                        <input type="checkbox" name="reference[]" value="<?php echo $index; ?>">
+                        <input type="checkbox" name="reference[]" value="<?php echo $reference['email_ref']; ?>">
                     </span>
                 </label>
             <?php endif; ?>
@@ -115,6 +144,8 @@ if(isset($_SESSION['user'])){
                         echo "<p><b>Qualités confirmées par le référent : </b>"; echo implode(", ", $reference['qualites_ref']);;
                     }
                    ?>
+                    </br><button class="supprimer-reference" data-reference-id="<?php echo $reference['email_ref']; ?>"><b>Supprimer</b></button>
+
 
                 </div>
             </div>
@@ -131,7 +162,6 @@ if(isset($_SESSION['user'])){
 </html>
 <script>
 
-// Cette fonction affiche le mot de passe et l'oeil ouvert/fermé
 
         function envoyer(){
             alert("Votre mail a été envoyé au consultant.");
