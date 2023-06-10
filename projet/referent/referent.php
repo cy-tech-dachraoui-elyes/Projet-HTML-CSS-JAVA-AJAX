@@ -33,7 +33,7 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
         <meta charset="UTF-8">
         <title> Jeunes 6.4 </title>
         <link rel="stylesheet" type="text/css" href="referent.css">
-        <script src="maxChoix.js" type="text/javascript"> </script>
+        <script src="../fonction.js" type="text/javascript"> </script>
     </head>
     
     <body>
@@ -130,21 +130,22 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
 <!--                <label for="commentaire">Commentaire:</label>-->
                 <textarea id="commentaire" name="commentaire" required class="comm"></textarea><br>
             </div>
-                    <label><input type="checkbox" name="qualites[]" value="Autonome" onclick="maxChoix()">Autonome</label>
-                    <label><input type="checkbox" name="qualites[]" value="Passioné" onclick="maxChoix()">Passioné</label>
-                    <label><input type="checkbox" name="qualites[]" value="Réfléchi" onclick="maxChoix()">Réfléchi</label>
-                    <label><input type="checkbox" name="qualites[]" value="A l'écoute" onclick="maxChoix()">A l'écoute</label>
-                    <label><input type="checkbox" name="qualites[]" value="Organisé" onclick="maxChoix()">Organisé</label>
-                    <label><input type="checkbox" name="qualites[]" value="Fiable" onclick="maxChoix()">Fiable</label>
-                    <label><input type="checkbox" name="qualites[]" value="Patient" onclick="maxChoix()">Patient</label>
-                    <label><input type="checkbox" name="qualites[]" value="Responsable" onclick="maxChoix()">Responsable</label>
-                    <label><input type="checkbox" name="qualites[]" value="Social" onclick="maxChoix()">Social</label>
-                    <label><input type="checkbox" name="qualites[]" value="Optimiste" onclick="maxChoix()">Optimiste</label>
-                   
+            <div class="checkboxes">    
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Autonome" onclick="maxChoix()">Autonme</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Passionné" onclick="maxChoix()" >Passioné</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Réfléchi" onclick="maxChoix()">Réfléchi</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="A l'écoute" onclick="maxChoix()">A l'écoute</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Organisé" onclick="maxChoix()">Organisé</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Fiable" onclick="maxChoix()" >Fiable</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Patient" onclick="maxChoix()" >Patient</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Responsable" onclick="maxChoix()">Responsable</label> 
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Social" onclick="maxChoix()">Social</label>
+                <label class="qualite"><input type="checkbox" name="qualites[]" value="Optimiste" onclick="maxChoix()">Optimiste</label> 
 
-
-                    <button type="submit" class="valider">Valider</button>
-                </form>
+                <button type="submit" class="valider" onclick="verifierFormulaire_ref(event)" id="ajouterBtn">Valider</button>
+        
+            </div>
+            </form>
                 <form method="POST" action="/mail/mailR_refus.php">
 
                 <input type="hidden" name="email" value="<?php echo $email; ?>">
@@ -170,17 +171,3 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
         
     </body>
 </html>
-
-<script>
-function promptValidation() {
-  var commentaire = prompt("Veuillez expliquer le refus de référence");
-  if (commentaire) { // Le commentaire a été saisi dans la boîte de dialogue prompt
-    
-    document.getElementById("message").value = commentaire;// Envoyer le commentaire en tant que champ POST
-
-    return true; // Soumet le formulaire
-  } else {
-    return false; // Annule la soumission du formulaire
-  }
-}
-</script>
