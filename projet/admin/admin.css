@@ -1,0 +1,217 @@
+
+/* ****************** BANDE GRISE ********************* */
+
+.bande-grise{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 70px;
+    width: 100%;
+    background-image: linear-gradient(to right, #B8B8B8 0%, #f5f5f5 20%, #B8B8B8 100%);
+}
+
+/* ****************** IMAGE ********************* */
+
+.bande-grise img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top : 7px;
+    padding-left : 40px;
+    transform: scale(2.6);
+    width: 200px;
+    height: auto;
+}
+
+
+/* ****************** "POUR FAIRE DE L'ENGAGEMENT UNE VALEUR" ********************* */
+
+.texte{
+    position: fixed;
+    color: #ff007f;
+    font-family : "Helvetica";
+    letter-spacing : 0px;
+    right: 0; /* Texte à droite de l'écran */
+    top: -75px;
+    font-size : 80px;
+    padding-right : 20px; 
+}
+
+.t2{
+    position: fixed;
+    font-family : "Helvetica";
+    right: 0; /* Texte à droite de l'écran */
+    top: -55px;
+    padding-right : 20px;
+    color : white;
+    font-size : 40px;
+    top : 40px;
+    letter-spacing : 1px;
+}
+
+
+        /* ************* Positionnement de la déconnexion ************* */
+
+.deconnexion {
+    position: fixed;
+    right: 20px; /* Texte à droite de l'écran */
+    top: 160px;
+}
+/* ************* Positionnement de profil ************* */
+
+.profil{
+    position: fixed;
+    right: 160px; /* Texte à droite de l'écran */
+    top: 160px;
+}
+
+
+          
+  
+
+        /* ************* Style du bouton de déconnexion et profil************* */
+
+.commande .button{
+    font-family : "Helvetica";
+    letter-spacing : 0px;
+    font-size : 14px;
+    background-color: #cccccc;
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    text-decoration : none; 
+}
+  
+.commande .button:hover {
+    background-color: #ff007f;
+}
+    
+.commande .button:active {
+    background-color: #ff0080; 
+}
+
+
+
+        /* *************************** TEXTE ROSE ************************* */
+.dec{
+    position: fixed;
+    font-size: 22px;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);/*le texte sera centré horizontalement au milieu de l'écran*/
+    color: #ff007f;
+    font-family: "Helvetica", sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 20px; /* Ajout de la marge inférieure */
+}
+
+
+        /* ************************ TRAIT ROSE *********************** */
+
+.traitrose{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 600px;
+    left: 50%;
+    width : 670px;
+    height : 230px;
+
+}
+
+
+
+/**********REFERENCES************/
+
+*{
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.reference {
+
+    cursor: pointer;
+    border: 1px solid #ff007f;
+    background: linear-gradient(to bottom, #ffffff, #dddbdb);
+    border-radius: 10px;
+    color: #ff007f;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.75);
+    font-family: "Helvetica", sans-serif;
+    font-size: 17px;
+    padding-inline: 130px;
+    margin-bottom: 20px;
+    transition: height 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    
+
+    
+}
+
+.reference:hover {
+    background: linear-gradient(to bottom, #ff007f, #e77fb1);
+    color: white;
+}
+
+/* Détails de référence */
+.reference-details {
+    display: none;
+    padding: 10px;
+    color: #ff007f;
+    background: linear-gradient(to bottom, #ffffff, #dddbdb);
+    
+}
+
+
+.reference.show-details .reference-details {
+    display: block;
+}
+
+.references-container {
+    padding: 50px;
+    position: fixed;
+    top: 200px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    overflow-y: scroll; 
+    max-height: calc(100vh - 200px); 
+    margin-bottom: 25px;
+    
+    
+ }
+
+ .users-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 200px;
+    padding: 20px;
+}
+
+.user {
+    border: 1px solid #ff007f;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.user p {
+    margin-bottom: 10px;
+}
+
+.user a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #ff007f;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.user a:hover {
+    background-color: #e77fb1;
+}
