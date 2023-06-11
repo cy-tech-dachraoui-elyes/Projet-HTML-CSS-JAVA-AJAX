@@ -100,6 +100,7 @@
     </script> 
     </body>
 </html>
+<!-- Vérifie si l'utilisateur a des référents et affiche une alerte s'il n'en a pas -->
 <script>
     var userReferences = <?php echo $nbref; ?>;
 
