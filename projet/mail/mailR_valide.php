@@ -9,13 +9,14 @@ $mail = new PHPMailer(true);
 
 $emailR = $_POST['email'];
 $id = $_POST['id'];
-$nomR = $_POST['nom'];
-$prenomR = $_POST['prenom'];
-$engagement = $_POST['engagement'];
-$duree = $_POST['duree'];
-$milieu = $_POST['milieu'];
+$nomR = htmlspecialchars(strip_tags($_POST['nom']));
+$prenomR = htmlspecialchars(strip_tags($_POST['prenom']));
+$engagement = htmlspecialchars(strip_tags($_POST['engagement']));
+$duree = htmlspecialchars(strip_tags($_POST['duree']));
+$milieu = htmlspecialchars(strip_tags($_POST['milieu']));
 $qualites = $_POST['qualites'];
-$commentaire = $_POST['commentaire'];
+$commentaire = htmlspecialchars(strip_tags($_POST['commentaire']));
+$objet = utf8_decode('Validation référence');
 
 // Charger le contenu du fichier utilisateurs.json dans une variable
 $json = file_get_contents('../utilisateurs.json');
@@ -64,7 +65,7 @@ try {
     $mail->Password = '@Jeunes6.4cytech';
 
     // Paramètres de l'e-mail
-    $mail->setFrom('engagementjeunes6.4@laposte.net', 'Votre Nom');
+    $mail->setFrom('engagementjeunes6.4@laposte.net', $objet);
     $mail->addAddress($email, $nom . ' ' . $prenom);
     $mail->Subject = 'Jeune.engagement6.4';
     $mail->Body = utf8_decode('Bonjour ' . $prenom . ", \n\n" .
@@ -78,7 +79,7 @@ try {
 
     $mail->send();
     //echo 'L\'e-mail a été envoyé avec succès';
-    header('Location: /referent/remerciement.html');
+    header('Location: /Referent/remerciement.php');
 
 } catch (Exception $e) {
     echo 'Une erreur s\'est produite lors de l\'envoi de l\'e-mail : ' . $mail->ErrorInfo;
