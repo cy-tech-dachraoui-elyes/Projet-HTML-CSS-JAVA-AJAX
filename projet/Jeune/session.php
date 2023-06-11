@@ -10,14 +10,14 @@ if(isset($_SESSION['user'])){
     foreach($users['jeune'] as $user){
         if($user['id'] === $_SESSION['user']){
             // Afficher les informations de l'utilisateur
-            $id = $user['id'];
-            $prenom = $user['prenom'];
-            $nom = $user['nom'];
-            $email = $user['email'];
-            $date = $user['date'];
-            $reseau = $user['reseau'];
-            $tel = $user['tel'];
-            $mdp = $user['mdp'];
+            $id = htmlspecialchars(strip_tags($user['id']));
+            $prenom = htmlspecialchars(strip_tags($user['prenom']));
+            $nom = htmlspecialchars(strip_tags($user['nom']));
+            $email = htmlspecialchars(strip_tags($user['email']));
+            $date = htmlspecialchars(strip_tags($user['date']));
+            $reseau = htmlspecialchars(strip_tags($user['reseau']));
+            $tel = htmlspecialchars(strip_tags($user['tel']));
+            $mdp = htmlspecialchars(strip_tags($user['mdp']));
             if(!isset($user['references'])){ // Vérifie si aucune référence n'existe, puis met la variable à null
                 $nbref = 'null';
             }
