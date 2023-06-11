@@ -35,7 +35,7 @@ if (isset($_POST['email']) && isset($_POST['mdp'])) {
 <body>
     <div class="bande-grise">
         <div class="contenu">
-            <a href="../accueil.html">
+            <a href="../accueil.php">
                 <img src="/image/jeunes.PNG" alt="Image">
             </a>
             <div class="texte">
@@ -45,7 +45,7 @@ if (isset($_POST['email']) && isset($_POST['mdp'])) {
     </div><br>
 
     <div class="Accueil">
-        <a href="../accueil.html" class="button">Retour Accueil</a>
+        <a href="../accueil.php" class="button">Retour Accueil</a>
     </div>
     
     <form method="POST">
