@@ -58,12 +58,12 @@ if (isset($_POST['email']) && isset($_POST['mdp'])) {
                 <h2>Se connecter</h2>
                 <div class="champ-saisie">
                     <span>Email</span>
-                    <img class="imgs" width="16px" height="16px" src="/boutton/email.png" alt="email">
+                    <img class="imgs" width="16px" height="16px" src="/bouton/email.png" alt="email">
                     <input type="email" class="input" placeholder="Entre ton email..." id="email" name="email" required>
                 </div>
                 <div class="champ-saisie">
                     <span>Mot de passe</span>
-                    <img class="imgs" width="16px" height="16px" src="/boutton/lock.png" alt="password" onclick="affichage()">
+                    <img class="imgs" width="16px" height="16px" src="/bouton/lock.png" alt="password" onclick="affichage()">
                     <input type="password" class="input" placeholder="Entre ton mot de passe..." id="mdp" name="mdp" required>
                 </div>
                 <input type="submit" value="Se connecter">
