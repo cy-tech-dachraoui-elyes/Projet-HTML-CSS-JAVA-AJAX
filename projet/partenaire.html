@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <title> Jeunes 6.4 </title>
         <link rel="stylesheet" type="text/css" href="partenaire.css">
+        <script src="../fonction.js" type="text/javascript"> </script>
     </head>
     
     <body>
@@ -15,15 +16,15 @@
             <div class="bande-centree">
                 <div class="texte2">
                     <a class="aj">
-                        <span> <button class="jeune"> JEUNE </button> </span>
+                        <span> <button class="jeune" onclick="Statut('jeune')"> JEUNE </button> </span>
                     </a>
                     
                     <a class="ar">
-                        <span class="referent">RÉFÉRENT</span>
+                        <span class="referent" onclick="Statut('referent')">RÉFÉRENT</span>
                     </a>
                     
                     <a class="ac">
-                        <span class="consultant">CONSULTANT</span>
+                        <span class="consultant" onclick="Statut('consultant')">CONSULTANT</span>
                     
                     <a href="partenaire.html">
                         <span> <button class="partenaires"> PARTENAIRES </button> </span>
