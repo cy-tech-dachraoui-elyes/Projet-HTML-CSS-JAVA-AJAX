@@ -33,7 +33,7 @@
 
             
                 <div class="contenu">
-                    <a href="accueil.html">
+                    <a href="accueil.php">
                         <img src="/image/jeunes.PNG" alt="Image">
                     </a>
                     
