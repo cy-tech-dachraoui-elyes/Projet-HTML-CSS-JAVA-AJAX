@@ -78,7 +78,7 @@ try {
 
     $mail->send();
     //echo 'L\'e-mail a été envoyé avec succès';
-    header('Location: /referent/remerciement.php');
+    header('Location: /referent/remerciement.html');
 
 } catch (Exception $e) {
     echo 'Une erreur s\'est produite lors de l\'envoi de l\'e-mail : ' . $mail->ErrorInfo;
