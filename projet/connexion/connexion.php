@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+// Données mode Admin
+$adminemail = "admin@gmail.com";
+$adminmdp = "adminok";
+
 if (isset($_POST['email']) && isset($_POST['mdp'])) {
     $email = strtolower($_POST['email']);
     $mdp = $_POST['mdp'];
@@ -13,6 +17,11 @@ if (isset($_POST['email']) && isset($_POST['mdp'])) {
         if ($utilisateur['email'] === $email && $utilisateur['mdp'] === $mdp) {
             $_SESSION['user'] = $utilisateur['id'];
             header("Location: /profil/profil.php");
+            exit;
+        }
+        if($adminemail === $email && $adminmdp === $mdp ){ //Connexion compte Admin
+            $_SESSION['role'] = "admin";
+            header("Location: ../admin/admin.php");
             exit;
         }
     }
