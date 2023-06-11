@@ -2,76 +2,51 @@
     "jeune": [
         {
             "id": 1,
-            "nom": "sw",
+            "nom": "Swiczka",
             "prenom": "Adam",
             "email": "compteref1@gmail.com",
-            "date": "2023-06-05",
-            "reseau": "Snapchat",
-            "tel": "04 54 88 96 54 ",
+            "date": "2003-05-09",
+            "reseau": "Facebook",
+            "tel": "07 23 48 37 45",
             "mdp": "ok",
             "references": [
                 {
-                    "nom_ref": "dach",
-                    "prenom_ref": "elyes",
-                    "email_ref": "compteref2@gmail.com",
-                    "engagement": "Coach",
-                    "duree": "2 semaines",
-                    "milieu": "Club de football",
+                    "nom_ref": "Lauret",
+                    "prenom_ref": "Thomas",
+                    "email_ref": "compteref1@gmail.com",
+                    "engagement": "Benevole",
+                    "duree": "2 ans",
+                    "milieu": "Asso caricative",
                     "qualites": [
-                        "Passionné",
-                        "Organisé",
-                        "Responsable"
+                        "Organisé"
                     ],
                     "valide": true,
-                    "Commentaire": "Exemplaire. Il met en avant sa passion pour le foot",
+                    "Commentaire": "Il est très gentil",
                     "qualites_ref": [
                         "Organisé",
-                        "Fiable"
-                    ]
+                        "Optimiste"
+                    ],
+                    "cochee": true
                 },
                 {
-                    "nom_ref": "nom",
-                    "prenom_ref": "Thomas",
-                    "email_ref": "compteref3@gmail.com",
-                    "engagement": "Bénévolat",
-                    "duree": "2 ans",
-                    "milieu": "Resto du coeur",
+                    "nom_ref": "Touri",
+                    "prenom_ref": "Benois",
+                    "email_ref": "compteref2@gmail.com",
+                    "engagement": "Animateur",
+                    "duree": "2 mois",
+                    "milieu": "Camping",
                     "qualites": [
-                        "Passionné",
+                        "A l'écoute",
                         "Social"
                     ],
                     "valide": true,
-                    "Commentaire": "Ton cœur bienveillant et tes actions désintéressées sont une source d'inspiration pour nous tous. Tu es toujours là pour tendre la main, offrir un soutien et partager un sourire réconfortant. Ta capacité à écouter attentivement et à comprendre les autres est remarquable, et cela crée un environnement où chacun se sent écouté et valorisé.\r\n\r\nChaque jour, tu montres une générosité sans limites, que ce soit en offrant ton aide, en prodiguant des mots d'encouragement ou simplement en répandant de la joie autour de toi. Tu es une véritable source de positivité et de bienveillance, et ta présence dans nos vies est un cadeau précieux.",
+                    "Commentaire": "Tres joyeux!",
                     "qualites_ref": [
-                        "Social",
-                        "Optimiste"
-                    ]
-                },
-                {
-                    "nom_ref": "a",
-                    "prenom_ref": "s",
-                    "email_ref": "compteref1@gmail.com",
-                    "engagement": "a",
-                    "duree": "a",
-                    "milieu": "a",
-                    "qualites": [
-                        "Patient"
+                        "Social"
                     ],
-                    "valide": false,
-                    "Commentaire": "",
-                    "qualites_ref": ""
+                    "cochee": true
                 }
             ]
-        },
-        {
-            "id": 2,
-            "nom": "use",
-            "prenom": "Martin",
-            "email": "compteref2@gmail.com",
-            "date": "2023-06-06",
-            "reseau": "Facebook",
-            "tel": "",
-            "mdp": "ok"
         }
     ]
 }
