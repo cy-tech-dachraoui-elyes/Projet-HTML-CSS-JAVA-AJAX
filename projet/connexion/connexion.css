@@ -1,7 +1,9 @@
+/* Réinitialisation des marges, paddings et boîte de modèles */
+
 *{
     margin: 10;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* la largeur et la hauteur incluent le contenu, le rembourrage et la bordure de l'élément */
 }
 
 body{
@@ -50,7 +52,7 @@ body{
 /* ********** Formulaire de connexion utilisateur ********** */
 
 .zone-connexion{
-    display: flex;
+    display: flex; /* l'élément est un conteneur flexible */
     align-items: center;
     justify-content: center;
     height: 850px;
@@ -66,7 +68,7 @@ body{
     border-radius: 20px;
     box-shadow: 0px 1px 14px 1px rgba(0,0,0,0.74);
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* les éléments sont disposés verticalement dans une colonne */
     align-items: center;
 }
 
@@ -121,7 +123,7 @@ input[type=submit] {
     font-size: 20px;
     color: #fff;
     background: linear-gradient(334deg, #6b97f7, #c947a8, #f7137e);
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out; /* indique une transition de la propriété 'background' avec une durée de 0,3 seconde et une fonction de temporisation 'ease-in-out' */
 }
 
 input[type=submit]:hover{
@@ -129,8 +131,9 @@ input[type=submit]:hover{
 }
 
 /* ************** "Créer un compte" ************** */
+
 .compte {
-    display: inline;
+    display: inline; /* l'élément est affiché comme un élément en ligne */
     font-size: 16px;
     font-family: "Helvetica", sans-serif;
     padding-top:10px;
@@ -142,6 +145,7 @@ input[type=submit]:hover{
 }
 
 /* ********** Bouton accueil ********** */
+
 .Accueil {
     position: fixed;
     right: 20px; /* Texte à droite de l'écran */
