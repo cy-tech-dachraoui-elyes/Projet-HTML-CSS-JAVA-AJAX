@@ -137,3 +137,17 @@ function verifierFormulaire_ref(event) {
     alert("La confirmation de référence a été envoyé.");
   }
 }
+
+function Statut(categorie) {
+    if (categorie === 'jeune') {
+        alert("Veuillez vous connecter à l'espace jeune.");
+    } else if (categorie === 'referent') {
+        alert("Vous ne pouvez pas accéder à l'espace référent.");
+    } else if (categorie === 'consultant') {
+        alert("Vous ne pouvez pas accéder à l'espace consultant.");
+    }
+    else if (categorie === 'jeune2') {
+      alert("Vous ne pouvez pas accéder à l'espace jeune.");
+  }
+}
+
