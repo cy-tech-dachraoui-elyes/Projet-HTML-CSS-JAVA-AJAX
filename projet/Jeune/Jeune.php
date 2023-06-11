@@ -121,6 +121,7 @@
             
 
         </form>
+	<!-- Vérifie si l'utilisateur a des référents et affiche une alerte s'il n'en a pas -->
         <script>
             function verifierRef(event) {
             var userReferences = <?php echo $nbref ?>;
