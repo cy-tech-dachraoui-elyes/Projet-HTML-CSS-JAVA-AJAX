@@ -49,8 +49,8 @@ if (isset($_POST['email']) && isset($_POST['mdp'])) {
     </div>
     
     <form method="POST">
-        <div class="zone-inscription">
-            <div class="inscription">
+        <div class="zone-connexion">
+            <div class="connexion">
                 <?php if (isset($msg)): ?>
                     <!-- Affichage d'un message d'erreur en cas d'identifiant ou de mot de passe incorrect. -->
                     <p class="erreur"><?php echo $msg; ?></p>
