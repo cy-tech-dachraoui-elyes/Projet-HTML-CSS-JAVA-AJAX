@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <title> Jeunes 6.4</title>
         <link rel="stylesheet" type="text/css" href="accueil.css">
+        <script src="../fonction.js" type="text/javascript"> </script>
     </head>
     
     <body>
@@ -110,14 +111,3 @@
     </body>
     
 </html>
-<script>
-function Statut(categorie) {
-    if (categorie === 'jeune') {
-        alert("Veuillez vous connecter à l'espace jeune.");
-    } else if (categorie === 'referent') {
-        alert("Vous ne pouvez pas accéder à l'espace référent.");
-    } else if (categorie === 'consultant') {
-        alert("Vous ne pouvez pas accéder à l'espace consultant.");
-    }
-}
-</script>
