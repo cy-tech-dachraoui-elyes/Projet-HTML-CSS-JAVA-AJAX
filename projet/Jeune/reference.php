@@ -2,14 +2,14 @@
 // Vérifier si les données POST ont été soumises
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Récupération des données du formulaire
-    $email = $_POST['mail'] ?? '';
-    $id = $_POST['id'] ?? '';
-    $nomR = $_POST['nomR'] ?? '';
-    $prenomR = $_POST['prenomR'] ?? '';
-    $emailR = $_POST['mailR'] ?? '';
-    $engagement = $_POST['engagement'] ?? '';
-    $duree = $_POST['duree'] ?? '';
-    $milieu = $_POST['milieu'] ?? '';
+    $email = htmlspecialchars(strip_tags($_POST['mail'])) ?? '';
+    $id = htmlspecialchars(strip_tags($_POST['id'])) ?? '';
+    $nomR = htmlspecialchars(strip_tags($_POST['nomR'])) ?? '';
+    $prenomR = htmlspecialchars(strip_tags($_POST['prenomR'])) ?? '';
+    $emailR = htmlspecialchars(strip_tags($_POST['mailR'])) ?? '';
+    $engagement = htmlspecialchars(strip_tags($_POST['engagement'])) ?? '';
+    $duree = htmlspecialchars(strip_tags($_POST['duree'])) ?? '';
+    $milieu = htmlspecialchars(strip_tags($_POST['milieu'])) ?? '';
     $qualites = $_POST['qualites'];
 
 
