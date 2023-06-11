@@ -67,7 +67,7 @@ p {
   padding: 10px;
 }
 
-.bande-centree .texte2 span.jeune {
+.bande-centree .module span.jeune {
   font-size: 20px;
   margin-left: 20px;
   margin-right: 20px;
@@ -81,7 +81,7 @@ p {
   text-decoration: none;
 }
 
-.bande-centree .texte2 span.referent {
+.bande-centree .module span.referent {
   font-size: 20px;
   margin-left: 20px;
   margin-right: 20px;
@@ -95,7 +95,7 @@ p {
   text-decoration: none;
 }
 
-.bande-centree .texte2 span.consultant {
+.bande-centree .module span.consultant {
   font-size: 20px;
   margin-left: 20px;
   margin-right: 20px;
@@ -109,7 +109,7 @@ p {
   text-decoration: none;
 }
 
-.bande-centree .texte2 .partenaires {
+.bande-centree .module .partenaires {
   font-size: 20px;
   margin-left: 20px;
   margin-right: 20px;
