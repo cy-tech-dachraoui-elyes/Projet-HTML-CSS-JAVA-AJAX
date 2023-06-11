@@ -18,7 +18,7 @@
         <div class="bande-grise">
             
             <div class="bande-centree">
-                <div class="texte2">
+                <div class="Option">
                     <a href="../accueil.html" class="aj" >
                         <span class="accueil">Accueil</span>
                     </a>
