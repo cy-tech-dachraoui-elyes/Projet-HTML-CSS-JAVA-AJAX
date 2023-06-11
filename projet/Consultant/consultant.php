@@ -32,6 +32,7 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
     <meta charset="UTF-8">
     <title>Jeunes 6.4</title>
     <link rel="stylesheet" type="text/css" href="consultant.css">
+    <script src="../fonction.js" type="text/javascript"> </script>
 </head>
 
 <body>
@@ -48,11 +49,11 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
             </div>
             <div class="bande-centree">
                 <div class="module">
-                    <a class="aj">
+                    <a class="aj" onclick="Statut('jeune2')">
                         <span><button class="jeune">JEUNE</button></span>
                     </a>
                     <a class="ar">
-                        <span class="referent">RÉFÉRENT</span>
+                        <span class="referent" onclick="Statut('referent')">RÉFÉRENT</span>
                     </a>
                     <a class="ac">
                         <span class="consultant">CONSULTANT</span>
