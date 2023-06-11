@@ -21,10 +21,10 @@
                     <span><button class="jeune">JEUNE</button></span>
                 </a>
                 <a class="ar">
-                    <span class="referent">RÉFÉRENT</span>
+                    <span class="referent" onclick="Statut('referent')">RÉFÉRENT</span>
                 </a>
                 <a class="ac">
-                    <span class="consultant">CONSULTANT</span>
+                    <span class="consultant" onclick="Statut('consultant')">CONSULTANT</span>
                 </a>
                 <a href="../partenaire.html">
                     <span><button class="partenaires">PARTENAIRES</button></span>
