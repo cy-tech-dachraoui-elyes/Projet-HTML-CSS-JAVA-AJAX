@@ -120,7 +120,8 @@
     background-color : transparent;
     cursor : pointer;
 }
-        /* ************* Positionnement de la déconnexion ************* */
+
+/* ************* Positionnement de la déconnexion ************* */
 
 .deconnexion {
     position: fixed;
@@ -143,9 +144,8 @@
     top: 160px;
 }
           
-  
 
-        /* ************* Style du bouton de déconnexion et profil************* */
+/* ************* Style du bouton de déconnexion et profil************* */
 
 .commande .button{
     font-family : "Helvetica";
@@ -168,7 +168,8 @@
 
 
 
-        /* *************************** TEXTE ROSE ************************* */
+/* *************************** TEXTE ROSE ************************* */
+
 .dec{
     position: fixed;
     font-size: 22px;
@@ -179,7 +180,8 @@
     font-family: "Helvetica", sans-serif;
     letter-spacing: 1px;
 }
-        /* ************************ TRAIT ROSE *********************** */
+
+/* ************************ TRAIT ROSE *********************** */
 
 .traitrose{
     position: fixed;
@@ -190,27 +192,14 @@
     height : 230px;
 
 }
-        /* ************************ DONNÉES *********************** */
 
-
+/* ************************ DONNÉES *********************** */
 
 label{
     font-size : 20px;
     font-family : "helvetica";
 }
-.cadreInfo{
-    position: fixed;
-    font-size: 22px;
-    top: 540px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family : 20px;
-    padding-right : 75px;
-    width: 25%;
-    border: 1px solid #ff007f;
-    background-color : white;
-    color : #ff007f;
-}
+
 .cadreInfo1{
     position: fixed;
     font-size: 22px;
@@ -225,6 +214,19 @@ label{
     color : #ff007f;
 }
 
+.cadreInfo2{
+    position: fixed;
+    font-size: 22px;
+    top: 540px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family : 20px;
+    padding-right : 75px;
+    width: 25%;
+    border: 1px solid #ff007f;
+    background-color : white;
+    color : #ff007f;
+}
 
 input[type="text"]{
     border: none;
@@ -252,7 +254,7 @@ input, textarea{
     font-size: 14px;
 }
 
-        /* ************************** "JE SUIS"**************************** */
+/* ************************** Bande rose ************************** */
 
 .bandeRose{
     position : fixed;
@@ -268,12 +270,15 @@ input, textarea{
     text-align : center;
 }
 
+/* ************************** "JE SUIS" ************************** */
+
 .jss{
     position: absolute;
     margin-top : -5px;
     margin-left : 130px;
 }
 
+/* ************************** Qualites ************************** */
 
 .checkboxes{
     position: fixed;
@@ -289,6 +294,7 @@ input, textarea{
     background-color: rgb(252, 237, 245);
 }
 
+/* ******************** Bouton valider ******************** */
 
 .valider{
     position : absolute;
@@ -301,6 +307,8 @@ input, textarea{
     left : 80px;
     cursor : pointer;
 }
+
+/* ************ "Faire 4 choix maximum" ************ */
 
 .maxChoix{
     position : fixed;
