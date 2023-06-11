@@ -12,7 +12,7 @@
         <div class="bande-grise">
 
             <div class="bande-centree">
-                <div class="texte2">
+                <div class="module">
                     <a class="aj">
                         <span class="jeune" onclick="Statut('jeune')"> JEUNE</span>
                     </a>
