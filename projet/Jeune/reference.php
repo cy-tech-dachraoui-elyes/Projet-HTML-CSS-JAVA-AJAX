@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'valide' => false, // par défaut la demande de référence est non validée.
                 'Commentaire' => "" ,
                 'qualites_ref' => "",
-                'cochee' => false
+                'cochee' => false // par défaut la référence n'est pas cochée.
             );
             $utilisateurs['jeune'][$key]['references'][] = $reference;
 
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Afficher un message de confirmation
 
-	        include("mail/mail.php");
+	        include("mail/mail.php"); // Inclusion du fichier PHP pour l'envoi de l'e-mail au référent 
 
             header('Location: Jeune.php');
             break;
