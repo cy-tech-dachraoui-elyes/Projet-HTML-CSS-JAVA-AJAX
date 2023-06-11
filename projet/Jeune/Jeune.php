@@ -9,7 +9,7 @@
         <meta charset="UTF-8">
         <title> Jeunes 6.4 </title>
         <link rel="stylesheet" type="text/css" href="Jeune.css">
-	<script src="../fonction.js" type="text/javascript"> </script>
+        <script src="../fonction.js" type="text/javascript"> </script>
     </head>
     
     <body>
@@ -74,8 +74,9 @@
                     <label for="email"> Email : </label>
                     <input type="email" id="email" name="mail" required value="<?php echo $email; ?>">
                     <input type="hidden" name="id" value="<?php echo $id; ?>">        
-                </fieldset>
-                <fieldset class="cadreInfo">
+            </fieldset>
+
+            <fieldset class="cadreInfo2">
                 <legend>Referent</legend>
                     <label for="nom"> Nom : </label>
                     <input type="text" id="nom" name="nomR" maxlenght="50" required>
@@ -89,8 +90,7 @@
                             
                     <br><br>
                     <label for="engagement"> Mon engagement : </label>
-                    <input type="text" id="engagement" name="engagement" required>
-                            
+                    <input type="text" id="engagement" name="engagement" required>  
                     <br>
                     <label for="duree"> Durée : </label>
                     <input type="text" id="duree" name="duree" required>
@@ -98,7 +98,7 @@
                     <label for="milieu"> Milieu : </label>
                     <input type="text" id="milieu" name="milieu" required >       
 
-                </fieldset>
+            </fieldset>
             </div>
 
 
@@ -120,8 +120,8 @@
             
 
         </form>
-        <script>
 
+        <script>
             function verifierRef(event) {
                 var userReferences = <?php echo $nbref ?>;
                     if (userReferences == null) {
@@ -139,5 +139,3 @@
         
     </body>
 </html>
-
-
