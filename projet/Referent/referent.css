@@ -1,64 +1,70 @@
 
 /* ****************** BANDE GRISE ********************* */
 
-.bande-grise{
+.bande-grise {
     position: fixed;
     top: 0;
     left: 0;
     padding: 70px;
     width: 100%;
     background-image: linear-gradient(to right, #B8B8B8 0%, #f5f5f5 20%, #B8B8B8 100%);
-}
-
-/* ****************** IMAGE ********************* */
-
-.bande-grise img{
+  }
+  
+  /* ****************** IMAGE ********************* */
+  
+  .bande-grise img {
     position: absolute;
     top: 0;
     left: 0;
-    padding-top : 7px;
-    padding-left : 40px;
-    transform: scale(2.6);
+    padding-top: 7px;
+    padding-left: 40px;
+    transform: scale(2.6); /* agrandit l'élément en le mettant à l'échelle 2,6 fois */
     width: 200px;
     height: auto;
-}
-
-/* ****************** "POUR FAIRE DE L'ENGAGEMENT UNE VALEUR" ********************* */
-
-.texte{
-    position : absolute;
-    left : 990px;
-    top : -75px;
-    letter-spacing : 0px;
+  }
+  
+  /* ****************** "Consultant" ********************* */
+  
+  .texte {
+    position: fixed;
     color: #C2E12E;
-    font-family : "Helvetica";
+    font-family: "Helvetica";
+    letter-spacing : 0px;
+    right: 0; /* Texte à droite de l'écran */
+    top: -75px;
     font-size : 80px;
-}
-
-.t2{
-    position : absolute;
-    font-family : "helvetica";
+    padding-right : 20px; ;
+  }
+  
+  /* *** "Je donne de la valeur à mon engagement" *** */
+  
+  .t2{
+    position: fixed;
+    font-family : "Helvetica";
+    right: 0; /* Texte à droite de l'écran */
+    top: -55px;
+    padding-right : 20px;
     color : white;
     font-size : 40px;
     top : 40px;
-    left : 625px;
     letter-spacing : 1px;
-}
+  }
 
 
 /* ****************** BANDE CENTREE ********************* */
-
 .bande-centree{
-    position : absolute;
+    position: fixed;
+    top: 140px;
+    left: 0;
+    right: 0;
+    margin: auto;
     width: 40%;
     text-align: center;
     background-image: linear-gradient(to right, #d3d3d3 0%, #f5f5f5 20%, #d3d3d3 100%);
-    text-align: center;
     padding: 10px;
-    margin: 70px 0 0 350px;
 }
 
-.bande-centree .texte2 .jeune{
+.bande-centree .module .jeune{
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -68,29 +74,30 @@
     border : none;
     background-color : transparent;
     cursor : pointer;
-}
+  }
 
 .aj{
     text-decoration : none;
 }
 
-.bande-centree .texte2 span.referent{
+.bande-centree .module span.referent{
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    padding: 5px 15px 5px 15px;
+    padding: 4px 14px 4px 14px;
     font-family : "helvetica";
     letter-spacing : -1px;
     color: white;
     cursor : pointer;
-    background-color : #228b22;
+    background-color :  #228b22;
+    border : none;
 }
 
 .ar{
     text-decoration : none;
 }
 
-.bande-centree .texte2 span.consultant{
+.bande-centree .module span.consultant{
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -104,7 +111,7 @@
     text-decoration : none;
 }
 
-.bande-centree .texte2 .partenaires{
+.bande-centree .module .partenaires{
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -115,8 +122,6 @@
     background-color : transparent;
     cursor : pointer;
 }
-
-
 /* *************************** TEXTE VERT ************************* */
 
 .dec{
@@ -162,8 +167,7 @@ label{
     width: 78%;
     border-top : none;
     border-left : none;
-    border-bottom : 1px solid #C2E12E;
-    border-right : 1px solid #C2E12E;
+    border: 1px solid #C2E12E;
 }
 
 input[type="text"]{
