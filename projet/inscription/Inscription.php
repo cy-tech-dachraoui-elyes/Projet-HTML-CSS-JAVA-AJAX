@@ -1,13 +1,13 @@
 <?php
     //echo json_encode($_POST);
 
-    $nom = $_POST['nom'];
-	$prenom = $_POST['prenom'];
-    $email = $_POST['email'];
-    $date = $_POST['date'];
-    $reseau = $_POST['reseau'];
+    $nom = htmlspecialchars(strip_tags($_POST['nom']));
+    $prenom = htmlspecialchars(strip_tags($_POST['prenom']));
+    $email = htmlspecialchars(strip_tags($_POST['email']));
+    $date = htmlspecialchars(strip_tags($_POST['date']));
+    $reseau = htmlspecialchars(strip_tags($_POST['reseau']));
     $tel = "";
-    $mdp = $_POST['mdp'];
+    $mdp = htmlspecialchars(strip_tags($_POST['mdp']));
     
     $utilisateurs = json_decode(file_get_contents('../utilisateurs.json'), true) ?: [];
 
