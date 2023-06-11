@@ -46,9 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $emailC_encoded = urlencode($emailC);
     $id_encoded = urlencode($id);
-    $lien = "http://localhost:8080/Consultant/consultant.php?emailC=$emailC_encoded&id=$id_encoded";
+    $lien = "http://localhost:8080/consultant/consultant.php?emailC=$emailC_encoded&id=$id_encoded";
     $nomC = 'ent';
     $prenomC ='consultant';
+    $objet = utf8_decode('Demande Jeune');
 
 try {
     // Paramètres du serveur SMTP de Laposte
@@ -63,7 +64,7 @@ try {
     $mail->Password = '@Jeunes6.4cytech';
 
     // Paramètres de l'e-mail
-    $mail->setFrom('engagementjeunes6.4@laposte.net', 'Votre Nom');
+    $mail->setFrom('engagementjeunes6.4@laposte.net', $objet);
     $mail->addAddress($emailC, $nomC . ' ' . $prenomC);
     $mail->Subject = 'Jeune.engagement6.4';
     $mail->Body = utf8_decode('Bonjour ' . $prenomC . ", \n\n" .
