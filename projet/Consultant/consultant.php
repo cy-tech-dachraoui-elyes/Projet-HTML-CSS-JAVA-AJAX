@@ -37,7 +37,7 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
 <body>
     <div class="bande-grise">
         <div class="contenu">
-            <a href="../accueil.html">
+            <a href="../accueil.php">
                 <img src="/image/jeunes.PNG" alt="Image" class="jeune">
             </a>
             <div class="texte">
