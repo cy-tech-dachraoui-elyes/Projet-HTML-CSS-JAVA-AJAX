@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $prenom = htmlspecialchars(strip_tags($_POST['prenom'])) ?? '';
 
     $email_encoded = urlencode($email);
-    $objet = utf8_decode('Validation recrutement');
+    $objet = utf8_decode('Refus recrutement');
 
 try {
     // Paramètres du serveur SMTP de Laposte
@@ -33,10 +33,8 @@ try {
     $mail->Subject = 'Jeune.engagement6.4';
     $mail->Body = utf8_decode('Bonjour ' . $prenom . ", \n\n" .
 
-    "Nous sommes ravis de vous informer que votre candidature a été retenue pour passer à la prochaine étape du processus de sélection.\n\n" .
-    "Nous avons examiné attentivement votre profil, vos qualifications et votre expérience, et nous sommes convaincus que vous possédez les compétences et les aptitudes nécessaires pour contribuer de manière significative à notre équipe.\n".
-    "Nous aimerions poursuivre le processus de sélection en organisant une entrevue avec vous. Nous vous contacterons dans les prochains jours pour convenir d'une date et d'une heure qui vous conviennent.\n".
-    "Pendant l'entretien, nous discuterons plus en détail de votre expérience, de vos compétences et de la manière dont vous pourriez contribuer à notre équipe.\n".
+    "Nous regrettons de vous informer que suite à l'évaluation de votre dossier, nous avons pris la décision de ne pas retenir votre candidature.\n\n" .
+    "Nous avons soigneusement examiné votre profil et vos qualifications, et bien que nous reconnaissions vos compétences, d'autres candidats ayant une expérience plus proche de ce que nous souhaitons ont été retenus pour poursuivre le processus de recrutement.\n\n".
     "Si vous avez des questions ou souhaitez obtenir de plus amples informations, n'hésitez pas à nous contacter.\n\n".
     "Cordialement,\n" .
     "L'équipe Jeunes 6.4");
