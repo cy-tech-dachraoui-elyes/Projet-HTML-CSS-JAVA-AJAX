@@ -13,16 +13,16 @@
 
             <div class="bande-centree">
                 <div class="texte2">
-                    <a href="/Jeune/Jeune.php" class="aj">
-                        <span class="jeune"> JEUNE</span>
+                    <a class="aj">
+                        <span class="jeune" onclick="Statut('jeune')"> JEUNE</span>
                     </a>
                     
-                    <a href="referent.php" class="ar">
-                        <span class="referent">RÉFÉRENT</span>
+                    <a class="ar" >
+                        <span class="referent" onclick="Statut('referent')">RÉFÉRENT</span>
                     </a>
                     
-                    <a href="consultant.html" class="ac">
-                        <span class="consultant">CONSULTANT</span>
+                    <a class="ac">
+                        <span class="consultant" onclick="Statut('consultant')">CONSULTANT</span>
                     </a>
                     
                     <a href="partenaire.html" class="ap">
@@ -110,4 +110,14 @@
     </body>
     
 </html>
-
+<script>
+function Statut(categorie) {
+    if (categorie === 'jeune') {
+        alert("Veuillez vous connecter à l'espace jeune.");
+    } else if (categorie === 'referent') {
+        alert("Vous ne pouvez pas accéder à l'espace référent.");
+    } else if (categorie === 'consultant') {
+        alert("Vous ne pouvez pas accéder à l'espace consultant.");
+    }
+}
+</script>
