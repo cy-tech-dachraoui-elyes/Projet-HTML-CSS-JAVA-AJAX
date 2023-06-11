@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $emailC_encoded = urlencode($emailC);
     $id_encoded = urlencode($id);
-    $lien = "http://localhost:8080/consultant/consultant.php?emailC=$emailC_encoded&id=$id_encoded";
+    $lien = "http://localhost:8080/Consultant/consultant.php?emailC=$emailC_encoded&id=$id_encoded";
     $nomC = 'ent';
     $prenomC ='consultant';
     $objet = utf8_decode('Demande Jeune');
