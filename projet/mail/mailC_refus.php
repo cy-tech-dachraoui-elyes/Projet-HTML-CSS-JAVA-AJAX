@@ -8,12 +8,12 @@ use PHPMailer\PHPMailer\Exception;
 $mail = new PHPMailer(true);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'] ?? '';
-    $nom = $_POST['nom'] ?? '';
-    $prenom = $_POST['prenom'] ?? '';
-    $message = $_POST['message'] ?? '';
+    $email = htmlspecialchars(strip_tags($_POST['email'])) ?? '';
+    $nom = htmlspecialchars(strip_tags($_POST['nom'])) ?? '';
+    $prenom = htmlspecialchars(strip_tags($_POST['prenom'])) ?? '';
 
     $email_encoded = urlencode($email);
+    $objet = utf8_decode('Refus recrutement');
 
 try {
     // Paramètres du serveur SMTP de Laposte
@@ -28,7 +28,7 @@ try {
     $mail->Password = '@Jeunes6.4cytech';
 
     // Paramètres de l'e-mail
-    $mail->setFrom('engagementjeunes6.4@laposte.net', 'Votre Nom');
+    $mail->setFrom('engagementjeunes6.4@laposte.net', $objet);
     $mail->addAddress($email, $nom . ' ' . $prenom);
     $mail->Subject = 'Jeune.engagement6.4';
     $mail->Body = utf8_decode('Bonjour ' . $prenom . ", \n\n" .
