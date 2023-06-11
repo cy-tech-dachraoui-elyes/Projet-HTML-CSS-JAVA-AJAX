@@ -18,13 +18,13 @@
     left: 0;
     padding-top : 7px;
     padding-left : 40px;
-    transform: scale(2.6);
+    transform: scale(2.6); /* agrandit l'élément en le mettant à l'échelle 2,6 fois */
     width: 200px;
     height: auto;
 }
 
 
-/* ****************** "POUR FAIRE DE L'ENGAGEMENT UNE VALEUR" ********************* */
+/* ****************** "Jeune" ********************* */
 
 .texte{
     position: fixed;
@@ -37,6 +37,8 @@
     padding-right : 20px; 
 }
 
+/* ****************** "Mes références" ********************* */
+
 .t2{
     position: fixed;
     font-family : "Helvetica";
@@ -48,7 +50,8 @@
     top : 40px;
     letter-spacing : 1px;
 }
-    /* ************* Positionnement de la déconnexion ************* */
+
+/* ************* Positionnement Générer PDF ************* */
 
 .pdf {
 position: fixed;
@@ -56,13 +59,6 @@ right: 260px; /* Texte à droite de l'écran */
 top: 160px;
 }
 
-        /* ************* Positionnement de la déconnexion ************* */
-
-.deconnexion {
-    position: fixed;
-    right: 20px; /* Texte à droite de l'écran */
-    top: 160px;
-}
 /* ************* Positionnement de profil ************* */
 
 .profil{
@@ -71,11 +67,16 @@ top: 160px;
     top: 160px;
 }
 
+/* ************* Positionnement de la déconnexion ************* */
 
-          
-  
+.deconnexion {
+    position: fixed;
+    right: 20px; /* Texte à droite de l'écran */
+    top: 160px;
+}
 
-        /* ************* Style du bouton de déconnexion et profil************* */
+
+/* ************* Style du bouton de déconnexion, PDF et profil ************* */
 
 .commande .button{
     font-family : "Helvetica";
@@ -97,36 +98,18 @@ top: 160px;
 }
 
 
-
-        /* *************************** TEXTE ROSE ************************* */
-.dec{
-    position: fixed;
-    font-size: 22px;
-    top: 200px;
-    left: 50%;
-    transform: translate(-50%, -50%);/*le texte sera centré horizontalement au milieu de l'écran*/
-    color: #ff007f;
-    font-family: "Helvetica", sans-serif;
-    letter-spacing: 1px;
-    margin-bottom: 20px; /* Ajout de la marge inférieure */
-}
-
-
-        /* ************************ TRAIT ROSE *********************** */
+/* ************************ TRAIT ROSE *********************** */
 
 .traitrose{
     position: fixed;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* le texte sera centré horizontalement au milieu de l'écran */
     top: 600px;
     left: 50%;
     width : 670px;
     height : 230px;
-
 }
 
-
-
-/**********REFERENCES************/
+/********** REFERENCES ************/
 
 *{
     margin: 10;
@@ -136,7 +119,6 @@ top: 160px;
 
 
 .reference {
-
     cursor: pointer;
     border: 1px solid #ff007f;
     background: linear-gradient(to bottom, #ffffff, #dddbdb);
@@ -149,9 +131,6 @@ top: 160px;
     margin-bottom: 20px;
     transition: height 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    
-
-    
 }
 
 
@@ -163,7 +142,7 @@ top: 160px;
 
 /* Détails de référence */
 .reference-details {
-    display: none;
+    display: none; /* l'élément est complètement retiré du flux du document */
     padding: 10px;
     color: #ff007f;
     background: linear-gradient(to bottom, #ffffff, #dddbdb);
@@ -208,7 +187,6 @@ top: 160px;
     padding: 10px;
     color: #1aac1a;
     background: linear-gradient(to bottom, #ffffff, #dddbdb);
-    
 }
 
 input[type="checkbox"] {
@@ -216,7 +194,23 @@ input[type="checkbox"] {
     right:560px;
     transform: scale(3); /* On grossit la case */
     
-  }
+}
+
+/* *************** Bouton supprimer *************** */
+
+.supprimer-reference {
+    padding: 8px 16px;
+    margin: 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: 1px, black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+  
+.supprimer-reference:hover {
+    background-color: #e23421;
+}
 
   .envoyer{
     position : absolute;
@@ -228,6 +222,8 @@ input[type="checkbox"] {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+/* *************** Bouton envoyer mail *************** */
 
 input[type="email"]{
     border: none;
@@ -252,18 +248,5 @@ input[type="email"]{
 
 .bouton:hover {
     background-color: #00bfff; /* Couleur de fond au survol */
-  }
+}
 
-.supprimer-reference {
-    padding: 8px 16px;
-    margin: 10px;
-    background-color: #e74c3c;
-    color: #fff;
-    border: 1px, black;
-    border-radius: 3px;
-    cursor: pointer;
-}
-  
-.supprimer-reference:hover {
-    background-color: #e23421;
-}
