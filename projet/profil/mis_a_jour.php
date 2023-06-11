@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Location: profil.php');
 } else {
     // Rediriger vers la page d'accueil si les données POST ne sont pas soumises
-    header('Location: ../accueil.html');
+    header('Location: ../accueil.php');
     exit;
 }
 
