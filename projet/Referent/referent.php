@@ -122,7 +122,13 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
                         <br>
                         <label for="qualites"> Qualites : </label>
                         <input type="text" id="qualites" name="qualites" value="<?php echo implode(", ", $qualites); ?>">
-                            
+                        <br>
+                        <label for="savoirEtre"> Savoir être :</label>
+                        <input type="text" id="savoirEtre" name="savoirEtre">
+
+                        <br>
+                        <label for="savoirFaire"> Savoir faire :</label>
+                        <input type="text" id="savoirFaire" name="savoirFaire">   
                         
                     </fieldset>
                     </div>
