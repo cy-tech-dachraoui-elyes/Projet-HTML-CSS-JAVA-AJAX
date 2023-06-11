@@ -1,3 +1,7 @@
+<?php
+	include("/mail/mailR_valide.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>   
@@ -8,9 +12,7 @@
 <body>
     <div class="bande-grise">
         <div class="contenu">
-            <a href="remerciement.html">
-                <img src="/image/jeunes.PNG" alt="image">
-            </a>
+            <img src="/image/jeunes.PNG" alt="image">
         </div>
         <div class="texte">
             <p>CONFIRMATION</p>
@@ -19,7 +21,7 @@
 
     <p class="h1">Félicitations <br> </p>
     <br><br><br>
-    <div class="im">
+    <div class="image">
         <img src="/image/LOGOS JEUNES 6,4.jpg" alt="image">
     </div>
     <div class="t2">
