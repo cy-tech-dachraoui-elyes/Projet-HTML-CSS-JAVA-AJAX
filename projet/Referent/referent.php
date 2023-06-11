@@ -41,18 +41,18 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
         <div class="bande-grise">
             
             <div class="bande-centree">
-                <div class="texte2">
-                    <a href="/Jeune/Jeune.php" class="aj">
-                        <span> <button class="jeune"> JEUNE </button> </span>
+                <div class="module">
+                    <a class="aj">
+                        <span> <button class="jeune" onclick="Statut('jeune2')"> JEUNE </button> </span>
                     </a>
                     
-                    <a href="referent.php" class="ar">
+                    <a class="ar">
                         <span class="referent">RÉFÉRENT</span>
                     </a>
                     
                     
-                    <a href="../consultant.php" class="ac">
-                        <span class="consultant">CONSULTANT</span>
+                    <a class="ac">
+                        <span class="consultant" onclick="Statut('referent')">CONSULTANT</span>
                     </a>
                     
                     <a href="../partenaire.html">
@@ -68,7 +68,7 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
             </div>
             
             <div class="contenu">
-                <a href="../accueil.php">
+                <a href="../accueil.html">
                     <img src="/image/jeunes.PNG" alt="Image">
                 </a>
                 
@@ -102,22 +102,21 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
                             
                         <br><label for="prenom"> Prénom : </label>
                         <input type="text" id="prenom" name="prenom" maxlenght="50" value="<?php echo $prenomR; ?>"required>
-                        
-                        <br>
-                        <label for="date"> Milieu: </label>
-                        <input type="text" id="milieu" name="milieu" maxlenght="50" value="<?php echo $milieu; ?>"required>
+
                         <br>
                         <label for="email"> Email : </label>
                         <input type="email" id="email" name="email" value="<?php echo $emailR; ?>"readonly>
-                            
-                        <br>
-                        <label for="reseau"> Réseau Social :  </label>
-                        <input type="text" id="reseau" name="reseau" value="<?php echo $email; ?>">
-                            
+
+                        
+                               
                         <br><br>
                         <label for="engagement"> Mon engagement: </label>
                         <input type="text" id="engagement" name="engagement" value="<?php echo $engagement; ?>">
-                            
+
+                        <br>
+                        <label for="date"> Milieu: </label>
+                        <input type="text" id="milieu" name="milieu" maxlenght="50" value="<?php echo $milieu; ?>"required> 
+                          
                         <br>
                         <label for="duree"> Durée : </label>
                         <input type="text" id="duree" name="duree" value="<?php echo $duree; ?>">
@@ -171,3 +170,4 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
         
     </body>
 </html>
+
