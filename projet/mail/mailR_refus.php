@@ -8,12 +8,12 @@ use PHPMailer\PHPMailer\Exception;
 $mail = new PHPMailer(true);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'] ?? '';
-    $nom = $_POST['nom'] ?? '';
-    $prenom = $_POST['prenom'] ?? '';
-    $message = $_POST['message'] ?? '';
+    $email = htmlspecialchars(strip_tags($_POST['email'])) ?? '';
+    $nom = htmlspecialchars(strip_tags($_POST['nom'])) ?? '';
+    $prenom = htmlspecialchars(strip_tags($_POST['prenom'])) ?? '';
 
     $email_encoded = urlencode($email);
+    $objet = utf8_decode('Refus recrutement');
 
 try {
     // Paramètres du serveur SMTP de Laposte
@@ -28,13 +28,13 @@ try {
     $mail->Password = '@Jeunes6.4cytech';
 
     // Paramètres de l'e-mail
-    $mail->setFrom('engagementjeunes6.4@laposte.net', 'Votre Nom');
+    $mail->setFrom('engagementjeunes6.4@laposte.net', $objet);
     $mail->addAddress($email, $nom . ' ' . $prenom);
     $mail->Subject = 'Jeune.engagement6.4';
     $mail->Body = utf8_decode('Bonjour ' . $prenom . ", \n\n" .
 
-    "Nous regrettons de vous informer que votre demande de référence a été refusée pour le motif suivant:\n\n" .
-    "'". $message ."'\n\n" .
+    "Nous regrettons de vous informer que suite à l'évaluation de votre dossier, nous avons pris la décision de ne pas retenir votre candidature.\n\n" .
+    "Nous avons soigneusement examiné votre profil et vos qualifications, et bien que nous reconnaissions vos compétences, d'autres candidats ayant une expérience plus proche de ce que nous souhaitons ont été retenus pour poursuivre le processus de recrutement.\n\n".
     "Si vous avez des questions ou souhaitez obtenir de plus amples informations, n'hésitez pas à nous contacter.\n\n".
     "Cordialement,\n" .
     "L'équipe Jeunes 6.4");
@@ -43,8 +43,7 @@ try {
 
     $mail->send();
     //echo 'L\'e-mail a été envoyé avec succès';
-    header('Location: /referent/refus.html');
-    
+    header('Location: ../page0.html');
 
 } catch (Exception $e) {
     echo 'Une erreur s\'est produite lors de l\'envoi de l\'e-mail : ' . $mail->ErrorInfo;
