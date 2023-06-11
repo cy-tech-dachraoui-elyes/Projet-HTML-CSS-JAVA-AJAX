@@ -43,7 +43,7 @@ if(isset($_SESSION['user'])){
 <body>
     <div class="bande-grise">
         <div class="contenu">
-            <a href="../accueil.html">
+            <a href="../accueil.php">
                 <img src="/image/jeunes.PNG" alt="Image">
             </a>
             <div class="texte">
