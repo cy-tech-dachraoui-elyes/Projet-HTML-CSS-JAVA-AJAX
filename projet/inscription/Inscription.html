@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 	<title>Inscription</title>
-	<link href="inscrip.css" type="text/css" rel="stylesheet">
+    <link href="inscription.css" type="text/css" rel="stylesheet">
 </head>
+
 <body>
-		<div class="bande-grise">
-                <div class="contenu">
-                    <a href="../accueil.html">
-                        <img src="/image/jeunes.PNG" alt="Image">
-                    </a>
-                    <div class="texte">
-                        <p>Inscription</p>
-                    </div>
-                </div>
-        </div><br>
+<div class="bande-grise">
+    <div class="contenu">
+
+        <a href="../accueil.html">
+            <img src="/image/jeunes.PNG" alt="Image">
+        </a>
+
+        <div class="texte">
+            <p>Inscription</p>
+        </div>
+    </div>
+</div><br>
+
+<div class="connexion">
+        <a href="/connexion/connexion.php" class="button">Connexion</a>
+</div>
+<div class="Accueil">
+        <a href="../accueil.html" class="button">Retour Accueil</a>
+</div>
 
 <form id="inscription">
-        <div class="gradient"></div>
-        <div class="sign-up-wrapper">
-            <div class="sign-up">
+    <div class="zone-inscription">
+        <div class="contenu-inscription">
             <h2>Inscription</h2>
-            <div class="input-box">
-                    <input type="text" placeholder="Nom" name="nom" required>
+
+            <div class="champ-saisie">
+                <input type="text" placeholder="Nom" name="nom" required>
             </div>
-            <div class="input-box">
-                    <input type="text" placeholder="Prenom" name="prenom" required>
+            <div class="champ-saisie">
+                <input type="text" placeholder="Prenom" name="prenom" required>
             </div>
-            <div class="input-box">
-                    <label for="date" class="label-date">Date de naissance</label>
-                    <input type="date" id="date" name="date" required>
-                  </div>                  
-            <div class="input-box">
-                    <input type="email" class="input" placeholder="Entre ton email..." id="email" name="email" required>
+            <div class="champ-saisie">
+                <label for="date" class="label-date">Date de naissance</label>
+                <input type="date" id="date" name="date" required>
+            </div>                  
+            <div class="champ-saisie">
+                <input type="email" class="input" placeholder="Entre ton email..." id="email" name="email" required>
             </div>
-            <div class="input-box">
-                    <input type="text" placeholder="Réseau social" name="reseau" required>
+            <div class="champ-saisie">
+                <input type="text" placeholder="Réseau social" name="reseau" required>
             </div>
-            <div class="input-box">
+
+            <div class="champ-saisie">
             <input type="password" class="input" placeholder="Entre ton mot de passe..." id="mdp" name="mdp" required>
             </div>
+
             <input type="submit" value="S'inscrire">
-        </div>
-            
+        </div>   
     </div>
 </form>
-<script src="Inscription.js"></script>
 
+<script src="Inscription.js"></script>
 
 </body>
 </html>​
