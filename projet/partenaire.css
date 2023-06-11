@@ -1,69 +1,58 @@
-        /* ****************** BANDE GRISE ********************* */
+/* ****************** BANDE GRISE ********************* */
 
-.bande-grise{
+.bande-grise {
     position: fixed;
     top: 0;
     left: 0;
     padding: 70px;
     width: 100%;
     background-image: linear-gradient(to right, #B8B8B8 0%, #f5f5f5 20%, #B8B8B8 100%);
+  }
+  
+  /* ****************** IMAGE ********************* */
+  
+.bande-grise img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 7px;
+    padding-left: 40px;
+    transform: scale(2.6); /* agrandit l'élément en le mettant à l'échelle 2,6 fois */
+    width: 200px;
+    height: auto;
 }
-
-/* ****************** IMAGE ********************* */
-
-.bande-grise img{
-position: absolute;
-top: 0;
-left: 0;
-padding-top : 7px;
-padding-left : 40px;
-transform: scale(2.6);
-width: 200px;
-height: auto;
-}
-
+  
 
 /* ****************** "POUR FAIRE DE L'ENGAGEMENT UNE VALEUR" ********************* */
 
-.contenu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 960px;
-    margin: auto;
-    font-size: 2.4em;
-}
+
 
 
 p{
-    position : absolute;
-    right : 10%;
-    transform: translate(60,10);
-    letter-spacing : 6px;
-    text-align : right;
+    position: fixed;
     color: grey;
-    font-family : "Helvetica";
+    font-family: "Helvetica";
+    letter-spacing : 0px;
+    right: 0; /* Texte à droite de l'écran */
+    top: -54px;
     font-size : 80px;
+    padding-right : 20px;
 }
 
-.bande-grise p{
-    position : absolute;
-    padding-left : 250px;
-    margin: 0;
-    top : 5px;
-}
+
 
 
         /* ****************** BANDE CENTREE ********************* */
-
 .bande-centree{
-    position : absolute;
+    position: fixed;
+    top: 140px;
+    left: 0;
+    right: 0;
+    margin: auto;
     width: 40%;
     text-align: center;
     background-image: linear-gradient(to right, #d3d3d3 0%, #f5f5f5 20%, #d3d3d3 100%);
-    text-align: center;
     padding: 10px;
-    margin: 70px 0 0 350px;
 }
 
 .bande-centree .texte2 .jeune{
@@ -76,11 +65,12 @@ p{
     border : none;
     background-color : transparent;
     cursor : pointer;
-}
+  }
 
 .aj{
     text-decoration : none;
 }
+
 
 .bande-centree .texte2 span.referent{
     font-size: 20px;
@@ -114,42 +104,45 @@ p{
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
+    padding: 4px 14px 4px 14px;
     font-family : "helvetica";
-    padding: 5px 15px 5px 15px;
     letter-spacing : -1px;
     color: white;
-    border : none;
-    background-color : grey;
     cursor : pointer;
+    background-color :  grey;
+    border : none;
 }
 
 .desc{
-    position : absolute;
+    position: fixed;
+    font-size: 19px;
+    top: 250px;
+    left: 55%;
+    transform: translate(-50%, -50%); /* Le texte sera centré horizontalement au milieu de l'écran */
     color: #7f7f7f;
-    font-family : "helvetica";
-    left : 430px;
-    top : 190px;
-    letter-spacing : 0px;
-    font-size : 19px;
+    font-family: "Helvetica", sans-serif;
+    letter-spacing: 1px;
     text-align : left;
 }
 
 
 .partenaire{
-    position : absolute;
+    position : fixed;
     height : 300px;
     width : 842px;
-    top : 280px;
-    left : 330px;
+    top : 500px;
+    left : 50%;
+    transform: translate(-50%, -50%);
 }
 
 .idk{
-    position : absolute;
+    position: fixed;
+    font-size: 19px;
+    top: 690px;
+    left: 55%;
+    transform: translate(-50%, -50%); /* Le texte sera centré horizontalement au milieu de l'écran */
     color: #7f7f7f;
-    font-family : "helvetica";
-    left : 430px;
-    top : 590px;
-    letter-spacing : 0px;
-    font-size : 19px;
+    font-family: "Helvetica", sans-serif;
+    letter-spacing: 1px;
     text-align : left;
 }
