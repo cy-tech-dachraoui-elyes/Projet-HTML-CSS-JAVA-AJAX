@@ -11,10 +11,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = htmlspecialchars(strip_tags($_POST['email'])) ?? '';
     $nom = htmlspecialchars(strip_tags($_POST['nom'])) ?? '';
     $prenom = htmlspecialchars(strip_tags($_POST['prenom'])) ?? '';
+    $message = htmlspecialchars(strip_tags($_POST['message'])) ?? '';
 
     $email_encoded = urlencode($email);
-    $objet = utf8_decode('Refus recrutement');
-
+    $objet = utf8_decode('Refus référence');
 try {
     // Paramètres du serveur SMTP de Laposte
     $mail->isSMTP();
@@ -33,8 +33,8 @@ try {
     $mail->Subject = 'Jeune.engagement6.4';
     $mail->Body = utf8_decode('Bonjour ' . $prenom . ", \n\n" .
 
-    "Nous regrettons de vous informer que suite à l'évaluation de votre dossier, nous avons pris la décision de ne pas retenir votre candidature.\n\n" .
-    "Nous avons soigneusement examiné votre profil et vos qualifications, et bien que nous reconnaissions vos compétences, d'autres candidats ayant une expérience plus proche de ce que nous souhaitons ont été retenus pour poursuivre le processus de recrutement.\n\n".
+    "Nous regrettons de vous informer que votre demande de référence a été refusée pour le motif suivant:\n\n" .
+    "'". $message ."'\n\n" .
     "Si vous avez des questions ou souhaitez obtenir de plus amples informations, n'hésitez pas à nous contacter.\n\n".
     "Cordialement,\n" .
     "L'équipe Jeunes 6.4");
@@ -43,7 +43,8 @@ try {
 
     $mail->send();
     //echo 'L\'e-mail a été envoyé avec succès';
-    header('Location: ../page0.html');
+    header('Location: /Referent/refus.html');
+    
 
 } catch (Exception $e) {
     echo 'Une erreur s\'est produite lors de l\'envoi de l\'e-mail : ' . $mail->ErrorInfo;
