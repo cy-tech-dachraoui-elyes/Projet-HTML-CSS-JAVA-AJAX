@@ -68,7 +68,7 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
             </div>
             
             <div class="contenu">
-                <a href="../accueil.html">
+                <a >
                     <img src="/image/jeunes.PNG" alt="Image">
                 </a>
                 
@@ -83,13 +83,12 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
             
         </div>
         
-        <p class="dec">  Confirmez cette expérience et ce que vous avez <br>pu constater au contact de ce jeune. </p>
+        <p class="dec">  Confirmez cette expérience et ce que vous avez pu constater au contact de ce jeune. </p>
 
         <img src="/image/traitvert.jpg" alt="traitvert" class="traitvert">
 
         <div class="container">
             
-            <div class="checkboxes">
                 
                 <form method="POST" action="/mail/mailR_valide.php">
                     <div class="info">
@@ -110,7 +109,7 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
                         
                                
                         <br><br>
-                        <label for="engagement"> Mon engagement: </label>
+                        <label for="engagement"> Engagement: </label>
                         <input type="text" id="engagement" name="engagement" value="<?php echo $engagement; ?>">
 
                         <br>
@@ -120,15 +119,16 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
                         <br>
                         <label for="duree"> Durée : </label>
                         <input type="text" id="duree" name="duree" value="<?php echo $duree; ?>">
+                        <br>
+                        <label for="qualites"> Qualites : </label>
+                        <input type="text" id="qualites" name="qualites" value="<?php echo implode(", ", $qualites); ?>">
                             
                         
                     </fieldset>
                     </div>
-                    </div>
-                    <div>
+                    
 <!--                <label for="commentaire">Commentaire:</label>-->
                 <textarea id="commentaire" name="commentaire" required class="comm"></textarea><br>
-            </div>
             <div class="checkboxes">    
                 <label class="qualite"><input type="checkbox" name="qualites[]" value="Autonome" onclick="maxChoix()">Autonme</label> 
                 <label class="qualite"><input type="checkbox" name="qualites[]" value="Passionné" onclick="maxChoix()" >Passioné</label> 
@@ -170,4 +170,3 @@ foreach ($utilisateurs['jeune'] as $utilisateur) {
         
     </body>
 </html>
-
