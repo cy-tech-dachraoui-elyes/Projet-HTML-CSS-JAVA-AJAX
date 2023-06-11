@@ -19,7 +19,7 @@
             
             <div class="bande-centree">
                 <div class="Option">
-                    <a href="../accueil.html" class="aj" >
+                    <a href="../accueil.php" class="aj" >
                         <span class="accueil">Accueil</span>
                     </a>
                     
@@ -39,7 +39,7 @@
             </div>
 
             <div class="contenu">
-                <a href="../accueil.html">
+                <a href="../accueil.php">
                     <img src="/image/jeunes.PNG" alt="Image" class="jeune">
                 </a>
                     
