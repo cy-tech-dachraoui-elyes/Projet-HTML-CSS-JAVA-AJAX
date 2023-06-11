@@ -17,7 +17,7 @@ class PDF_Document extends FPDF {
     }
     
     function Content($reference) {
-        $nombreReferent = count($reference);//Compter le nombre de réferent déjà enregistrés
+        $nombreReferent = count($reference); //Compter le nombre de réferent déjà enregistrés
         $Comptage = 0;
         if ($reference['valide'] == true){
         $this->SetFont('Arial', 'B', 12);
