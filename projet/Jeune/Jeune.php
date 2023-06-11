@@ -67,7 +67,7 @@
         
         <img src="/image/traitRose.jpg" alt="traitrose" class="traitrose">
             
-        <form action="reference.php" method="post">
+        <form action="reference.php" method="post"><!-- Envoyer les données pour les enregistrer dans la base de donnée -->
 
             <div class="container">
             <fieldset class="cadreInfo1">
