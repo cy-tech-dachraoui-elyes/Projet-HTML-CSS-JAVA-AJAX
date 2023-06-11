@@ -18,7 +18,7 @@ if(isset($_SESSION['user'])){
             $reseau = $user['reseau'];
             $tel = $user['tel'];
             $mdp = $user['mdp'];
-            if(!isset($user['references'])){
+            if(!isset($user['references'])){ // Vérifie si aucune référence n'existe, puis met la variable à null
                 $nbref = 'null';
             }
         }
