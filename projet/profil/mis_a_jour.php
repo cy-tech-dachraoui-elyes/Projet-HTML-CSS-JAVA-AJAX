@@ -2,14 +2,14 @@
 // Vérifier si les données POST ont été soumises
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Récupération des données du formulaire
-    $nom = $_POST['nom'] ?? '';
-    $prenom = $_POST['prenom'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $date = $_POST['date'] ?? '';
-    $reseau = $_POST['reseau'] ?? '';
-    $tel = $_POST['telephone'] ?? '';
-    $mdp = $_POST['mdp'] ?? '';
-    $id = $_POST['id'] ?? '';
+    $nom = htmlspecialchars(strip_tags($_POST['nom'])) ?? '';
+    $prenom = htmlspecialchars(strip_tags($_POST['prenom'])) ?? '';
+    $email = htmlspecialchars(strip_tags($_POST['email'])) ?? '';
+    $date = htmlspecialchars(strip_tags($_POST['date'])) ?? '';
+    $reseau = htmlspecialchars(strip_tags($_POST['reseau'])) ?? '';
+    $tel = htmlspecialchars(strip_tags($_POST['telephone'])) ?? '';
+    $mdp = htmlspecialchars(strip_tags($_POST['mdp'])) ?? '';
+    $id = htmlspecialchars(strip_tags($_POST['id'])) ?? '';
 
     // Récupération de l'ID de l'utilisateur actuel depuis la session
 
