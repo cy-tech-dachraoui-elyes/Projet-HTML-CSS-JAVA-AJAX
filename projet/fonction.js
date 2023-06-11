@@ -1,4 +1,5 @@
 /* ************* Jeune et referent ************* */
+
 function maxChoix(){
     var max = 4;
     var cb = document.querySelectorAll('input[type=checkbox]');
@@ -14,7 +15,9 @@ function maxChoix(){
       }
     }
 }
-        /* ************* Jeune ************* */
+
+/* ************* Jeune ************* */
+
 function verifierFormulaire(event) {
   var checkboxes = document.getElementsByName('qualites[]');
   var cocher = false;
@@ -48,7 +51,9 @@ function affichage(){
       afficher.type = "password";
   }
 }
-        /* ************* Profil ************* */
+
+/* ************* Profil ************* */
+
 function affichage_eye() {
   var afficher = document.getElementById("mdp");
   var eye = document.getElementById("eye");
@@ -61,7 +66,8 @@ function affichage_eye() {
       eye.src = "/boutton/eye-closed.svg";
   }
 }
-        /* ************* Liste reference ************* */
+
+/* ************* Liste reference ************* */
 
 function envoyer(){
   alert("Votre mail a été envoyé au consultant.");
@@ -100,7 +106,8 @@ document.addEventListener('DOMContentLoaded', function() {
       xhr.send('referenceId=' + encodeURIComponent(referenceId));
   }
 });
-        /* ************* Page Référent ************* */
+
+/* ************* Page Référent ************* */
 
 function promptValidation() {
   var commentaire = prompt("Veuillez expliquer le refus de référence");
@@ -137,6 +144,8 @@ function verifierFormulaire_ref(event) {
     alert("La confirmation de référence a été envoyé.");
   }
 }
+
+/* ************* Toutes les pages ************* */
 
 function Statut(categorie) {
     if (categorie === 'jeune') {
