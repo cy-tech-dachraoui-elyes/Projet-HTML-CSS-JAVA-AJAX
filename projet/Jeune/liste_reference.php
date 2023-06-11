@@ -71,11 +71,11 @@ if(isset($_SESSION['user'])){
 
     <img src="/image/traitRose.jpg" alt="traitrose" class="traitrose">
 
-    <form action="../mail/mail_consul.php" method="POST">
+    <form action="/mail/mail_consul2.php" method="POST">
     <div class="references-container">
 
     <input type="hidden" name="id" value="<?php echo $id; ?>">
-
+        <!-- Boucle pour afficher les références validés -->
         <?php foreach($references as $reference): ?>
             <?php if ($reference['valide']): ?>
                 <label class="reference-label">
@@ -84,10 +84,12 @@ if(isset($_SESSION['user'])){
                     </span>
                 </label>
             <?php endif; ?>
+            <!-- Boucle pour afficher les références validés -->
             <div class="reference <?php if ($reference['valide']) echo 'reference-validee'; ?>" onclick="MontrerDetails(this)">
                 <p><b>Référent:</b> <?php echo $reference['nom_ref']; echo " "; echo $reference['prenom_ref']; ?></p>
                 <p><b>Engagement :</b> <?php echo $reference['engagement']; ?></p>
-              
+
+                <!-- Cliquez pour accéder à toutes les informations de référence -->
                 <div class="reference-details <?php if ($reference['valide']) echo 'reference-validee-details'; ?>" style="display: none;">
                     <p><b>Email du référent:</b> <?php echo $reference['email_ref']; ?></p>
                     <p><b>Durée :</b> <?php echo $reference['duree']; ?></p>
@@ -105,7 +107,7 @@ if(isset($_SESSION['user'])){
                         echo "<p><b>Qualités confirmées par le référent : </b>"; echo implode(", ", $reference['qualites_ref']);;
                     }
                    ?>
-                   <br><button class="supprimer-reference" data-reference-id="<?php echo $reference['email_ref']; ?>"><b>Supprimer</b></button>
+                   <br> <button class="supprimer-reference" data-reference-id="<?php echo $reference['email_ref']; ?>"><b>Supprimer</b></button>
 
 
                 </div>
