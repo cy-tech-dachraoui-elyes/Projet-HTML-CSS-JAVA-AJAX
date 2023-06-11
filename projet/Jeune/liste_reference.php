@@ -71,7 +71,7 @@ if(isset($_SESSION['user'])){
 
     <img src="/image/traitRose.jpg" alt="traitrose" class="traitrose">
 
-    <form action="/mail/mail_consul2.php" method="POST">
+    <form action="/mail/mail_consul.php" method="POST">
     <div class="references-container">
 
     <input type="hidden" name="id" value="<?php echo $id; ?>">
